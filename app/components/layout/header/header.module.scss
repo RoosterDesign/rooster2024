@@ -1,0 +1,11 @@
+@import '@/app/styles/mixins.scss';
+
+.siteHeader {
+    border-top: .5rem solid var(--accent);
+    height: 25rem;
+
+    // @include breakpoint(xl) {
+    //     background: green;
+    // }
+
+}

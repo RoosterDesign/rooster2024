@@ -1,0 +1,45 @@
+/* Colours */
+
+:root {
+
+    //= Colours
+
+    --white: #fff;
+    --dark-blue: #030F1E; 
+    --pink: #F21483;
+    
+    --bg: var(--dark-blue);
+    --accent: var(--pink);
+    --text-colour: var(--white);
+
+
+    //= Typography
+
+    //= Poppins
+    --primary-font: var(--font-poppins);
+
+    //= Permanent Marker
+    --secondary-font: var(--font-permanent-marker);
+    
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text-colour);
+    font-family: var(--primary-font);
+}
+
+h1 {
+    font-size: 30px;
+    font-size: 3rem;
+}

@@ -1,4 +1,4 @@
-/* Colours */
+@import '@/app/styles/mixins.scss';
 
 :root {
 
@@ -15,12 +15,37 @@
 
     //= Typography
 
-    //= Poppins
     --primary-font: var(--font-poppins);
-
-    //= Permanent Marker
     --secondary-font: var(--font-permanent-marker);
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+
+    //= Layout
+
+    --container-width: 1440px;
+    --container-padding: 2rem;
+
+
+    //= Header
+
+    --header-height: 11rem;
+    --logo-width: 5rem;
     
+}
+
+
+@include breakpoint(xl) {
+    
+    :root {
+
+        //= Header
+
+        --header-height: 25rem;
+        --logo-width: 9rem;
+
+    }
+
 }
 
 *,

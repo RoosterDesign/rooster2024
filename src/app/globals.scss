@@ -19,30 +19,86 @@
     --secondary-font: var(--font-permanent-marker);
     --fw-regular: 400;
     --fw-bold: 700;
+    
+    --h1-size: 3.2rem;
+    --h1-line-height: 1.5;
+
+    --p-size: 1.6rem;
+    --p-line-height: 1.8;
 
 
     //= Layout
 
-    --container-width: 1440px;
+    --container-width: 1480px;
     --container-padding: 2rem;
+
+    --gap-1: 1rem;
+    --gap-2: 2rem;
+    --gap-3: 3rem;
+    --gap-4: 4rem;
+
+
+    //= Transitions
+
+    --hover-transition: all .2s ease-in-out;
 
 
     //= Header
 
     --header-height: 11rem;
-    --logo-width: 5rem;
+    --logo-width: 4rem;
+
+
+    //= Buttons
+
+    --button-bg: var(--accent);
+    --button-colour: var(--white);
+    --button-hover-bg: var(--white);
+    --button-hover-colour: var(--accent);
     
 }
 
+@include breakpoint(md) {
+
+  :root {
+
+    //= Typography
+
+    --h1-size: 4rem;
+    --p-size: 1.8rem;
+  }
+
+}
+
+@include breakpoint(lg) {
+
+  :root {
+
+    //= Header
+
+    --header-height: 15rem;
+    --logo-width: 6rem;
+
+
+    
+
+  }
+
+}
 
 @include breakpoint(xl) {
     
     :root {
 
-        //= Header
+      //= Header
 
-        --header-height: 25rem;
-        --logo-width: 9rem;
+      --header-height: 25rem;
+      --logo-width: 9rem;
+
+
+      //= Typography
+
+      --h1-size: 6rem;
 
     }
 
@@ -68,4 +124,8 @@ body {
   background: var(--bg);
   color: var(--text-colour);
   font-family: var(--primary-font);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
 }

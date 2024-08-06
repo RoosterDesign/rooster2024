@@ -1,27 +1,23 @@
-@import '@/app/mixins.scss';
+// @import '@/app/mixins.scss';
 
 .siteHeader {
     border-top: .5rem solid var(--accent);
     height: var(--header-height);
+
+    > div {
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+    }
+    
 }
 
 .logo {
-    height: auto;
-    width: var(--logo-width);
-}
+    align-self: center;
 
-// @include breakpoint(md) {
-
-//     .logo {
-//         width: 9rem;
-//     }
-
-// }
-
-@include breakpoint(xl) {
-
-    .logo {
-        width: 9rem;
+    > img {
+        height: auto;
+        width: var(--logo-width);
     }
 
 }

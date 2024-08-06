@@ -1,5 +1,7 @@
+import HomeHero from '@/components/HomeHero/HomeHero';
+
 export default function Home() {
   return (
-    <h1>Rooster Design 2024</h1>
+    <HomeHero />
   );
 }

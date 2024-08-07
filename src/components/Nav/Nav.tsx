@@ -9,10 +9,27 @@ import Button from '@/components/Button/Button';
 export default function Nav() {
 	const pathname = usePathname();
 	const [navVisible, setNavVisible] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+  let timeoutId: NodeJS.Timeout;
 
   useEffect(() => {
     setNavVisible(false);
   }, [pathname]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolling(true);
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => setIsScrolling(false), 150); // Adjust the timeout as needed
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timeoutId);
+    };
+  }, []);
 
 	const navItems = [
 		{
@@ -31,13 +48,16 @@ export default function Nav() {
 			label: 'Portfolio',
 			url: '/portfolio',
 		},
-		{
-			label: 'Download my CV',
-			url: '/cv',
-		},
+		// {
+		// 	label: 'Download my CV',
+		// 	url: '/cv',
+		// },
 	];
 
 	const navVisibleClass = navVisible ? styles.navVisible : '';
+
+  const scrollingClass = !navVisible && isScrolling  ? styles.onScroll : '';
+
 
 	const handleNavToggle = () => {
 		setNavVisible(!navVisible);
@@ -47,7 +67,7 @@ export default function Nav() {
 
 	return (
     <>
-      <div className={`${styles.navWrap} ${navVisibleClass}`}>
+      <div className={`${styles.navWrap} ${navVisibleClass} ${scrollingClass}`}>
 
         <nav className={styles.nav}>
           <ul className={styles.navLinks}>

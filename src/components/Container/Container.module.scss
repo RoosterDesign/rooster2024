@@ -1,6 +1,39 @@
+@import '@/app/mixins.scss';
+
 .container {
-  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 var(--container-padding);
+  padding: 0 rem(16);
   width: 100%;
+}
+
+@include breakpoint(md) {
+
+  .container {
+    max-width: rem(980);
+  }
+
+}
+
+@include breakpoint(lg) {
+
+  .container {
+    max-width: rem(1180);
+  }
+
+}
+
+@include breakpoint(xl) {
+
+  .container {
+    max-width: rem(1380);
+  }
+
+}
+
+@include breakpoint(xxl) {
+
+  .container {
+    max-width: rem(1580);
+  }
+
 }

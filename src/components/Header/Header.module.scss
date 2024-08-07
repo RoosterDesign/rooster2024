@@ -1,8 +1,10 @@
-// @import '@/app/mixins.scss';
+@import '@/app/mixins.scss';
 
 .siteHeader {
     border-top: .5rem solid var(--accent);
-    height: var(--header-height);
+    // height: rem(110);
+    margin-bottom: rem(20);
+    padding: rem(10) 0 0;
 
     > div {
         display: flex;
@@ -14,10 +16,57 @@
 
 .logo {
     align-self: center;
+    margin: 0 auto;
 
     > img {
         height: auto;
-        width: var(--logo-width);
+        width: rem(60);
+    }
+
+}
+
+@include breakpoint(sm) {
+
+    .siteHeader {
+        margin-bottom: rem(30);
+        padding-top: rem(30);
+    }
+
+    .logo {
+    
+        > img {
+            width: rem(80);
+        }
+    
+    }
+
+}
+
+@include breakpoint(md) {
+
+    .siteHeader {
+        margin-bottom: rem(60);
+        padding: rem(20) 0;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+}
+
+@include breakpoint(lg) {
+
+    .siteHeader {
+        padding: rem(40) 0;
+    }
+
+}
+
+@include breakpoint(xl) {
+
+    .logo > img {
+        width: rem(100);
     }
 
 }

@@ -1,0 +1,45 @@
+import Image from 'next/image';
+import styles from './ClientLogos.module.scss';
+import Container from '@/components/Container/Container';
+
+import dcl from './images/dcl.svg';
+import hitachi from './images/hitachi.svg';
+import santander from './images/santander.svg';
+import boots from './images/boots.svg';
+import bmw from './images/bmw.svg';
+import heineken from './images/heineken.svg';
+import hollandAndBarrett from './images/holland-and-barrett.svg';
+import homeserve from './images/homeserve.svg';
+import bicesterVillage from './images/bicester-village.svg';
+import mini from './images/mini.svg';
+import orange from './images/orange.svg';
+import muk from './images/muk.svg';
+
+const images = [
+  { src: dcl },
+  { src: hitachi },
+  { src: santander },
+  { src: boots },
+  { src: bmw },
+  { src: heineken },
+  { src: hollandAndBarrett },
+  { src: homeserve },
+  { src: bicesterVillage },
+  { src: mini },
+  { src: orange },
+  { src: muk }
+]
+
+export default function ClientLogos() {
+  return (
+    <section className={styles.clientLogos}>
+      <Container>
+        <div className={styles.clientLogosList}>
+          {images.map((image, index) => (
+            <Image src={image.src} alt="" key={index} />
+          ))}
+        </div>
+      </Container>
+    </section>
+  )
+}

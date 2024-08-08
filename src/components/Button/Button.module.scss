@@ -24,6 +24,17 @@
 
 }
 
+.buttonAlt {
+  background: var(--button-alt-bg);
+  color: var(--button-alt-colour);
+
+  &:hover {
+    background: var(--button-alt-hover-bg);
+    color: var(--button-alt-hover-colour);
+  }
+
+}
+
 @include breakpoint(xl) {
 
   .button {

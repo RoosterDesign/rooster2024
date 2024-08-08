@@ -25,13 +25,12 @@
 
   p {
     font-size: rem(16);
-    line-height: 1.75;
+    line-height: var(--p-line-height);
     margin-bottom: rem(32);
   }
 
   a {
     align-self: center;
-    // min-width: rem(250);
   }
 
 }
@@ -114,7 +113,7 @@
     margin-bottom: rem(-80);
 
     p {
-      font-size: rem(18);
+      font-size: var(--p-font-size);
     }
 
   }

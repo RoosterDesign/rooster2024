@@ -15,28 +15,16 @@ import mini from './images/mini.svg';
 import orange from './images/orange.svg';
 import muk from './images/muk.svg';
 
-const images = [
-  { src: dcl },
-  { src: hitachi },
-  { src: santander },
-  { src: boots },
-  { src: bmw },
-  { src: heineken },
-  { src: hollandAndBarrett },
-  { src: homeserve },
-  { src: bicesterVillage },
-  { src: mini },
-  { src: orange },
-  { src: muk }
-]
-
 export default function ClientLogos() {
+
+  const images = [dcl, hitachi, santander, boots, bmw, heineken, hollandAndBarrett, homeserve, bicesterVillage, mini, orange, muk]
+  
   return (
     <section className={styles.clientLogos}>
       <Container>
         <div className={styles.clientLogosList}>
           {images.map((image, index) => (
-            <Image src={image.src} alt="" key={index} />
+            <Image src={image} alt="" key={index} />
           ))}
         </div>
       </Container>

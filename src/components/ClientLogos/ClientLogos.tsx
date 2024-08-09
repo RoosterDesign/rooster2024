@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import styles from './ClientLogos.module.scss';
 import Container from '@/components/Container/Container';
 
@@ -17,7 +17,7 @@ import muk from './images/muk.svg';
 
 export default function ClientLogos() {
 
-  const images = [dcl, hitachi, santander, boots, bmw, heineken, hollandAndBarrett, homeserve, bicesterVillage, mini, orange, muk]
+  const images: StaticImageData[] = [dcl, hitachi, santander, boots, bmw, heineken, hollandAndBarrett, homeserve, bicesterVillage, mini, orange, muk]
   
   return (
     <section className={styles.clientLogos}>

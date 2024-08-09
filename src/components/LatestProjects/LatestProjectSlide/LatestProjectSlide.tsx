@@ -3,16 +3,14 @@ import Button from "@/components/Button/Button";
 import styles from './LatestProjectSlide.module.scss';
 
 interface Client {
-  type: string, name: string, synopsis: string, link: string, image: StaticImageData
+  type: string;
+  name: string;
+  synopsis: string;
+  link: string;
+  image: string | StaticImageData;
 }
 
-export default function LatestProjectSlide({
-  client
-}: {
-  client: Client
-}) {
-
-  const { type, name, synopsis, link, image } = client;
+export default function LatestProjectSlide( { type, name, synopsis, link, image }: Client ) {
 
   return (
     <div className={styles.latestProjectsSlide}>
@@ -20,7 +18,7 @@ export default function LatestProjectSlide({
         <span>{type}</span>
         <h2>{name}</h2>
         <p>{synopsis}</p>
-        <Button url={link} alt>View Project</Button>              
+        <Button url={link} reverse>View Project</Button>
       </div>
         <div className={styles.projectDetailsMask}></div>
         <Image src={image} alt="" />

@@ -50,7 +50,7 @@
     padding: 0 ;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
   }
 
   .nav {
@@ -72,8 +72,7 @@
   
   }
 
-  .navLinks {    
-    // margin-bottom: rem(20);    
+  .navLinks {
     width: 100%;
   
     a {
@@ -204,6 +203,7 @@
     position: fixed;
     right: 0;
     top: 0;
+    z-index: 1;
   }
 
 }

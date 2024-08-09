@@ -20,9 +20,6 @@
     --fw-regular: 400;
     --fw-bold: 700;
 
-    --p-font-size: rem(18);
-    --p-line-height: 1.75;
-
 
     //= Transitions
 
@@ -40,6 +37,7 @@
     --button-alt-colour: var(--accent);
     --button-alt-hover-bg: var(--accent);
     --button-alt-hover-colour: var(--white);
+
     
 }
 
@@ -52,7 +50,6 @@
 
 html,
 body {
-  // max-width: 100vw;
   overflow-x: hidden;
 }
 
@@ -60,19 +57,84 @@ body {
   background: var(--bg);
   color: var(--text-colour);
   font-family: var(--primary-font);
+  // max-width: 100vw;
+  
 }
 
 h1, h2, h3, h4, h5, h6, p {
+  font-weight: var(--fw-regular);
   margin: 0;
 }
 
+h1, h2 {
+  font-weight: var(--fw-bold);
+}
+
+h1 {  
+
+}
+
+h2 {
+  font-size: rem(20);
+  line-height: rem(32);
+}
+
 p {
-  font-size: var(--p-font-size);
-  line-height: var(--p-line-height);
+  font-size: rem(16);
+  line-height: 1.75;
+  margin-bottom: rem(20);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+@include breakpoint(sm) {
+
+}
+
+@include breakpoint(md) {
+
+  h2 {
+    font-size: rem(26);
+    line-height: rem(40);
+  }
+
+}
+
+@include breakpoint(lg) {
+
+  p {
+    font-size: rem(18);
+  }
+ 
+
+}
+
+@include breakpoint(xl) {
+
+
+}
+
+@include breakpoint(xxl) {
+
+  h2 {
+    font-size: rem(32);
+    line-height: rem(48);
+  }
+
+}
+
+
+@include breakpoint(xxxl) {
+
 }
 
 
 
+
+// HIDE
 
 .bp-helper {
   align-items: center;
@@ -86,93 +148,36 @@ p {
   font-weight: bold;
   font-size: 30px;
 
-  &--base {
-    display: flex;
+  &--base { display: flex; }
+
+  @include breakpoint(sm) {    
+    display: none;
+    &--sm { background: limegreen; display: flex; }  
   }
 
-}
-
-@include breakpoint(sm) {
-
-  .bp-helper {
-    display: none;
-    
-    &--sm {
-      background: limegreen;
-      display: flex;
-    }
-
+  @include breakpoint(md) {
+    display: none;      
+    &--md { background: orange; display: flex; }  
   }
-
-}
-
-@include breakpoint(md) {
-
-  .bp-helper {
-    display: none;
-    
-    &--md {
-      background: orange;
-      display: flex;
-    }
-
+  
+  @include breakpoint(lg) {
+    display: none;      
+    &--lg { background: red; display: flex; }  
   }
-
-}
-
-@include breakpoint(lg) {
-
-  .bp-helper {
+  
+  @include breakpoint(xl) {
     display: none;
-    
-    &--lg {
-      background: red;
-      display: flex;
-    }
-
+    &--xl { background: blue; display: flex; }  
   }
-
-}
-
-@include breakpoint(xl) {
-
-  .bp-helper {
+  
+  @include breakpoint(xxl) {  
+    display: none;      
+    &--xxl { background: hotpink; display: flex; }  
+  }  
+  
+  @include breakpoint(xxxl) {  
     display: none;
-    
-    &--xl {
-      background: blue;
-      display: flex;
-    }
-
-  }
-
-}
-
-@include breakpoint(xxl) {
-
-  .bp-helper {
-    display: none;
-    
-    &--xxl {
-      background: hotpink;
-      display: flex;
-    }
-
-  }
-
-}
-
-
-@include breakpoint(xxxl) {
-
-  .bp-helper {
-    display: none;
-    
-    &--xxxl {
-      background: yellow;
-      display: flex;
-    }
-
+    &--xxxl { background: yellow; display: flex; }  
   }
 
 }

@@ -1,0 +1,134 @@
+@import '@/app/mixins.scss';
+
+.callout {
+  margin: 100px 0 200px; // todo
+  position: relative;
+
+  .calloutImage {
+    border-radius: rem(4) rem(4) 0 0;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .calloutContent {
+    background: var(--white);
+    border-radius: 0 0 rem(4) rem(4);
+    color: var(--dark-blue);
+    padding: rem(40) rem(30);
+
+    h2 {
+      margin-bottom: rem(20);
+    }
+
+    cite {
+      display: block;
+      font-size: rem(14);
+      font-style: normal;
+      letter-spacing: rem(2);
+      line-height: 1.75;
+      margin-top: rem(40);
+      text-transform: uppercase;
+    }
+
+  }
+
+}
+
+@include breakpoint(sm) {
+  
+  .callout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+
+    .calloutImage {
+      border-radius: rem(4) 0 0 rem(4);
+      height: 100%;
+    }
+
+    .calloutContent {      
+      border-radius:0 rem(4) rem(4) 0;
+      padding: rem(40);
+    }
+
+  }
+
+}
+
+
+@include breakpoint(md) {
+
+  .callout {
+    display: block;
+
+    .calloutImage,
+    .calloutContent {
+      border-radius: rem(4);
+    }
+
+    .calloutImage {
+      height: auto;
+      width: 60%;
+    }
+
+    .calloutContent {
+      padding: rem(60);      
+      position: absolute;
+      right: 0;
+      top: rem(60);
+      width: 55%;
+    }
+
+  }
+
+}
+
+@include breakpoint(xl) {
+
+  .callout {
+
+    .calloutImage {
+      max-width: 100%;
+      width: auto;
+    }
+
+    .calloutContent {
+      max-width: rem(800);
+      top: rem(100);
+      width: auto;
+
+      h2 {
+        margin-bottom: rem(30);
+      }
+
+      cite {
+        font-size: rem(15);
+        letter-spacing: rem(3);
+        margin-top: rem(80);
+      }
+
+    }
+
+  }
+
+}
+
+@include breakpoint(xxl) {
+
+  .callout {
+
+    .calloutContent {
+      max-width: rem(850);
+      padding: rem(90) rem(70);
+      right: rem(60);
+
+      h2 {
+        margin-bottom: rem(40);
+      }
+
+    }
+
+  }
+
+}

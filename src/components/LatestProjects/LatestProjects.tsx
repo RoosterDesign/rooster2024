@@ -2,19 +2,26 @@
 
 import styles from './LatestProjects.module.scss';
 import "slick-carousel/slick/slick.css";
-
 import {useState} from 'react';
+import { StaticImageData } from 'next/image';
 import Slider from "react-slick";
 import Container from "@/components/Container/Container";
 import LatestProjectSlide from './LatestProjectSlide/LatestProjectSlide';
-
 import gasRegulatory from './images/gas-regulatory.jpg';
+
+interface Client {
+  type: string;
+  name: string;
+  synopsis: string;
+  link: string;
+  image: string | StaticImageData;
+}
 
 export default function LatestProjects() {
 
   const [isEnabled, setIsEnabled] = useState(true);
-
-  const clients = [
+ 
+  const clients: Client[] = [
     {
       type: "UI/UX Design Concept" ,
       name: "Gas Regulatory App",
@@ -78,9 +85,16 @@ export default function LatestProjects() {
   return (        
     <section className={`${styles.latestProjects} ${isEnabled ? 'hoverEnabled' : ''}`} >
       <Container>
-        <Slider {...carouselSettings} >
+        <Slider {...carouselSettings} >          
           {clients.map((client, index) =>
-              <LatestProjectSlide client={client} key={index} />
+              <LatestProjectSlide
+                key={index}
+                type={client.type}
+                name={client.name}
+                synopsis={client.synopsis}
+                link={client.link}
+                image={client.image}                
+              />
           )}
         </Slider>
       </Container>

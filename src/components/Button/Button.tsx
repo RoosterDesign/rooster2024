@@ -1,15 +1,15 @@
 import styles from './Button.module.scss';
 import Link from 'next/link'
 
-export default function Button({
-  alt, url, children,
-  }: {
-    alt?: boolean,
-    url: string;
-    children: React.ReactNode;
-}) {
+interface Button {
+  children: React.ReactNode;
+  url: string;
+  reverse?: boolean;
+}
+
+export default function Button({ children, url, reverse }: Button) {
 
   return (
-    <Link href={url} className={`${styles.button} ${alt ? styles.buttonAlt : ''}`}>{children}</Link>
+    <Link href={url} className={`${styles.button} ${reverse ? styles.buttonAlt : ''}`}>{children}</Link>
   )
 }

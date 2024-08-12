@@ -38,16 +38,8 @@
 @include breakpoint(xl) {
 
   .button {
-    font-size: rem(18);
+    // font-size: rem(18);
     min-height: rem(60);
-  }
-
-}
-
-@include breakpoint(xxxl) {
-
-  .button {
-    font-size: rem(20);
   }
 
 }

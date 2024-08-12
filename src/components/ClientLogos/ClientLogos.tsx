@@ -20,13 +20,11 @@ export default function ClientLogos() {
   const images: StaticImageData[] = [dcl, hitachi, santander, boots, bmw, heineken, hollandAndBarrett, homeserve, bicesterVillage, mini, orange, muk]
   
   return (
-    <section className={styles.clientLogos}>
+    <section className={`${styles.clientLogos} block`}>
       <Container>
-        <div className={styles.clientLogosList}>
-          {images.map((image, index) => (
-            <Image src={image} alt="" key={index} />
-          ))}
-        </div>
+        {images.map((image, index) => (
+          <Image src={image} alt="" key={index} />
+        ))}
       </Container>
     </section>
   )

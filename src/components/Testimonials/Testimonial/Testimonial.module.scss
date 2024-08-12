@@ -1,0 +1,56 @@
+@import '@/app/mixins.scss';
+
+.testimonial {
+  margin: 0;
+  padding: 0;
+
+  svg {
+    height: auto;
+    margin-bottom: rem(20);
+    width: rem(30);
+  }
+
+  .quote {
+    font-style: italic;
+  }
+
+  .toggle {
+    color: var(--accent);
+    font-weight: var(--fw-bold);
+    text-underline-offset: rem(8);
+    text-decoration: underline;
+  }
+
+}
+
+
+
+@include breakpoint(sm) {
+
+  .testimonial {
+
+    svg {
+      width: rem(55);
+    }
+
+  }
+
+}
+
+@include breakpoint(xl) {
+
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+
+    svg {
+      margin-bottom: rem(40);
+    }
+
+    .quote {
+      margin-bottom: auto;
+    }
+
+  }
+
+}

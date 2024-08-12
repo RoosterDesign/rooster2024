@@ -50,7 +50,7 @@
 
 html,
 body {
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 body {
@@ -90,6 +90,15 @@ p {
 
 }
 
+strong {
+  font-weight: var(--fw-bold);
+}
+
+.block {
+  margin-top: rem(75);
+  margin-bottom: rem(75);
+}
+
 @include breakpoint(sm) {
 
 }
@@ -101,6 +110,11 @@ p {
     line-height: rem(40);
   }
 
+  .block {
+    margin-top: rem(150);
+    margin-bottom: rem(150);
+  }
+
 }
 
 @include breakpoint(lg) {
@@ -108,12 +122,15 @@ p {
   p {
     font-size: rem(18);
   }
- 
 
 }
 
 @include breakpoint(xl) {
 
+  .block {
+    margin-top: rem(200);
+    margin-bottom: rem(200);
+  }
 
 }
 
@@ -124,10 +141,26 @@ p {
     line-height: rem(48);
   }
 
+  .block {
+    margin-top: rem(250);
+    margin-bottom: rem(250);
+  }
+
 }
 
 
 @include breakpoint(xxxl) {
+
+  h2 {
+    font-size: rem(40);
+    line-height: rem(54);
+  }
+
+  p {
+    font-size: rem(20);
+    line-height: 1.9;
+    margin-bottom: rem(30);
+  }
 
 }
 

@@ -1,10 +1,8 @@
 @import '@/app/mixins.scss';
 
 .latestProjects {
-  padding-bottom: 300px; // TODO
+  overflow-x: hidden;
 }
-
-
 
 .latestProjects :global {
 
@@ -54,11 +52,7 @@
 
 }
 
-@include breakpoint(lg) {
-
-  .latestProjects {
-    padding: rem(100) 0;
-  }
+@include breakpoint(sm) {
 
   .latestProjects :global {
 
@@ -88,6 +82,18 @@
       li {
         border-radius: rem(4);
       }
+
+    }
+
+  }
+
+}
+
+@include breakpoint(lg) {
+
+  .latestProjects :global {
+
+    .slick-dots {
 
       button:hover {
         background-color: rgba(255, 255, 255, 0.15);  

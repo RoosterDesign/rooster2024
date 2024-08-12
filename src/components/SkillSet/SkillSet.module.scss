@@ -1,0 +1,117 @@
+@import '@/app/mixins.scss';
+
+.skillset {
+  padding-top: 16%;
+  
+  > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .skill {
+    color: var(--white);
+    color: #01050c;
+    filter: url('#hex');
+    margin: 4% -8%;
+
+    span { // img
+      align-items: center;
+      color: red;
+      display: flex;
+      justify-content: center;
+      left: 0;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      background:currentColor;
+      padding-top: 86.6%;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      z-index: -1;    
+    } 
+
+    svg {
+      visibility: hidden;
+      position: absolute;
+    }
+
+    &:nth-child(3n+2) {
+      transform: translateY(-50%);
+    }
+
+  }
+
+}
+
+@include breakpoint(sm) {
+
+  .skillset {
+  
+    > div {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .skill {
+
+      &:nth-child(3n+2) {
+        transform: none;
+      }
+
+      &:nth-child(even),
+      &:nth-child(21) {
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(21) {
+        grid-column: 2;
+      }
+
+    }
+
+  }
+
+}
+
+@include breakpoint(md) {
+
+  .skillset {
+  
+    > div {
+      grid-template-columns: repeat(9, 1fr);
+    }
+
+    .skill {
+
+      &:nth-child(even) {
+        transform: none;
+      }
+
+      &:nth-child(1),
+      &:nth-child(3),
+      &:nth-child(even):nth-child(n+6):nth-child(-n+20),
+      &:nth-child(21) {
+        transform: translateY(-50%);
+      }
+      
+      &:nth-child(5) {
+        grid-column: 2;
+      }
+      
+      &:nth-child(n+12):nth-child(-n+20) {
+        grid-row: 3 / 4;
+      }
+  
+      &:nth-child(21) {
+        grid-column: 5;
+      }
+
+    }
+
+  }
+
+}

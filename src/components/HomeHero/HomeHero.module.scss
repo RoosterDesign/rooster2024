@@ -23,8 +23,6 @@
   flex-direction: column;
 
   p {
-    // font-size: rem(16);
-    // line-height: var(--p-line-height);
     margin-bottom: rem(32);
   }
 
@@ -49,16 +47,9 @@
   .downloadCv {
     max-width: rem(500);
     margin: 0 auto;
-
-    // p {
-    //   font-size: rem(24);
-    // }
-
   }
 
 }
-
-
 
 @include breakpoint(md) {
 
@@ -85,11 +76,6 @@
     max-width: none;
     margin: 0;
 
-    // p {
-    //   font-size: rem(16);
-    //   margin-bottom: rem(32);
-    // }
-
     a {
       align-self: flex-start;
     }
@@ -114,14 +100,10 @@
 
   .downloadCv {
     margin-bottom: rem(-80);
-
-    // p {
-    //   font-size: var(--p-font-size);
-    // }
-
   }
 
 }
+
 @include breakpoint(xl) {
 
   .homeHero {
@@ -133,6 +115,34 @@
     > div {
       grid-template-columns: minmax(0, rem(900)) rem(330);
     } 
+
+  }
+
+}
+
+@include breakpoint(xxl) {
+
+  .homeHero {
+
+    h1 {
+      font-size: rem(72);
+    }
+
+    > div {
+      grid-template-columns: minmax(0, rem(1100)) rem(330);
+    } 
+
+  }
+
+}
+
+@include breakpoint(xxxl) {
+
+  .homeHero {
+
+    h1 {
+      font-size: rem(80);
+    }
 
   }
 

@@ -1,0 +1,84 @@
+@import '@/app/mixins.scss';
+
+.testimonials {
+
+  > div {
+    display: grid;
+    gap: rem(75);
+  }
+
+}
+
+@include breakpoint(sm) {
+
+  .testimonials {
+    max-width: rem(600);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@include breakpoint(md) {
+
+  .testimonials {
+
+    > div {
+      gap: rem(90);
+    }
+
+    blockquote:nth-child(odd) {
+      transform: translateX(rem(-100));
+    }
+    
+    blockquote:nth-child(even) {
+      transform: translateX(rem(100));
+    }
+  
+  }
+
+}
+
+@include breakpoint(lg) {
+
+  .testimonials {
+    max-width: rem(700);
+
+    > div {
+      gap: rem(120);
+    }
+
+  }
+
+}
+
+@include breakpoint(xl) {
+
+  .testimonials {
+    max-width: none;
+
+    > div {
+      gap: rem(90);
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    blockquote:nth-child(odd),
+    blockquote:nth-child(even) {
+      transform: none;
+    }
+  
+  }
+
+}
+
+@include breakpoint(xxl) {
+
+  .testimonials {
+
+    > div {
+      gap: rem(150);
+    }
+  
+  }
+
+}

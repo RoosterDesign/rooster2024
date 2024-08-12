@@ -1,14 +1,13 @@
 @import '@/app/mixins.scss';
 
 .clientLogos {
-  padding: rem(60) 0;
-}
 
-.clientLogosList {
-  align-items: center;
-  display: grid;
-  gap: rem(50);
-  grid-template-columns: repeat(2, 1fr);
+  > div {
+    align-items: center;
+    display: grid;
+    gap: rem(50);
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   img {
     height: auto;
@@ -24,12 +23,12 @@
 @include breakpoint(sm) {
 
   .clientLogos {
-    padding: rem(80) 0;
-  }
 
-  .clientLogosList {
-    gap: rem(60) rem(50);
-    grid-template-columns: repeat(4, 1fr);
+    > div {
+      gap: rem(60) rem(50);
+      grid-template-columns: repeat(4, 1fr);
+    }
+
   }
 
 }
@@ -37,36 +36,35 @@
 @include breakpoint(md) {
 
   .clientLogos {
-    padding: rem(100) 0;
-  }
 
-  .clientLogosList {
-    gap: rem(70) rem(50);    
-  }
+    > div {
+      gap: rem(70) rem(50);    
+    }
 
-}
-
-@include breakpoint(lg) {
-
-  .clientLogos {
-    padding: rem(200) 0 rem(100);
   }
 
 }
 
 @include breakpoint(xl) {
 
-  .clientLogosList {
-    grid-template-columns: repeat(6, 1fr);
+  .clientLogos {
+
+    > div {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
   }
 
 }
 
 @include breakpoint(xxl) {
 
-  .clientLogosList {
-    gap: rem(120) rem(90);
-    grid-template-columns: repeat(6, 1fr);
+  .clientLogos {
+
+    > div {
+      gap: rem(120) rem(90);
+      grid-template-columns: repeat(6, 1fr);
+    }
 
     img {
       max-width: rem(200);

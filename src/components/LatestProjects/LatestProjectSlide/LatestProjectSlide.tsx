@@ -21,7 +21,7 @@ export default function LatestProjectSlide( { type, name, synopsis, link, image 
         <Button url={link} reverse>View Project</Button>
       </div>
         <div className={styles.projectDetailsMask}></div>
-        <Image src={image} alt="" />
+        <Image src={image} alt="" placeholder="blur" />
     </div>
   )
 }

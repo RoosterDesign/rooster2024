@@ -43,3 +43,11 @@
   }
 
 }
+
+@include breakpoint(xxxl) {
+
+  .button {
+    font-size: rem(20);
+  }
+
+}

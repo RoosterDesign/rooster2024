@@ -83,7 +83,7 @@ export default function LatestProjects() {
   };
 
   return (        
-    <section className={`${styles.latestProjects} ${isEnabled ? 'hoverEnabled' : ''}`} >
+    <section className={`${styles.latestProjects} ${isEnabled ? 'hoverEnabled' : ''} block`} >
       <Container>
         <Slider {...carouselSettings} >          
           {clients.map((client, index) =>

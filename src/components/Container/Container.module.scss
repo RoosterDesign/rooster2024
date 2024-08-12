@@ -6,6 +6,14 @@
   width: 100%;
 }
 
+@include breakpoint(sm) {
+
+  .container {
+    max-width: rem(680);
+  }
+
+}
+
 @include breakpoint(md) {
 
   .container {

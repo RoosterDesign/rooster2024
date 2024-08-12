@@ -264,3 +264,16 @@
   }
   
 }
+
+@include breakpoint(xxxl) {
+
+  .navLinks {
+    gap: rem(75);
+
+    a {
+      font-size: rem(20);
+    }
+
+  }
+
+}

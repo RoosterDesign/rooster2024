@@ -5,7 +5,8 @@
     //= Colours
 
     --white: #fff;
-    --dark-blue: #030F1E; 
+    --dark-blue: #030F1E;
+    --darker-blue: #01050c;
     --pink: #F21483;
 
     --bg: var(--dark-blue);
@@ -70,15 +71,6 @@ h1, h2 {
   font-weight: var(--fw-bold);
 }
 
-h1 {  
-
-}
-
-h2 {
-  font-size: rem(20);
-  line-height: rem(32);
-}
-
 p {
   font-size: rem(16);
   line-height: 1.75;
@@ -101,14 +93,14 @@ strong {
 
 @include breakpoint(sm) {
 
+  .block {
+    margin-top: rem(150);
+    margin-bottom: rem(150);
+  }
+
 }
 
 @include breakpoint(md) {
-
-  h2 {
-    font-size: rem(26);
-    line-height: rem(40);
-  }
 
   .block {
     margin-top: rem(150);
@@ -121,25 +113,13 @@ strong {
 
   p {
     font-size: rem(18);
+    line-height: 1.9;
+    margin-bottom: rem(30);
   }
 
 }
 
 @include breakpoint(xl) {
-
-  .block {
-    margin-top: rem(200);
-    margin-bottom: rem(200);
-  }
-
-}
-
-@include breakpoint(xxl) {
-
-  h2 {
-    font-size: rem(32);
-    line-height: rem(48);
-  }
 
   .block {
     margin-top: rem(250);
@@ -148,21 +128,22 @@ strong {
 
 }
 
+@include breakpoint(xxl) {
 
-@include breakpoint(xxxl) {
-
-  h2 {
-    font-size: rem(40);
-    line-height: rem(54);
-  }
-
-  p {
-    font-size: rem(20);
-    line-height: 1.9;
-    margin-bottom: rem(30);
+  .block {
+    margin-top: rem(300);
+    margin-bottom: rem(300);
   }
 
 }
+
+// @include breakpoint(xxxl) {
+
+//   p {
+//     font-size: rem(20);    
+//   }
+
+// }
 
 
 

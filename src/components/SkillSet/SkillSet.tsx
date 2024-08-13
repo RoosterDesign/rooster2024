@@ -1,21 +1,54 @@
+import { StaticImageData } from 'next/image';
+import LinkIcon from '@/components/LinkIcon/LinkIcon';
+import Heading from '@/components/Heading/Heading';
+import Container from '@/components/Container/Container';
+import SkillLogo from './SkillLogo/SkillLogo'
 import styles from './SkillSet.module.scss';
 
-import Container from '@/components/Container/Container';
+import html5 from './images/html5.svg';
+import css3 from './images/css3.svg';
+import less from './images/less.svg';
+import sass from './images/sass.svg';
+import tailwind from './images/tailwind.svg';
+import w3c from './images/w3c.svg';
+import javascript from './images/javascript.svg';
+import react from './images/react.svg';
+import typescript from './images/typescript.svg';
+import gatsby from './images/gatsby.svg';
+import nextJs from './images/nextJs.svg';
+import vue from './images/vue.svg';
+import jquery from './images/jquery.svg';
+import umbraco from './images/umbraco.svg';
+import wordpress from './images/wordpress.svg';
+import php from './images/php.svg';
+import git from './images/git.svg';
+import devops from './images/devops.svg';
+import figma from './images/figma.svg';
+import photoshop from './images/photoshop.svg';
 
 export default function Skillset() {
 
-  const logos: string[] = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21'];
-
+  const logos: StaticImageData[] = [html5, css3, less, sass, react, tailwind, javascript, typescript, nextJs, gatsby, vue, jquery, w3c, umbraco, wordpress, php, git, devops, photoshop, figma];
 
   return (
     <>
-      <section className={`${styles.skillset}`}>
+      <section className={`${styles.skillset} block`}>
         <Container>
 
-          {logos.map((index) => (
-            <div className={styles.skill} key={index}><span>{index}</span></div>
-          ))}
-                    
+          <div className={styles.intro}>
+            <Heading title="Skillset" />
+            <p>I am always learning new skills and technologies through my own projects, freelancing and courses. I find this helps with settling in to new find this helps with settling in find this helps with settling in find this helps with settling incontract roles and being able to bring new development practices to the table.&nbsp;&nbsp; <LinkIcon url={`#`} label="Find out more" /></p>
+          </div>
+
+          <div className={styles.logoGrid}>
+            {logos.map((logo, index) => (
+              // <div className={styles.skill} key={index}>
+              //   <Image src={logo} alt="" />
+              // </div>
+              <SkillLogo logo={logo} key={index} />
+            ))}
+          </div>
+          
         </Container>
       </section>
 

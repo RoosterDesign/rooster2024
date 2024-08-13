@@ -1,0 +1,38 @@
+@import '@/app/mixins.scss';
+
+.heading {
+  display: flex;
+  font-size: rem(48);
+  line-height: 1.25;
+  margin-bottom: rem(24);
+
+  &:before {
+    align-self: flex-end;
+    background-color: var(--accent);
+    content: '';
+    display: block;
+    flex-shrink: 0;
+    height: rem(4);
+    margin-right: rem(10);
+    transform: translateY(rem(-13));
+    position: relative;
+    width: rem(30);
+  }
+
+}
+
+@include breakpoint(lg) {
+
+  .heading {
+    font-size: rem(64);
+    margin-bottom: rem(32);
+
+    &:before {
+      height: rem(6);
+      width: rem(40);
+    }
+
+  }
+
+}
+

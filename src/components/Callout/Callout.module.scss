@@ -6,40 +6,37 @@
     position: relative;
   }
 
-  .calloutImage {
-    border-radius: rem(4) rem(4) 0 0;
-    display: block;
-    height: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-  
-  .calloutContent {
-    background: var(--white);
-    border-radius: 0 0 rem(4) rem(4);
-    color: var(--dark-blue);
-    padding: rem(40) rem(30);
-
-    h2 {
-      margin-bottom: rem(20);
-    }
-
+  h2 {
+    font-size: rem(20);
+    line-height: rem(32);
+    margin-bottom: rem(20);
   }
 
 }
 
+.calloutImage {
+  border-radius: rem(4) rem(4) 0 0;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.calloutContent {
+  background: var(--white);
+  border-radius: 0 0 rem(4) rem(4);
+  color: var(--dark-blue);
+  padding: rem(40) rem(30);
+}
+
 @include breakpoint(sm) {
   
-  .callout {
+  .calloutImage {
+    height: rem(400);
+  }
 
-    .calloutImage {
-      height: rem(400);
-    }
-
-    .calloutContent {      
-      padding: rem(40);
-    }
-
+  .calloutContent {      
+    padding: rem(40);
   }
 
 }
@@ -49,24 +46,29 @@
 
   .callout {
 
-    .calloutImage,
-    .calloutContent {
-      border-radius: rem(4);
+    h2 {
+      font-size: rem(26);
+      line-height: rem(40);
     }
 
-    .calloutImage {
-      height: auto;
-      width: 60%;
-    }
+  }
 
-    .calloutContent {
-      padding: rem(60);      
-      position: absolute;
-      right: 0;
-      top: rem(60);
-      width: 55%;
-    }
+  .calloutImage,
+  .calloutContent {
+    border-radius: rem(4);
+  }
 
+  .calloutImage {
+    height: auto;
+    width: 60%;
+  }
+
+  .calloutContent {
+    padding: rem(60);      
+    position: absolute;
+    right: 0;
+    top: rem(60);
+    width: 55%;
   }
 
 }
@@ -75,22 +77,21 @@
 
   .callout {
 
-    .calloutImage {
-      max-width: 100%;
-      width: auto;
+    h2 {
+      margin-bottom: rem(30);
     }
 
-    .calloutContent {
-      max-width: rem(800);
-      top: rem(100);
-      width: auto;
+  }
 
-      h2 {
-        margin-bottom: rem(30);
-      }
-      
-    }
+  .calloutImage {
+    max-width: 100%;
+    width: auto;
+  }
 
+  .calloutContent {
+    max-width: rem(800);
+    top: rem(100);
+    width: auto;
   }
 
 }
@@ -98,16 +99,30 @@
 @include breakpoint(xxl) {
 
   .callout {
+    
+    h2 {
+      font-size: rem(32);
+      line-height: rem(48);
+      margin-bottom: rem(40);
+    }
 
-    .calloutContent {
-      max-width: rem(850);
-      padding: rem(90) rem(70);
-      right: rem(60);
+  }
 
-      h2 {
-        margin-bottom: rem(40);
-      }
+  .calloutContent {
+    max-width: rem(850);
+    padding: rem(90) rem(70);
+    right: rem(60);
+  }
 
+}
+
+@include breakpoint(xxxl) {
+
+  .callout {
+
+    h2 {
+      font-size: rem(40);
+      line-height: rem(54);
     }
 
   }

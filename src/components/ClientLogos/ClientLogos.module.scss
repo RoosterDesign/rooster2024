@@ -11,10 +11,17 @@
 
   img {
     height: auto;
-    max-width: rem(150);
-    max-height: rem(40);
-    width: 100%;
+    opacity: .5;
     margin: 0 auto;
+    max-width: rem(150);
+    max-height: rem(40);    
+    transition: opacity .3s ease;
+    width: 100%;    
+
+    &:hover {
+      opacity: 1;
+    }
+
   }
 
 }
@@ -23,6 +30,8 @@
 @include breakpoint(sm) {
 
   .clientLogos {
+    margin-top: rem(100);
+    margin-bottom: 0;
 
     > div {
       gap: rem(60) rem(50);
@@ -36,6 +45,7 @@
 @include breakpoint(md) {
 
   .clientLogos {
+    margin-top: rem(150);
 
     > div {
       gap: rem(70) rem(50);    
@@ -48,6 +58,7 @@
 @include breakpoint(xl) {
 
   .clientLogos {
+    margin-top: rem(200);
 
     > div {
       grid-template-columns: repeat(6, 1fr);

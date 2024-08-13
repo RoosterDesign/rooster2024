@@ -1,74 +1,34 @@
 @import '@/app/mixins.scss';
 
-.skillset {
-  padding-top: 16%;
-  
-  > div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .skill {
-    color: var(--white);
-    color: #01050c;
-    filter: url('#hex');
-    margin: 4% -8%;
+.intro {
+  margin-bottom: rem(60);  
+}
 
-    span { // img
-      align-items: center;
-      color: red;
-      display: flex;
-      justify-content: center;
-      left: 0;
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 100%;
-    }
+.logoGrid {
+  display: grid;  
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 15%;
 
-    &:before {
-      content: "";
-      display: block;
-      background:currentColor;
-      padding-top: 86.6%;
-      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      z-index: -1;    
-    } 
-
-    svg {
-      visibility: hidden;
-      position: absolute;
-    }
-
-    &:nth-child(3n+2) {
-      transform: translateY(-50%);
-    }
-
+  div:nth-child(3n+2) {
+    transform: translateY(-50%);
   }
 
 }
 
 @include breakpoint(sm) {
 
-  .skillset {
-  
-    > div {
-      grid-template-columns: repeat(4, 1fr);
-    }
+  .logoGrid {
+    grid-template-columns: repeat(4, 1fr);    
+    padding-top: 11%;
 
-    .skill {
+    div {
 
       &:nth-child(3n+2) {
         transform: none;
       }
-
-      &:nth-child(even),
-      &:nth-child(21) {
+  
+      &:nth-child(even){
         transform: translateY(-50%);
-      }
-
-      &:nth-child(21) {
-        grid-column: 2;
       }
 
     }
@@ -80,38 +40,64 @@
 @include breakpoint(md) {
 
   .skillset {
-  
+
     > div {
-      grid-template-columns: repeat(9, 1fr);
+      align-items: flex-end;
+      display: grid;
     }
 
-    .skill {
+  }
+
+  .intro {
+    justify-self: flex-end;
+    grid-column: 2;
+    grid-row: 1;
+    max-width: 50%;
+    margin-bottom: 34%;
+    z-index: 1;
+  }
+  
+  .logoGrid {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    grid-template-columns: repeat(9, 1fr);
+    padding-top: 0;
+    
+    div {
 
       &:nth-child(even) {
         transform: none;
       }
 
-      &:nth-child(1),
-      &:nth-child(3),
-      &:nth-child(even):nth-child(n+6):nth-child(-n+20),
-      &:nth-child(21) {
-        transform: translateY(-50%);
+      &:nth-child(even):nth-child(n+2):nth-child(-n+4),
+      &:nth-child(odd):nth-child(n+7):nth-child(-n+13),
+      &:nth-child(even):nth-child(n+14):nth-child(-n+20)
+      { transform: translateY(-50%);
       }
-      
-      &:nth-child(5) {
+
+      &:nth-child(1) {
         grid-column: 2;
       }
-      
-      &:nth-child(n+12):nth-child(-n+20) {
-        grid-row: 3 / 4;
+
+      &:nth-child(n+2):nth-child(-n+5) {
+        grid-row: 2;
       }
-  
-      &:nth-child(21) {
-        grid-column: 5;
+
+      &:nth-child(6) {
+        grid-column: 2;
       }
 
     }
 
+  }
+
+}
+
+
+@include breakpoint(xl) {
+
+  .intro {
+    margin-bottom: 38%;
   }
 
 }

@@ -15,7 +15,7 @@ import javascript from './images/javascript.svg';
 import react from './images/react.svg';
 import typescript from './images/typescript.svg';
 import gatsby from './images/gatsby.svg';
-import nextJs from './images/nextJs.svg';
+import nextJs from './images/nextjs.svg';
 import vue from './images/vue.svg';
 import jquery from './images/jquery.svg';
 import umbraco from './images/umbraco.svg';

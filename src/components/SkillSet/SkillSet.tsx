@@ -42,9 +42,6 @@ export default function Skillset() {
 
           <div className={styles.logoGrid}>
             {logos.map((logo, index) => (
-              // <div className={styles.skill} key={index}>
-              //   <Image src={logo} alt="" />
-              // </div>
               <SkillLogo logo={logo} key={index} />
             ))}
           </div>

@@ -16,14 +16,16 @@
     -webkit-overflow-scrolling: touch;
     padding-bottom: rem(30);
 
-    > div {
+    >div,
+    > a {
       scroll-snap-align: center;
       flex: 0 0 auto;
       margin-right: var(--container-padding);
       width: 80vw;
     }
 
-    > div:first-child {
+    >div,
+    > a:first-child {
       margin-left: var(--container-padding);
     }
 

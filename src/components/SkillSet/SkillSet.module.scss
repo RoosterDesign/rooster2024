@@ -1,7 +1,7 @@
 @import '@/app/mixins.scss';
 
-.intro {
-  margin-bottom: rem(60);  
+.skillset > div > div:first-child {
+  margin-bottom: rem(60);
 }
 
 .logoGrid {
@@ -48,11 +48,9 @@
 
   }
 
-  .intro {
-    justify-self: flex-end;
+  .skillset > div > div:first-child {
     grid-column: 2;
-    grid-row: 1;
-    max-width: 50%;
+    grid-row: 1;    
     margin-bottom: 34%;
     z-index: 1;
   }
@@ -96,7 +94,7 @@
 
 @include breakpoint(xl) {
 
-  .intro {
+  .skillset > div > div:first-child {
     margin-bottom: 38%;
   }
 

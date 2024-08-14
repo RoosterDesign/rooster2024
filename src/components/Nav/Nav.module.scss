@@ -42,7 +42,7 @@
 
   .navWrap {
     align-items: center;
-    bottom: rem(50);
+    bottom: rem(20);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,16 +54,14 @@
   }
 
   .nav {
-    // align-items: flex-start;
     background: var(--white);
     border-radius: rem(8);  
-    bottom: -100vh;    
-    // flex-direction: column;
-    left: rem(16);
+    bottom: -100vh;
+    left:  var(--container-padding);
     opacity: 0;
     padding: rem(30) rem(40) rem(70);
     position: absolute;  
-    right: rem(16);
+    right:  var(--container-padding);
     transition: all .5s ease;
   
     a {
@@ -90,15 +88,21 @@
     border-radius: rem(30);
     box-shadow: 0 rem(5) rem(30) rgba(0, 0, 0, 0.1);
     display: flex;
-    height: rem(60);
+    height: rem(50);
     justify-content: space-between;
-    padding: 0 rem(25);
+    padding: 0 rem(22);
     position: relative;    
     transition: opacity .5s ease;
-    width: rem(200);
+    width: rem(180);
   
     a {
       transition: opacity .2s ease-in-out;
+
+      svg {
+        height: auto;
+        width: rem(22);
+      }
+
     }
 
   }
@@ -111,11 +115,11 @@
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    height: rem(70);
+    height: rem(60);
     margin: 0;
     padding: 0;
     position: relative;
-    width: rem(70);
+    width: rem(60);
   
     span {    
       background: var(--dark-blue);
@@ -128,16 +132,16 @@
       width: rem(24);    
   
       &:nth-child(1) {
-        top: rem(23);
+        top: rem(18);
       }
   
       &:nth-child(2),
       &:nth-child(3) {
-        top: rem(33);
+        top: rem(28);
       }
   
       &:nth-child(4) {
-        top: rem(43);
+        top: rem(38);
       }
   
     }
@@ -268,7 +272,7 @@
 @include breakpoint(xxxl) {
 
   .navLinks {
-    gap: rem(75);
+    gap: rem(80);
 
     a {
       font-size: rem(20);

@@ -4,6 +4,7 @@ import { poppins, permanent_marker } from '@/app/fonts'
 import type { Metadata } from "next";
 
 import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,14 +13,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" className={`${poppins.variable} ${permanent_marker.variable}`}>
       <body>
           <Header />
           {children}
+          <Footer />
 
           <div className="bp-helper bp-helper--base">BASE</div>
           <div className="bp-helper bp-helper--sm">SM</div>

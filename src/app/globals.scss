@@ -6,7 +6,7 @@
 
     --white: #fff;
     --dark-blue: #030F1E;
-    --darker-blue: #01050c;
+    --darker-blue: #01060D;
     --pink: #F21483;
 
     --bg: var(--dark-blue);
@@ -38,6 +38,11 @@
     --button-alt-colour: var(--accent);
     --button-alt-hover-bg: var(--accent);
     --button-alt-hover-colour: var(--white);
+
+
+    //= Layout
+
+    --container-padding: 20px;
 
     
 }
@@ -87,8 +92,25 @@ strong {
 }
 
 .block {
-  margin-top: rem(75);
-  margin-bottom: rem(75);
+  margin-top: rem(80);
+  margin-bottom: rem(80);
+}
+
+.textLink {
+  color: var(--accent);
+  font-weight: var(--fw-bold);
+  text-decoration: underline;
+  text-underline-offset: rem(8);
+  transition: .2s color ease;
+
+  &:hover {
+    color: var(--white);
+  }
+
+  &--alt:hover {
+    color: var(--dark-blue);
+  }
+
 }
 
 @include breakpoint(sm) {

@@ -1,3 +1,4 @@
+import Container from '@/components/Container/Container';
 import HomeHero from '@/components/HomeHero/HomeHero';
 import ClientLogos from '@/components/ClientLogos/ClientLogos';
 import LatestProjects from '@/components/LatestProjects/LatestProjects';
@@ -5,8 +6,15 @@ import Callout from '@/components/Callout/Callout';
 import Testimonials from '@/components/Testimonials/Testimonials';
 import Cite from '@/components/Cite/Cite';
 import Skillset from '@/components/SkillSet/SkillSet';
-
+import LinkIcon from '@/components/LinkIcon/LinkIcon';
 import neilHeadshot from '../../public/neil-headshot.jpg';
+import IntroBlock from '@/components/IntroBlock/IntroBlock';
+import CardsList from '@/components/CardsList/CardsList';
+import Card from '@/components/Card/Card';
+
+import contracting from '../../public/icons/contracting.svg';
+import outsourcing from '../../public/icons/outsourcing.svg';
+import freelance from '../../public/icons/freelance.svg';
 
 export default function Home() {
   return (
@@ -26,16 +34,26 @@ export default function Home() {
 
       <Testimonials />
 
-      <Skillset />
-      
-      <footer>
-        <p>ad nskjfnh dskjhf nksjdhf jsdhf kjsdhf jksdhf jksdhf jkdshf jkdshf</p>
-        <p>ad nskjfnh dskjhf nksjdhf jsdhf kjsdhf jksdhf jksdhf jkdshf jkdshf</p>
-        <p>ad nskjfnh dskjhf nksjdhf jsdhf kjsdhf jksdhf jksdhf jkdshf jkdshf</p>
-        <p>ad nskjfnh dskjhf nksjdhf jsdhf kjsdhf jksdhf jksdhf jkdshf jkdshf</p>
-        <p>ad nskjfnh dskjhf nksjdhf jsdhf kjsdhf jksdhf jksdhf jkdshf jkdshf</p>
-        <p>ad nskjfnh dskjhf nksjdhf jsdhf kjsdhf jksdhf jksdhf jkdshf jkdshf</p>
-      </footer>
+      <Skillset>
+        <IntroBlock title={`Skillset`} alignRight>
+          <p>I am always learning new skills and technologies through my own projects, freelancing and courses. I find this helps with settling in to new find this helps with settling in find this helps with settling in find this helps with settling incontract roles and being able to bring new development practices to the table.&nbsp;&nbsp; <LinkIcon url={`#`} label="Find out more" /></p>
+        </IntroBlock>
+      </Skillset>
+
+
+      <section className={`block`}>
+        <Container>
+          <IntroBlock title={`Services`}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis nulla, venenatis vitae eleifend in, efficitur sit amet dolor etiam ultricies metus quis nisi imperdiet.</p>
+          </IntroBlock>          
+          <CardsList>
+            <Card icon={contracting} title={`Contracting`} body={`Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Nunc eu sapien ipsum adipiscing.`} link={`#`} />
+            <Card icon={outsourcing} title={`Outsourcing`} body={`Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Nunc eu sapien ipsum adipiscing.`} link={`#`} />
+            <Card icon={freelance} title={`Freelance`} body={`Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Nunc eu sapien ipsum adipiscing.`} link={`#`} />
+          </CardsList>
+        </Container>
+
+      </section>
 
     </>
   );

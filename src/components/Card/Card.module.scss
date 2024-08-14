@@ -1,0 +1,56 @@
+@import '@/app/mixins.scss';
+
+.card {
+  background: var(--white);
+  border-radius: rem(4);
+  color: var(--dark-blue);
+  padding: rem(30);
+
+  .icon {
+    height: auto;
+    margin-bottom: rem(20);
+    width: rem(40);
+  }
+
+  h3 {
+    font-size: rem(24);
+    font-weight: var(--fw-bold);
+    margin-bottom: rem(15);
+  }
+
+}
+
+@include breakpoint(md) {
+
+  .card {
+
+    .icon {
+      margin-bottom: rem(30);
+    }
+
+  }
+
+}
+
+@include breakpoint(lg) {
+
+  .card {
+    padding: rem(40);
+  }
+
+}
+
+
+@include breakpoint(xl) {
+
+  .card {
+    padding: rem(50);
+
+    h3 {
+      font-size: rem(32);
+      margin-bottom: rem(20);
+    }
+
+  }
+
+}

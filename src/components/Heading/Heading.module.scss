@@ -2,21 +2,30 @@
 
 .heading {
   display: flex;
-  font-size: rem(48);
+  font-size: rem(40);
   line-height: 1.25;
-  margin-bottom: rem(24);
+  margin-bottom: rem(16);
+}
 
-  &:before {
-    align-self: flex-end;
-    background-color: var(--accent);
-    content: '';
-    display: block;
-    flex-shrink: 0;
-    height: rem(4);
-    margin-right: rem(10);
-    transform: translateY(rem(-13));
-    position: relative;
-    width: rem(30);
+@include breakpoint(sm) {
+
+  .heading {
+    font-size: rem(48);
+    margin-bottom: rem(24);
+
+    &:before {
+      align-self: flex-end;
+      background-color: var(--accent);
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      height: rem(4);
+      margin-right: rem(10);
+      transform: translateY(rem(-13));
+      position: relative;
+      width: rem(30);
+    }
+
   }
 
 }

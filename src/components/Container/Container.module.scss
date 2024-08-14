@@ -2,7 +2,9 @@
 
 .container {
   margin: 0 auto;
-  padding: 0 rem(16);
+  // padding: 0 rem(16);
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
   width: 100%;
 }
 

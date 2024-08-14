@@ -25,8 +25,9 @@ import git from './images/git.svg';
 import devops from './images/devops.svg';
 import figma from './images/figma.svg';
 import photoshop from './images/photoshop.svg';
+import React from 'react';
 
-export default function Skillset() {
+export default function Skillset({children} : { children : React.ReactNode}) {
 
   const logos: StaticImageData[] = [html5, css3, less, sass, react, tailwind, javascript, typescript, nextJs, gatsby, vue, jquery, w3c, umbraco, wordpress, php, git, devops, photoshop, figma];
 
@@ -35,21 +36,25 @@ export default function Skillset() {
       <section className={`${styles.skillset} block`}>
         <Container>
 
-          <div className={styles.intro}>
-            <Heading title="Skillset" />
+          {children}
+
+          {/* <div className={styles.intro}>
+            <Heading title={`Skillset`} />
             <p>I am always learning new skills and technologies through my own projects, freelancing and courses. I find this helps with settling in to new find this helps with settling in find this helps with settling in find this helps with settling incontract roles and being able to bring new development practices to the table.&nbsp;&nbsp; <LinkIcon url={`#`} label="Find out more" /></p>
-          </div>
+          </div> */}
 
           <div className={styles.logoGrid}>
             {logos.map((logo, index) => (
               <SkillLogo logo={logo} key={index} />
             ))}
           </div>
+
+          <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg"><defs><filter id="hex"><feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/><feColorMatrix in="blur" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 19 -9" result="hex"/><feComposite in="SourceGraphic" in2="hex" operator="atop"/></filter></defs></svg>
           
         </Container>
       </section>
 
-      <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg"><defs><filter id="hex"><feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/><feColorMatrix in="blur" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 19 -9" result="hex"/><feComposite in="SourceGraphic" in2="hex" operator="atop"/></filter></defs></svg>
+      
     </>
   )
 }

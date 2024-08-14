@@ -1,19 +1,11 @@
 @import '@/app/mixins.scss';
 
 .linkIcon {
-  align-items: center;
-  color: var(--accent);
-  font-weight: var(--fw-bold);  
-  text-decoration: underline;
-  text-underline-offset: rem(8);  
+  align-items: center;  
   display: inline-flex;
 
   svg {
     margin-left: rem(10);
   }
-
-  &:hover {
-    color: var(--white);
-  }
-
+  
 }

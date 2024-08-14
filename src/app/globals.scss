@@ -107,23 +107,8 @@ strong {
     transition: stroke .2s ease;
   }
 
-  &:hover:not(.textLink--faux) {
-    color: var(--white);
-  }
-
-  &:hover:not(.textLink--faux) svg path {
-    stroke: var(--white);
-  }
-
-  &--alt:hover {
-    color: var(--dark-blue);
-  }
-
-  &--alt:hover svg path {
-    stroke: var(--dark-blue);
-  }
-
 }
+
 
 @include breakpoint(sm) {
 
@@ -170,6 +155,33 @@ strong {
   }
 
 }
+
+
+@media not all and (hover: none) {
+
+  .textLink {
+
+    &:hover:not(.textLink--faux) {
+      color: var(--white);
+    }
+
+    &:hover:not(.textLink--faux) svg path {
+      stroke: var(--white);
+    }
+
+    &--alt:hover {
+      color: var(--dark-blue);
+    }
+
+    &--alt:hover svg path {
+      stroke: var(--dark-blue);
+    }
+
+  }
+
+}
+
+
 
 // @include breakpoint(xxxl) {
 

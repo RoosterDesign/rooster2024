@@ -15,11 +15,18 @@
   text-decoration: none;
   text-transform: uppercase;
   transition: var(--hover-transition);
+}
 
-  &:hover {
-    background: var(--button-hover-bg);
-    color: var(--button-hover-colour);
-    transform: scale(1.03);
+@media not all and (hover: none) {
+
+  .button {
+
+    &:hover {
+      background: var(--button-hover-bg);
+      color: var(--button-hover-colour);
+      transform: scale(1.03);
+    }
+    
   }
 
 }

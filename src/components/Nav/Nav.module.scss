@@ -212,7 +212,6 @@
 
 }
 
-
 @include breakpoint(md) {
 
   .nav {
@@ -233,11 +232,6 @@
       color: var(--white);
       font-size: rem(16);
       transition: var(--hover-transition);
-
-      &:hover {
-        color: var(--accent);
-      }
-
     }
 
     .active {
@@ -276,6 +270,19 @@
 
     a {
       font-size: rem(20);
+    }
+
+  }
+
+}
+
+
+@media not all and (hover: none) {
+
+  .navLinks {
+
+    a:hover {
+      color: var(--accent);
     }
 
   }

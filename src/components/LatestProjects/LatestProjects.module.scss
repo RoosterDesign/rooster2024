@@ -63,12 +63,7 @@
       transition: opacity .5s ease;
   
       &:not(.slick-active) {
-        cursor: pointer;
-        
-        &:hover {
-          opacity: .4;
-        }
-  
+        cursor: pointer;  
       }
   
       &.slick-active {
@@ -91,9 +86,22 @@
 
 }
 
-@include breakpoint(lg) {
+
+@media not all and (hover: none) {
 
   .latestProjects :global {
+
+    .slick-slide {
+  
+      &:not(.slick-active) {
+        
+        &:hover {
+          opacity: .5;
+        }
+  
+      }
+  
+    }
 
     .slick-dots {
 

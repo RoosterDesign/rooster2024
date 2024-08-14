@@ -5,6 +5,21 @@
   border-radius: rem(4);
   color: var(--dark-blue);
   padding: rem(30);
+  text-decoration: none;
+  transition: transform .3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+
+    :global(.textLink--faux) {
+      color: var(--dark-blue);
+    }
+
+    :global(.textLink--faux) svg path {
+      stroke: var(--dark-blue);
+    }
+
+  }
 
   .icon {
     height: auto;

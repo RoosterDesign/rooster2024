@@ -101,14 +101,26 @@ strong {
   font-weight: var(--fw-bold);
   text-decoration: underline;
   text-underline-offset: rem(8);
-  transition: .2s color ease;
+  transition: color .2s ease;
 
-  &:hover {
+  svg path {
+    transition: stroke .2s ease;
+  }
+
+  &:hover:not(.textLink--faux) {
     color: var(--white);
+  }
+
+  &:hover:not(.textLink--faux) svg path {
+    stroke: var(--white);
   }
 
   &--alt:hover {
     color: var(--dark-blue);
+  }
+
+  &--alt:hover svg path {
+    stroke: var(--dark-blue);
   }
 
 }

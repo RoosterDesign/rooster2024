@@ -1,5 +1,24 @@
 @import '@/app/mixins.scss';
 
+@mixin animate-nth-child($total-items, $delay, $increment) {
+  @for $i from 1 through $total-items {
+    &:nth-child(#{$i}) img {
+      animation-delay: $delay + ($increment * ($i - 1));
+    }
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 .skillset > div > div:first-child {
   margin-bottom: rem(60);
 }
@@ -8,29 +27,77 @@
   display: grid;  
   grid-template-columns: repeat(3, 1fr);
   padding-top: 15%;
+}
 
-  div:nth-child(3n+2) {
+
+.skillLogo {
+  color: var(--darker-blue);
+  filter: url('#hex');
+  margin: 4% -8%;
+  position: relative;
+
+  img {
+    height: auto;
+    left: 50%;
+    max-height: 45%;
+    max-width: 50%;
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    background: currentColor;
+    padding-top: 86.6%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    z-index: -1;
+  } 
+
+  svg {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  &:nth-child(3n+2) {
     transform: translateY(-50%);
   }
 
 }
+
+.inView {
+
+  .skillLogo {
+    @include animate-nth-child(20, 0.5s, 0.1s);
+  
+    img {
+      animation: 1s popIn forwards;
+    }
+    
+  }
+
+}
+
 
 @include breakpoint(sm) {
 
   .logoGrid {
     grid-template-columns: repeat(4, 1fr);    
     padding-top: 11%;
+  }
 
-    div {
+  .skillLogo {
 
-      &:nth-child(3n+2) {
-        transform: none;
-      }
-  
-      &:nth-child(even){
-        transform: translateY(-50%);
-      }
+    &:nth-child(3n+2) {
+      transform: none;
+    }
 
+    &:nth-child(even){
+      transform: translateY(-50%);
     }
 
   }
@@ -60,33 +127,32 @@
     grid-row: 1;
     grid-template-columns: repeat(9, 1fr);
     padding-top: 0;
-    
-    div {
+  }
 
-      &:nth-child(even) {
-        transform: none;
-      }
+  .skillLogo {
 
-      &:nth-child(even):nth-child(n+2):nth-child(-n+4),
-      &:nth-child(odd):nth-child(n+7):nth-child(-n+13),
-      &:nth-child(even):nth-child(n+14):nth-child(-n+20)
-      { transform: translateY(-50%);
-      }
-
-      &:nth-child(1) {
-        grid-column: 2;
-      }
-
-      &:nth-child(n+2):nth-child(-n+5) {
-        grid-row: 2;
-      }
-
-      &:nth-child(6) {
-        grid-column: 2;
-      }
-
+    &:nth-child(even) {
+      transform: none;
     }
 
+    &:nth-child(even):nth-child(n+2):nth-child(-n+4),
+    &:nth-child(odd):nth-child(n+7):nth-child(-n+13),
+    &:nth-child(even):nth-child(n+14):nth-child(-n+20)
+    { transform: translateY(-50%);
+    }
+
+    &:nth-child(1) {
+      grid-column: 2;
+    }
+
+    &:nth-child(n+2):nth-child(-n+5) {
+      grid-row: 2;
+    }
+
+    &:nth-child(6) {
+      grid-column: 2;
+    }
+    
   }
 
 }

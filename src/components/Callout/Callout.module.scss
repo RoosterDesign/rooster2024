@@ -1,5 +1,16 @@
 @import '@/app/mixins.scss';
 
+.animate {
+  opacity: 0;
+  transform: translateY(rem(150));
+  transition: opacity 1s ease-out, transform .8s ease-out;
+}
+
+.inView {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .callout {
 
   > div {
@@ -84,8 +95,8 @@
   }
 
   .calloutImage {
-    max-width: 100%;
-    width: auto;
+    max-width: rem(880);
+    // width: auto;
   }
 
   .calloutContent {

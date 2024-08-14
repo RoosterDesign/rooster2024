@@ -6,19 +6,32 @@ interface LinkIcon {
   label: string;
   alt?: boolean;
   external?: boolean;
+  faux?: boolean;
 }
 
 const svg = <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m4.406 1.494 7.029.041m0 0 .042 7.03m-.042-7.03-9.9 9.9" stroke="#F21483" strokeWidth="2" strokeLinecap="square"/></svg>;
 
-export default function LinkIcon({url, label, alt, external}: LinkIcon) {
-  return (
-    external ?
+export default function LinkIcon({url, label, alt, external, faux}: LinkIcon) {
+
+  if(external) {
+    return (
       <a href={url} target="_blank" title={url} className={` ${styles.linkIcon} ${alt ? "textLink--alt" : ''} textLink`}>
-        {label} {svg}
+       {label} {svg}
       </a>
-    :
-      <Link href={url} className={` ${styles.linkIcon} ${alt ? "textLink--alt" : ''} textLink`} title={url}>
-        {label} {svg}  
-      </Link>
+    )
+  }
+
+  if(faux) {
+    return (
+      <span className={` ${styles.linkIcon} textLink textLink--faux`}>
+         {label} {svg}
+      </span>
+    )
+  }
+
+  return (
+    <Link href={url} className={` ${styles.linkIcon} ${alt ? "textLink--alt" : ''} textLink`} title={url}>
+      {label} {svg}  
+    </Link>
   )
 }

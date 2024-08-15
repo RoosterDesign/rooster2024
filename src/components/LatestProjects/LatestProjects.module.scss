@@ -4,6 +4,15 @@
   overflow-x: hidden;
 }
 
+.notes {
+  font-size: rem(14);
+  font-style: italic;
+  margin: rem(40) auto 0;
+  max-width: rem(1000);
+  opacity: .75;
+  text-align: center;
+}
+
 .latestProjects :global {
 
   .slick-list {
@@ -86,6 +95,13 @@
 
 }
 
+@include breakpoint(md) {
+
+  .notes {
+    font-size: rem(16);
+  }
+
+}
 
 @media not all and (hover: none) {
 

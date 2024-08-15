@@ -12,7 +12,7 @@ export default function Callout({ children, image }: Callout) {
     <section className={`${styles.callout} block`}>
       <Container>
 
-        <Image src={image} alt="Neil Dewing - Front End Developer" width={875} height={875} className={styles.calloutImage} placeholder="blur" />
+        <Image src={image} alt="Neil Dewing - Front End Developer" width={875} height={875} className={styles.calloutImage} placeholder="blur" quality={100}  />
         <div className={styles.calloutContent}>
           {children}
         </div>    

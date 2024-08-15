@@ -43,9 +43,18 @@
 
 }
 
+@include breakpoint(sm) {
+
+  .card {
+    padding: rem(50) rem(40);
+  }
+
+}
+
 @include breakpoint(md) {
 
   .card {
+    padding: rem(30);
 
     .icon {
       margin-bottom: rem(30);
@@ -59,6 +68,7 @@
 
   .card {
     padding: rem(40);
+    
   }
 
 }

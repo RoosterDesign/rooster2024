@@ -3,8 +3,8 @@ import styles from './Testimonials.module.scss';
 import Container from '@/components/Container/Container';
 import Testimonial from './Testimonial/Testimonial';
 
-import robertNash from './images/robert-nash.png';
-import davidMaidment from './images/david-maidment.png';
+import robertNash from './images/robert-nash.jpg';
+import davidMaidment from './images/david-maidment.jpg';
 import theSpa from './images/the-spa.png';
 
 export default function Testimonials() {

@@ -7,8 +7,8 @@ import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 
 export const metadata: Metadata = {
-  title: "Rooster Design Ltd",
-  description: "To do...",
+  title: "Freelance Front End Developer and UI/UX Designer based in Leamington Spa, Warwickshire",
+  description: "Freelance Front End Developer and UI/UX Designer offering outsourcing and contracting services across Warwickshire and West Midlands.",
 };
 
 export default function RootLayout({ children, }: { children: React.ReactNode; }) {

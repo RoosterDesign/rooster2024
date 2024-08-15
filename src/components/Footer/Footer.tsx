@@ -6,6 +6,9 @@ import Heading from '@/components/Heading/Heading';
 import LinkIcon from '@/components/LinkIcon/LinkIcon';
 
 export default function Footer() {
+
+  const year = new Date().getFullYear();
+
   return (
     <footer className={styles.footer}>
       <Container>
@@ -31,7 +34,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottomFooter}>
-          <p>&copy; 2024 Rooster Design Ltd <span>|</span> <Link href={`/privacy`} title={`Privacy & Legal`} className="textLink">Privacy & Legal</Link></p>
+          <p>&copy; {year} Rooster Design Ltd <span>|</span> <Link href={`/privacy`} title={`Privacy & Legal`} className="textLink">Privacy & Legal</Link></p>
           <p className={styles.small}>Rooster Design is registered in England and Wales, No: 07335844, VAT No: 996320685 <span>|</span> Registered Address: 7 Dale Close, Long Itchington, CV47 9SE</p>
         </div>
 

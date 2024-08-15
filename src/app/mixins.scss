@@ -26,16 +26,18 @@ $breakpoints: (
         max: rem(1199.98)
     ),
     xl: (
-        min: rem(1400),
+      min: rem(1400),
       max: rem(1399.98)
     ),
     xxl: (
-      min: rem(1920),
-      max: rem(1919.98)
+    //   min: rem(1920),
+    //   max: rem(1919.98)
+    min: rem(2560),
+    max: rem(2559.98)
     ),
     xxxl: (
-      min: rem(2560),
-      max: rem(2559.98)
+      min: rem(2860),
+      max: rem(2759.98)
     )
 );
 

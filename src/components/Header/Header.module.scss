@@ -4,7 +4,7 @@
     border-top: .5rem solid var(--accent);
     // height: rem(110);
     margin-bottom: rem(20);
-    padding: rem(10) 0 0;
+    padding: rem(20) 0 0;
 
     > div {
         display: flex;
@@ -18,10 +18,10 @@
     align-self: center;
     margin: 0 auto;
 
-    > img {
+    // > img {
         height: auto;
         width: rem(60);
-    }
+    // }
 
 }
 
@@ -34,9 +34,9 @@
 
     .logo {
     
-        > img {
+        // > img {
             width: rem(80);
-        }
+        // }
     
     }
 
@@ -65,7 +65,11 @@
 
 @include breakpoint(xl) {
 
-    .logo > img {
+    // .logo > img {
+    //     width: rem(100);
+    // }
+
+    .logo {
         width: rem(100);
     }
 

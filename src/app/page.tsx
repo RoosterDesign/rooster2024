@@ -41,7 +41,10 @@ export default function Home() {
 
       <Skillset>
         <IntroBlock title={`Skillset`} alignRight>
-          <p>I am always learning new skills and technologies through my own projects, freelancing and courses. I find this helps with settling in to new find this helps with settling in find this helps with settling in find this helps with settling incontract roles and being able to bring new development practices to the table.&nbsp;&nbsp; <LinkIcon url={`#`} label="Find out more" /></p>
+          {/* <p>I am always learning new skills and technologies through my own projects, freelancing and courses. I find this helps with settling in to new find this helps with settling in find this helps with settling in find this helps with settling incontract roles and being able to bring new development practices to the table.&nbsp;&nbsp; <LinkIcon url={`#`} label="Find out more" /></p> */}
+
+          <p>I am always learning new skills and technologies through my own projects, freelancing and courses. I find this helps with settling in to new find this helps with settling in find this helps with settling in find this helps with settling incontract roles and being able to bring new development practices to the table.</p>
+
         </IntroBlock>
       </Skillset>
 
@@ -53,9 +56,9 @@ export default function Home() {
           </IntroBlock>         
           <AOS>
             <CardsList>
-              <Card icon={contracting} title={`Contracting`} body={`Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Nunc eu sapien ipsum adipiscing.`} link={`#`} />
-              <Card icon={outsourcing} title={`Outsourcing`} body={`Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Nunc eu sapien ipsum adipiscing.`} link={`#`} />
-              <Card icon={freelance} title={`Freelance`} body={`Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Nunc eu sapien ipsum adipiscing.`} link={`#`} />
+              <Card icon={contracting} title={`Contracting`} body={`Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Nunc eu sapien ipsum adipiscing.`} />
+              <Card icon={outsourcing} title={`Outsourcing`} body={`Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Nunc eu sapien ipsum adipiscing.`} />
+              <Card icon={freelance} title={`Freelance`} body={`Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Nunc eu sapien ipsum adipiscing.`} />
             </CardsList>
           </AOS> 
         </Container>

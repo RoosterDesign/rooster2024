@@ -1,0 +1,47 @@
+@import '@/app/mixins.scss';
+
+.breadcrumbs {
+  display: grid;
+  gap: rem(16);
+  grid-auto-columns: min-content;
+  grid-auto-flow: column;
+  font-size: rem(16);
+  list-style: none;
+  margin: 0 0 rem(40);
+  padding: 0;
+}
+
+.crumb {
+  align-items: center;
+  display: flex;
+  text-transform: capitalize;
+}
+
+.crumb:not(.crumbCurrent) {
+
+  &:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffffff' d='m5 3 3.057-3L20 12 8.057 24 5 21l9-9z'/%3E%3C/svg%3E");  
+    background-position: 0 0;
+    background-size: cover;
+    content: '';
+    display: block;
+    height: 10px;
+    margin-left: rem(16);
+    width: 10px;
+  }
+
+}
+
+@include breakpoint(sm) {
+  
+  .breadcrumbs {
+    margin-bottom: rem(60);
+  }
+}
+
+@include breakpoint(lg) {
+  
+  .breadcrumbs {
+    margin-bottom: rem(80);
+  }
+}

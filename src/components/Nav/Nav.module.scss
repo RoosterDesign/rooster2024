@@ -217,7 +217,7 @@
   .nav {
     align-items: center;
     gap: rem(50);
-    grid-auto-columns: auto-fit;
+    // grid-auto-columns: auto-fit;
     grid-auto-flow: column;
     height: 100%;
   }
@@ -225,7 +225,7 @@
   .navLinks {
     display: grid;
     gap: rem(50);
-    grid-auto-columns: auto-fit;
+    // grid-auto-columns: auto-fit;
     grid-auto-flow: column;
 
     a {

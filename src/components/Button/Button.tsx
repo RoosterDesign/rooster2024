@@ -5,11 +5,17 @@ interface Button {
   children: React.ReactNode;
   url: string;
   reverse?: boolean;
+  external?: boolean;
 }
 
-export default function Button({ children, url, reverse }: Button) {
+export default function Button({children, url, reverse, external}: Button) {
 
   return (
-    <Link href={url} className={`${styles.button} ${reverse ? styles.buttonAlt : ''}`}>{children}</Link>
+    external ?
+      <a href={url} target="_blank" title={url} className={`${styles.button} ${reverse ? styles.buttonAlt : ''}`}>
+       {children}
+      </a>
+    :
+      <Link href={url} className={`${styles.button} ${reverse ? styles.buttonAlt : ''}`}>{children}</Link>
   )
 }

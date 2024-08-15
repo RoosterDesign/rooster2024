@@ -7,16 +7,23 @@ interface Card {
   icon: StaticImageData;
   title: string;
   body: string;
-  link: string;
+  link?: string;
 }
 
 export default function Card({icon, title, body, link}: Card) {
   return (
-    <Link href={link} className={styles.card} title={title}>
+    link ? 
+      <Link href={link} className={`${styles.card} ${styles.cardLink}`} title={title}>
+        <Image src={icon} alt={title} className={styles.icon} />
+        <h3>{title}</h3>
+        <p>{body}</p>
+        <p><LinkIcon url={``} label={`Find out more`} faux/></p>
+      </Link>
+    :    
+    <div className={styles.card} title={title}>
       <Image src={icon} alt={title} className={styles.icon} />
       <h3>{title}</h3>
       <p>{body}</p>
-      <p><LinkIcon url={``} label={`Find out more`} faux/></p>
-    </Link>
+    </div>    
   )
 }

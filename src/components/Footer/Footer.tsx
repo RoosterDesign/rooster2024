@@ -20,12 +20,12 @@ export default function Footer() {
               <p><LinkIcon url={`#`} label={`Send me an online enquiry`} /></p>
             </li> */}
             <li>
-              Send me an email
-              <p><LinkIcon url={`mailto:neil@roosterdesign.co.uk`} label={`neil@roosterdesign.co.uk`} external /></p>
+              {`Send me an email`}
+              <p><LinkIcon url={`mailto:neil@roosterdesign.co.uk`} label={`neil@roosterdesign.co.uk`} title={`Send me an email`} external /></p>
             </li>
             <li>
-              Message me on LinkedIn
-              <p><LinkIcon url={`https://www.linkedin.com/in/roosterdesign`} label={`@roosterdesign`} external /></p>
+              {`Message me on LinkedIn`}
+              <p><LinkIcon url={`https://www.linkedin.com/in/roosterdesign`} label={`@roosterdesign`} title={`Message me on LinkedIn`} external /></p>
             </li>
           </ul>
         </div>

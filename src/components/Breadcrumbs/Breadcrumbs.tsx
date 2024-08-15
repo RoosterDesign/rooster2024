@@ -13,7 +13,7 @@ export default function Breadcrumbs() {
     <nav aria-label="breadcrumb">
       <ol className={styles.breadcrumbs}>
         <li key="home" className={styles.crumb}>
-          <Link href="/" className="textLink">Home</Link>
+          <Link href="/" className="textLink" title={`Home`}>Home</Link>
         </li>
         {pathArray.map((path, index) => {
           const href = `/${pathArray.slice(0, index + 1).join('/')}`;
@@ -27,7 +27,7 @@ export default function Breadcrumbs() {
               {isLast ? (
                 path
               ) : (
-                <Link href={href}>
+                <Link href={href} title={path.replace(/-/g, ' ')}>
                   {path.replace(/-/g, ' ')}
                 </Link>
               )}

@@ -18,7 +18,7 @@ export default function LatestProjectSlide( { type, name, synopsis, link, image 
         <span>{type}</span>
         <h2>{name}</h2>
         <p>{synopsis}</p>
-        {/* <Button url={link} reverse>View Project</Button> */}
+        {/* <Button url={link} label={`View Project`} reverse /> */}
       </div>
         <div className={styles.projectDetailsMask}></div>
         <Image src={image} alt="" placeholder="blur" />

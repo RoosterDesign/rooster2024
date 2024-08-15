@@ -11,7 +11,7 @@ export default function HomeHero() {
 
         <div className={styles.downloadCv}>
           <p>I am open to contracting, freelance and outsourcing opportunities. You can download my CV below.</p>
-          <Button url="#">Download CV</Button>
+          <Button url="#" label={`Download CV`} />
         </div>
 
       </Container>

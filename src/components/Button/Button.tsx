@@ -2,20 +2,20 @@ import styles from './Button.module.scss';
 import Link from 'next/link'
 
 interface Button {
-  children: React.ReactNode;
+  label: string;
   url: string;
   reverse?: boolean;
   external?: boolean;
 }
 
-export default function Button({children, url, reverse, external}: Button) {
+export default function Button({label, url, reverse, external}: Button) {
 
   return (
     external ?
-      <a href={url} target="_blank" title={url} className={`${styles.button} ${reverse ? styles.buttonAlt : ''}`}>
-       {children}
+      <a href={url} target="_blank" title={label} className={`${styles.button} ${reverse ? styles.buttonAlt : ''}`}>
+       {label}
       </a>
     :
-      <Link href={url} className={`${styles.button} ${reverse ? styles.buttonAlt : ''}`}>{children}</Link>
+      <Link href={url} className={`${styles.button} ${reverse ? styles.buttonAlt : ''}`} title={label}>{label}</Link>
   )
 }

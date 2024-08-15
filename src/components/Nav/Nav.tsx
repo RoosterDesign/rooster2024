@@ -82,10 +82,10 @@ export default function Nav() {
               );
             })}
           </ul>
-          <Button url="/contact">Get in touch</Button>
+          <Button url="/contact" label={`Get in touch`} />
            */}
 
-          <Button url="mailto:neil@roosterdesign.co.uk" external>Get in touch</Button>
+          <Button url={`mailto:neil@roosterdesign.co.uk`} label={`Get in touch`} external />
 
         </nav>
 

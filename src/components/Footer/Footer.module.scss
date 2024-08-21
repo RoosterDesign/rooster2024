@@ -2,15 +2,12 @@
 
 .footer {
   background: var(--darker-blue);
-  margin-top: rem(80);
-  padding-top: rem(70);
-  padding-bottom: rem(70);
-  // padding-bottom: rem(100);
+  margin-top: rem(80);  
 }
 
 .topFooter {
-  align-items: flex-start;
-  border-bottom: rem(1) solid rgba(255, 255, 255, 0.2);  
+  align-items: flex-start;  
+  padding-top: rem(70);
   padding-bottom: rem(50);
 
   h2 {
@@ -40,7 +37,9 @@
 }
 
 .bottomFooter {
+  border-top: rem(1) solid rgba(255, 255, 255, 0.2);  
   padding-top: rem(50);
+  padding-bottom: rem(70);
 
   p {
     margin: 0;

@@ -18,7 +18,7 @@
     font-weight: var(--fw-bold);
     position: relative;
 
-    &:after {
+    &::after {
       background: var(--accent);
       bottom: rem(8);
       content: '';
@@ -236,7 +236,7 @@
 
     .active {
 
-      &:after {
+      &::after {
         bottom: rem(-15);
       }
 

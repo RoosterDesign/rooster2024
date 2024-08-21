@@ -86,7 +86,7 @@
       margin-top: rem(50);
 
       li {
-        border-radius: rem(4);
+        border-radius: var(--border-radius);
       }
 
     }

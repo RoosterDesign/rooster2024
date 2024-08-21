@@ -3,17 +3,17 @@
 .button {
   align-items: center;
   background: var(--button-bg);
+  border-radius: var(--border-radius);
   color: var(--button-colour);
   display: flex;
   min-height: rem(55);
   justify-content: center;
   font-size: rem(16);
   font-weight: var(--fw-bold);
-  letter-spacing: rem(3);
+  // letter-spacing: rem(0.5);
   line-height: 1;
-  padding: 0 rem(25);
+  padding: 0 rem(30);
   text-decoration: none;
-  text-transform: uppercase;
   transition: var(--hover-transition);
 }
 
@@ -42,11 +42,10 @@
 
 }
 
-@include breakpoint(xl) {
+@include breakpoint(lg) {
 
   .button {
-    font-size: rem(19);
-    min-height: rem(60);
+    font-size: rem(18);
   }
 
 }

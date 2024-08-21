@@ -1,7 +1,7 @@
 @import '@/app/mixins.scss';
 
 .latestProjectsSlide {
-  border-radius: rem(4);
+  border-radius: var(--border-radius);
   overflow: hidden;
   position: relative;
 

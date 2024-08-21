@@ -5,7 +5,7 @@ import Container from '@/components/Container/Container';
 import Heading from '@/components/Heading/Heading';
 import LinkIcon from '@/components/LinkIcon/LinkIcon';
 
-export default function Footer() {
+export default function Footer({ noTopFooter } : { noTopFooter?: boolean }) {
 
   const year = new Date().getFullYear();
 
@@ -13,25 +13,27 @@ export default function Footer() {
     <footer className={styles.footer}>
       <Container>
 
-        <div className={styles.topFooter}>
-          <Heading title={`Want to get in touch?`} />
-          <Image src={`/rooster-logo.svg`} alt="Rooster Design ltd" width={90} height={168} />
+        {!noTopFooter &&
+          <div className={styles.topFooter}>
+            <Heading title={`Want to get in touch?`} />
+            <Image src={`/rooster-logo.svg`} alt="Rooster Design ltd" width={90} height={168} />
 
-          <ul className={styles.footerContactLinks}>
-            {/* <li>
-              Drop me a message
-              <p><LinkIcon url={`#`} label={`Send me an online enquiry`} /></p>
-            </li> */}
-            <li>
-              {`Send me an email`}
-              <p><LinkIcon url={`mailto:neil@roosterdesign.co.uk`} label={`neil@roosterdesign.co.uk`} title={`Send me an email`} external /></p>
-            </li>
-            <li>
-              {`Message me on LinkedIn`}
-              <p><LinkIcon url={`https://www.linkedin.com/in/roosterdesign`} label={`@roosterdesign`} title={`Message me on LinkedIn`} external /></p>
-            </li>
-          </ul>
-        </div>
+            <ul className={styles.footerContactLinks}>
+              {/* <li>
+                Drop me a message
+                <p><LinkIcon url={`#`} label={`Send me an online enquiry`} /></p>
+              </li> */}
+              <li>
+                {`Send me an email`}
+                <p><LinkIcon url={`mailto:neil@roosterdesign.co.uk`} label={`neil@roosterdesign.co.uk`} title={`Send me an email`} external /></p>
+              </li>
+              <li>
+                {`Message me on LinkedIn`}
+                <p><LinkIcon url={`https://www.linkedin.com/in/roosterdesign`} label={`@roosterdesign`} title={`Message me on LinkedIn`} external /></p>
+              </li>
+            </ul>
+          </div>
+        }
 
         <div className={styles.bottomFooter}>
           <p>&copy; {year} Rooster Design Ltd <span>|</span> <Link href={`/privacy`} title={`Privacy & Legal`} className="textLink">Privacy & Legal</Link></p>

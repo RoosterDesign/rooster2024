@@ -13,9 +13,10 @@
     font-size: rem(48);
     margin-bottom: rem(24);
 
-    &:before {
+    &::before {
       align-self: flex-end;
       background-color: var(--accent);
+      border-radius: rem(2);
       content: '';
       display: block;
       flex-shrink: 0;
@@ -36,7 +37,8 @@
     font-size: rem(64);
     margin-bottom: rem(32);
 
-    &:before {
+    &::before {
+      border-radius: rem(3);
       height: rem(6);
       width: rem(40);
     }

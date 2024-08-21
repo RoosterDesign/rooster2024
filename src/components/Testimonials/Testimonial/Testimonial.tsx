@@ -2,18 +2,18 @@ import { StaticImageData } from 'next/image';
 import styles from './Testimonial.module.scss';
 import Cite from '@/components/Cite/Cite';
 
-interface Testimonial {  
+interface Testimonial {
   quote: string;
-  avatar?: StaticImageData;  
+  avatar?: StaticImageData;
   author: string;
   company: string;
   role: string;
 }
 
 export default function Testimonial({avatar, quote, author, company, role}: Testimonial) {
-  return (     
+  return (
     <blockquote className={styles.testimonial}>
-      <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 43"><path d="M32.142 42.125V25.187c0-13.071 8.55-21.931 20.586-24.312l2.28 4.93c-5.573 2.1-9.155 8.337-9.155 13.403h9.166v22.917H32.142Zm-32.122 0V25.187C.02 12.116 8.609 3.256 20.645.875l2.282 4.93c-5.576 2.1-9.157 8.337-9.157 13.403h9.127v22.917H.02Z" fill="#F21483"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.725C13 9.584 16.892 4.206 23 3l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746A5.213 5.213 0 0 1 24 16.021C24 19.203 21.416 21 18.801 21 15.786 21 13 18.695 13 14.725zm-13 0C0 9.584 3.892 4.206 10 3l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746A5.213 5.213 0 0 1 11 16.021C11 19.203 8.416 21 5.801 21 2.786 21 0 18.695 0 14.725z" fill="#F21483"/></svg>
       <p className={styles.quote}>&quot;{quote}&quot;</p>
       <Cite avatar={avatar} author={author} company={company} role={role} />
     </blockquote>

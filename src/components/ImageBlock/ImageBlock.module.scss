@@ -1,0 +1,16 @@
+@import '@/app/mixins.scss';
+
+.imageBlock {
+
+    > div {
+        aspect-ratio: 16 / 9;
+    }
+
+    img {
+        border-radius: var(--border-radius);
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+}

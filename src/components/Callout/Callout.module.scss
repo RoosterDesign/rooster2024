@@ -34,20 +34,20 @@
 }
 
 .calloutContent {
-  background: var(--white);
+  background: var(--light-blue);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
-  color: var(--dark-blue);
+  color: var(--white);
   padding: rem(40) rem(30);
 }
 
 @include breakpoint(sm) {
-  
+
   .calloutImage {
-    
+
     height: rem(400);
   }
 
-  .calloutContent {      
+  .calloutContent {
     padding: rem(40);
   }
 

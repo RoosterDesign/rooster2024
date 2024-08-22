@@ -154,7 +154,7 @@
 
         > div {
             justify-content: space-between;
-            grid-template-columns: 450px minmax(auto, rem(550));
+            grid-template-columns: rem(450) minmax(auto, rem(550));
         }
 
     }
@@ -193,6 +193,7 @@
 
         > div {
             gap: rem(100);
+            grid-template-columns: rem(500) minmax(auto, rem(550));
         }
 
     }
@@ -205,7 +206,7 @@
 
         > div {
             display: grid;
-            grid-template-columns: minmax(auto, rem(600)) minmax(auto, rem(550));
+            grid-template-columns: rem(650) minmax(auto, rem(550));
         }
 
     }

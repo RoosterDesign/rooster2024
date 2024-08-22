@@ -1,0 +1,246 @@
+@import '@/app/mixins.scss';
+
+.skillsGraph {
+
+    > div {
+        // display: grid;
+        // gap: 10vw;
+        // grid-template-columns: auto 1fr;
+    }
+
+}
+
+.skillsWrap {
+    align-self: flex-start;
+    align-items: center;
+    display: grid;
+    gap: 8vw;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-items: center;
+    position: relative;
+}
+
+.skill {
+    align-items: center;
+    aspect-ratio: 1;
+    background: var(--dark-blue);
+    border: rem(2) solid var(--light-blue);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding: 4vw;
+    width: 20vw;
+
+    &:nth-child(1),
+    &:nth-child(3),
+    &:nth-child(6),
+    &:nth-child(8) {
+        position: relative;
+    }
+
+    &:nth-child(1) {
+        bottom: -7vw;
+        right: -7vw;
+    }
+
+    &:nth-child(3) {
+        bottom: -7vw;
+        left: -7vw;
+    }
+
+    &:nth-child(6) {
+        top: -7vw;
+        right: -7vw;
+    }
+
+    &:nth-child(8) {
+        top: -7vw;
+        left: -7vw;
+    }
+
+    img {
+        height: auto;
+        opacity: 0.5;
+        width: 100%;
+    }
+
+}
+
+.skillPhoto {
+    border: rem(2) solid var(--light-blue);
+    aspect-ratio: 1;
+    background: red;
+    border-radius: 50%;
+    grid-column: 2;
+    grid-row: 2;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    &:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 640 611'%3E%3Cpath stroke='%23132842' stroke-dasharray='6 6' stroke-width='2' d='M640 307H0M93.293 531.293 545.841 78.745M547.707 531.293 95.16 78.744M319 610.5V.5'/%3E%3C/svg%3E");
+        background-position: 50% 50%;
+        background-size: cover;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+}
+
+.intro {
+    align-self: center;
+
+    h3 {
+        font-size: rem(24);
+        font-weight: var(--fw-bold);
+        line-height: rem(40);
+        margin-bottom: rem(20);
+    }
+
+    p {
+        margin-bottom: rem(40);
+    }
+
+}
+
+@include breakpoint(sm) {
+
+    .skillsWrap {
+        gap: rem(50);
+        // grid-template-columns: rem(100) rem(200) rem(100);
+        // grid-template-columns: 1fr  minmax(auto, rem(200)) 1fr;
+        // grid-template-rows: rem(100) rem(300) rem(100);
+    }
+
+    .skill {
+        padding: rem(20);
+        width: rem(100);
+
+        &:nth-child(1) {
+            bottom: rem(-50);
+            right: rem(-50);
+        }
+
+        &:nth-child(3) {
+            bottom: rem(-50);
+            left: rem(-50);
+        }
+
+        &:nth-child(6) {
+            top: rem(-50);
+            right: rem(-50);
+        }
+
+        &:nth-child(8) {
+            top: rem(-50);
+            left: rem(-50);
+        }
+
+        img {
+            // max-height: rem(60);
+            // max-width: rem(60);
+        }
+
+    }
+
+}
+
+@include breakpoint(md) {
+
+    .skillsGraph {
+
+        > div {
+            display: grid;
+            // gap: 10vw;
+            gap: rem(60);
+            grid-template-columns: 450px 1fr;
+        }
+
+    }
+
+    .skillsWrap {
+        // gap: rem(40);
+    }
+
+    .skill {
+        padding: rem(15);
+        width: rem(80);
+
+        &:nth-child(1) {
+            bottom: rem(-30);
+            right: rem(-30);
+        }
+
+        &:nth-child(3) {
+            bottom: rem(-30);
+            left: rem(-30);
+        }
+
+        &:nth-child(6) {
+            top: rem(-30);
+            right: rem(-30);
+        }
+
+        &:nth-child(8) {
+            top: rem(-30);
+            left: rem(-30);
+        }
+
+    }
+
+}
+
+@include breakpoint(xl) {
+
+    .skillsGraph {
+
+        > div {
+            display: grid;
+            gap: 10vw;
+            grid-template-columns: auto 1fr;
+        }
+
+    }
+
+    .skillsWrap {
+        gap: rem(70);
+    }
+
+    .skill {
+        width: rem(100);
+
+        &:nth-child(1) {
+            bottom: rem(-60);
+            right: rem(-60);
+        }
+
+        &:nth-child(3) {
+            bottom: rem(-60);
+            left: rem(-60);
+        }
+
+        &:nth-child(6) {
+            top: rem(-60);
+            right: rem(-60);
+        }
+
+        &:nth-child(8) {
+            top: rem(-60);
+            left: rem(-60);
+        }
+
+    }
+
+}

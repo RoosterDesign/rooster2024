@@ -5,7 +5,7 @@
   background: var(--button-bg);
   border-radius: var(--border-radius);
   color: var(--button-colour);
-  display: flex;
+  display: inline-flex;
   min-height: rem(55);
   justify-content: center;
   font-size: rem(16);
@@ -26,7 +26,7 @@
       color: var(--button-hover-colour);
       transform: scale(1.03);
     }
-    
+
   }
 
 }

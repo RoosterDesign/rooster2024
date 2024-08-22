@@ -14,9 +14,9 @@
     opacity: .5;
     margin: 0 auto;
     max-width: rem(150);
-    max-height: rem(40);    
-    transition: opacity .3s ease;
-    width: 100%;    
+    max-height: rem(40);
+    // transition: opacity .3s ease;
+    width: 100%;
 
     // &:hover {
     //   opacity: 1;
@@ -48,7 +48,7 @@
     margin-top: rem(150);
 
     > div {
-      gap: rem(70) rem(50);    
+      gap: rem(70) rem(50);
     }
 
   }

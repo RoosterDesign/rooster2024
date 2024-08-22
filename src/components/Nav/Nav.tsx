@@ -7,10 +7,10 @@ import { usePathname } from 'next/navigation';
 import Button from '@/components/Button/Button';
 
 export default function Nav() {
-	const pathname = usePathname();
+    const pathname = usePathname();
 	const [navVisible, setNavVisible] = useState(false);
-  const [isScrolling, setIsScrolling] = useState(false);
-  let timeoutId: NodeJS.Timeout;
+    const [isScrolling, setIsScrolling] = useState(false);
+    let timeoutId: NodeJS.Timeout;
 
   useEffect(() => {
     setNavVisible(false);
@@ -31,28 +31,28 @@ export default function Nav() {
     };
   }, []);
 
-	const navItems = [
-		{
-			label: 'Home',
-			url: '/',
-		},
-		{
-			label: 'About',
-			url: '/about',
-		},
-		{
-			label: 'Services',
-			url: '/services',
-		},
-		{
-			label: 'Portfolio',
-			url: '/portfolio',
-		},
-		// {
-		// 	label: 'Download my CV',
-		// 	url: '/cv',
-		// },
-	];
+    const navItems = [
+        {
+            label: 'Home',
+            url: '/',
+        },
+        {
+            label: 'About',
+            url: '/about',
+        },
+        {
+            label: 'Services',
+            url: '/services',
+        },
+        {
+            label: 'Portfolio',
+            url: '/portfolio',
+        },
+        // {
+        // 	label: 'Download my CV',
+        // 	url: '/cv',
+        // },
+    ];
 
 	const navVisibleClass = navVisible ? styles.navVisible : '';
 

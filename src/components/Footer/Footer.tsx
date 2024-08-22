@@ -1,13 +1,39 @@
+'use client';
+
 import styles from './Footer.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import Container from '@/components/Container/Container';
 import Heading from '@/components/Heading/Heading';
 import LinkIcon from '@/components/LinkIcon/LinkIcon';
+import { usePathname } from 'next/navigation';
 
 export default function Footer({ noTopFooter } : { noTopFooter?: boolean }) {
+    const pathname = usePathname();
+    const year = new Date().getFullYear();
 
-  const year = new Date().getFullYear();
+    const navItems = [
+        {
+            label: 'Home',
+            url: '/',
+        },
+        {
+            label: 'About',
+            url: '/about',
+        },
+        {
+            label: 'Services',
+            url: '/services',
+        },
+        {
+            label: 'Portfolio',
+            url: '/portfolio',
+        },
+        // {
+        // 	label: 'Download my CV',
+        // 	url: '/cv',
+        // },
+    ];
 
   return (
     <footer className={styles.footer}>
@@ -36,11 +62,32 @@ export default function Footer({ noTopFooter } : { noTopFooter?: boolean }) {
         }
 
         <div className={styles.bottomFooter}>
+
           <p>&copy; {year} Rooster Design Ltd <span>|</span> <Link href={`/privacy`} title={`Privacy & Legal`} className="textLink">Privacy & Legal</Link></p>
+
+          <nav className={styles.nav}>
+            <ul className={styles.navLinks}>
+                {navItems.map(item => {
+                const isActive = pathname === item.url;
+                return (
+                    <li key={item.label}>
+                    <Link href={item.url} title={item.label}>
+                        {item.label}
+                    </Link>
+                    </li>
+                );
+                })}
+            </ul>
+
+          {/* <Button url={`mailto:neil@roosterdesign.co.uk`} label={`Get in touch`} external /> */}
+
+        </nav>
+
+
           <p className={styles.small}>Rooster Design is registered in England and Wales, No: 07335844, VAT No: 996320685 <span>|</span> Registered Address: 7 Dale Close, Long Itchington, CV47 9SE</p>
         </div>
 
-        
+
       </Container>
     </footer>
   )

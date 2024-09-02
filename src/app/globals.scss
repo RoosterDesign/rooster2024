@@ -17,7 +17,7 @@
 
     //= Typography
 
-    --primary-font: var(--font-poppins);
+    --primary-font: var(--font-poppins, 'Arial');
     --secondary-font: var(--font-permanent-marker);
     --fw-regular: 400;
     --fw-bold: 700;

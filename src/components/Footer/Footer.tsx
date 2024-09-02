@@ -29,10 +29,10 @@ export default function Footer({ noTopFooter } : { noTopFooter?: boolean }) {
             label: 'Portfolio',
             url: '/portfolio',
         },
-        // {
-        // 	label: 'Download my CV',
-        // 	url: '/cv',
-        // },
+        {
+        	label: 'Get in touch',
+        	url: '/contact',
+        },
     ];
 
   return (
@@ -45,10 +45,10 @@ export default function Footer({ noTopFooter } : { noTopFooter?: boolean }) {
             <Image src={`/rooster-logo.svg`} alt="Rooster Design ltd" width={90} height={168} />
 
             <ul className={styles.footerContactLinks}>
-              {/* <li>
+              <li>
                 Drop me a message
                 <p><LinkIcon url={`#`} label={`Send me an online enquiry`} /></p>
-              </li> */}
+              </li>
               <li>
                 {`Send me an email`}
                 <p><LinkIcon url={`mailto:neil@roosterdesign.co.uk`} label={`neil@roosterdesign.co.uk`} title={`Send me an email`} external /></p>
@@ -71,16 +71,13 @@ export default function Footer({ noTopFooter } : { noTopFooter?: boolean }) {
                 const isActive = pathname === item.url;
                 return (
                     <li key={item.label}>
-                    <Link href={item.url} title={item.label}>
-                        {item.label}
-                    </Link>
+                        <Link href={item.url} title={item.label} className={`textLink ${isActive ? styles.active : '' }`}>
+                            {item.label}
+                        </Link>
                     </li>
                 );
                 })}
             </ul>
-
-          {/* <Button url={`mailto:neil@roosterdesign.co.uk`} label={`Get in touch`} external /> */}
-
         </nav>
 
 

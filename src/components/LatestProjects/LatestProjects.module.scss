@@ -17,24 +17,23 @@
 
   .slick-list {
     margin: 0 rem(-22);
-    overflow: visible;    
+    overflow: visible;
   }
   .slick-track {
     overflow: visible;
-  }  
+  }
 
   .slick-slide {
     padding: 0 rem(22);
   }
 
   .slick-dots {
+    @include basicList;
     display: grid !important;
     grid-auto-flow: column;
     gap: rem(10);
     height: rem(16);
-    list-style: none;
-    margin: rem(30) 0 0;
-    padding: 0;
+    margin-top: rem(30);
 
     li {
       background-color: rgba(255, 255, 255, 0.2);
@@ -55,7 +54,7 @@
       width: 100%;
     }
 
-    .slick-active button {      
+    .slick-active button {
       background: var(--accent);
     }
 
@@ -70,15 +69,15 @@
     .slick-slide {
       opacity: .25;
       transition: opacity .5s ease;
-  
+
       &:not(.slick-active) {
-        cursor: pointer;  
+        cursor: pointer;
       }
-  
+
       &.slick-active {
         opacity: 1;
       }
-  
+
     }
 
     .slick-dots {
@@ -108,21 +107,21 @@
   .latestProjects :global {
 
     .slick-slide {
-  
+
       &:not(.slick-active) {
-        
+
         &:hover {
           opacity: .5;
         }
-  
+
       }
-  
+
     }
 
     .slick-dots {
 
       button:hover {
-        background-color: rgba(255, 255, 255, 0.15);  
+        background-color: rgba(255, 255, 255, 0.15);
       }
 
     }

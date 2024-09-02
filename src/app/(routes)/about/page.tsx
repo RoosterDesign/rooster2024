@@ -16,7 +16,7 @@ export default function About() {
 
             <SkillsGraph />
 
-            <ImageBlock image={neilHeadshot} alt={`Neil Dewing - Freelance Front End Web Developer`} fullWidth />
+            <ImageBlock image={neilHeadshot} alt={`Neil Dewing - Freelance Front End Web Developer`} />
 
             <Callout image={neilHeadshot}>
                 <h2>{` Ut hendrerit tincidunt tellus, ut vestibulum neque efficitur ac. Ut ornare, leo at interdum consectetur, sem erat lobortis.`}</h2>

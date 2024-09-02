@@ -1,0 +1,127 @@
+@import '@/app/mixins.scss';
+
+.servicePanel {
+    background: var(--light-blue);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    padding: rem(16);
+
+    svg {
+        align-self: flex-start;
+        fill: var(--accent);
+        height: rem(30);
+        margin-bottom: rem(20);
+        width: auto;
+    }
+
+    :global(.tailwind) {
+        height: rem(25);
+    }
+
+    :global(.cms) {
+        height: rem(40);
+    }
+
+    :global(.wcag) {
+        height: rem(40);
+    }
+
+    h3 {
+        font-size: rem(18);
+        line-height: rem(24);
+        font-weight: var(--fw-bold);
+        margin-bottom: rem(10);
+    }
+
+
+}
+
+.servicePanelLink {
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--hover-transition);
+
+    svg {
+        fill: var(--white);
+        transition: var(--hover-transition);
+    }
+
+}
+
+@include breakpoint(md, max) {
+
+    .servicePanel {
+
+        p {
+            font-size: rem(14);
+        }
+
+    }
+
+}
+
+@include breakpoint(sm) {
+
+    .servicePanel {
+        padding: rem(30) rem(20);
+
+        svg {
+            height: rem(40);
+        }
+
+        :global(.tailwind) {
+            height: rem(30);
+        }
+
+        :global(.cms) {
+            height: rem(50);
+        }
+
+        :global(.wcag) {
+            height: rem(50);
+        }
+
+        h3 {
+            font-size: rem(24);
+            line-height: rem(32);
+        }
+
+    }
+
+}
+
+@include breakpoint(md) {
+
+    .servicePanel {
+        padding:rem(30);
+    }
+
+}
+
+@include breakpoint(lg) {
+
+    .servicePanel {
+        padding: rem(40) rem(30) rem(60);
+    }
+
+}
+
+@media not all and (hover: none) {
+
+    .servicePanelLink {
+
+        &:hover {
+            background: var(--white);
+            color: var(--accent);
+            transform: scale(1.03);
+
+            svg {
+                fill: var(--accent);
+            }
+        }
+
+    }
+
+}

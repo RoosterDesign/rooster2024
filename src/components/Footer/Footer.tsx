@@ -8,11 +8,16 @@ import Heading from '@/components/Heading/Heading';
 import LinkIcon from '@/components/LinkIcon/LinkIcon';
 import { usePathname } from 'next/navigation';
 
+interface NavItem {
+    label: string;
+    url: string;
+}
+
 export default function Footer({ noTopFooter } : { noTopFooter?: boolean }) {
     const pathname = usePathname();
     const year = new Date().getFullYear();
 
-    const navItems = [
+    const navItems: NavItem[] = [
         {
             label: 'Home',
             url: '/',

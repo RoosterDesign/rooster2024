@@ -1,89 +1,99 @@
 @import '@/app/mixins.scss';
 
 .card {
-  background: var(--white);
-  border-radius: var(--border-radius);
-  color: var(--dark-blue);
-  padding: rem(30);
-  text-decoration: none;
-  transition: transform .3s ease;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    padding: rem(30);
+    text-decoration: none;
+    transition: transform .3s ease;
 
-  .icon {
-    height: auto;
-    margin-bottom: rem(20);
-    width: rem(40);
-  }
+    .icon {
+        height: auto;
+        margin-bottom: rem(20);
+        width: rem(40);
+    }
 
-  h3 {
-    font-size: rem(24);
-    font-weight: var(--fw-bold);
-    margin-bottom: rem(15);
-  }
+    h3 {
+        font-size: rem(24);
+        font-weight: var(--fw-bold);
+        margin-bottom: rem(15);
+    }
+
+}
+
+.cardLink {
+
+    p:last-child {
+        margin-top: auto;
+    }
 
 }
 
 @media not all and (hover: none) {
 
-  .cardLink {
+    .cardLink {
 
-    &:hover {
-      transform: scale(1.03);
-  
-      :global(.textLink--faux) {
-        color: var(--dark-blue);
-      }
-  
-      :global(.textLink--faux) svg path {
-        stroke: var(--dark-blue);
-      }
-  
+        &:hover {
+            transform: scale(1.03);
+
+            :global(.textLink--faux) {
+                color: var(--dark-blue);
+            }
+
+            :global(.textLink--faux) svg path {
+                stroke: var(--dark-blue);
+            }
+
+        }
+
     }
-
-  }
 
 }
 
 @include breakpoint(sm) {
 
-  .card {
-    padding: rem(50) rem(40);
-  }
+    .card {
+        padding: rem(50) rem(40);
+    }
 
 }
 
 @include breakpoint(md) {
 
-  .card {
-    padding: rem(30);
+    .card {
+        padding: rem(30);
 
-    .icon {
-      margin-bottom: rem(30);
+        .icon {
+            margin-bottom: rem(30);
+        }
+
     }
-
-  }
 
 }
 
 @include breakpoint(lg) {
 
-  .card {
-    padding: rem(40);
-    
-  }
+    .card {
+        padding: rem(40);
+
+    }
 
 }
 
 
 @include breakpoint(xl) {
 
-  .card {
-    padding: rem(50);
+    .card {
+        padding: rem(50);
 
-    h3 {
-      font-size: rem(32);
-      margin-bottom: rem(20);
+        h3 {
+            font-size: rem(32);
+            margin-bottom: rem(20);
+        }
+
     }
-
-  }
 
 }

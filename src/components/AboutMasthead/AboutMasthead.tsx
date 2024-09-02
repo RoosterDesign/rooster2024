@@ -19,8 +19,8 @@ export default function AboutMasthead() {
 
                 <div className={styles.intro}>
                     <Heading title={`Who I am`} />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique arcu quis nibh rhoncus, vel faucibus lorem semper. Ut consequat mi id diam blandit, ac consequat dolor imperdiet. Suspendisse id nibh iaculis, tincidunt mauris ac, porta massa.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique arcu quis nibh rhoncus, vel faucibus lorem semper. Ut consequat mi id diam blandit, ac consequat dolor imperdiet. Suspendisse id nibh iaculis, tincidunt mauris ac, porta massa.</p>
+                    <p>{`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique arcu quis nibh rhoncus, vel faucibus lorem semper. Ut consequat mi id diam blandit, ac consequat dolor imperdiet. Suspendisse id nibh iaculis, tincidunt mauris ac, porta massa.`}</p>
+                    <p>{`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique arcu quis nibh rhoncus, vel faucibus lorem semper. Ut consequat mi id diam blandit, ac consequat dolor imperdiet. Suspendisse id nibh iaculis, tincidunt mauris ac, porta massa.`}</p>
                 </div>
 
                 <div className={styles.panels}>

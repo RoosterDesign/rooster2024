@@ -6,7 +6,7 @@ import styles from './SkillsGraph.module.scss';
 
 export default function SkillsGraph() {
 
-    const skillLogos = ['html5', 'css3', 'javascript', 'react', 'nextjs', 'tailwind', 'wordpress', 'figma'];
+    const skillLogos: string[] = ['html5', 'css3', 'javascript', 'react', 'nextjs', 'tailwind', 'wordpress', 'figma'];
 
     return (
         <section className={`${styles.skillsGraph} block`}>

@@ -5,7 +5,7 @@ import ImageBlock from "@/components/ImageBlock/ImageBlock";
 import Callout from "@/components/Callout/Callout";
 import Testimonials from '@/components/Testimonials/Testimonials';
 
-import neilHeadshot from '../../../../public/neil-headshot.jpg';
+import neilHeadshot from '/public/neil-headshot.jpg';
 
 export default function About() {
     return (

@@ -100,13 +100,6 @@
 .intro {
     align-self: center;
 
-    h3 {
-        font-size: rem(24);
-        font-weight: var(--fw-bold);
-        line-height: rem(40);
-        margin-bottom: rem(20);
-    }
-
     p {
         margin-bottom: rem(40);
     }
@@ -152,8 +145,8 @@
     .skillsGraph {
 
         > div {
-            justify-content: space-between;
-            grid-template-columns: rem(450) minmax(auto, rem(550));
+            gap: rem(100);
+            grid-template-columns: 1fr 1fr;
         }
 
     }
@@ -186,26 +179,12 @@
 
 }
 
-@include breakpoint(lg) {
-
-    .skillsGraph {
-
-        > div {
-            gap: rem(100);
-            grid-template-columns: rem(500) minmax(auto, rem(550));
-        }
-
-    }
-
-}
-
 @include breakpoint(xl) {
 
     .skillsGraph {
 
         > div {
-            display: grid;
-            grid-template-columns: rem(650) minmax(auto, rem(550));
+            gap: rem(150);
         }
 
     }

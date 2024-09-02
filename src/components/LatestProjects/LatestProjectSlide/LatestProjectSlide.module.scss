@@ -7,7 +7,7 @@
 
   .projectDetails,
   .projectDetailsMask {
-    display: none;    
+    display: none;
   }
 
   img {
@@ -20,7 +20,7 @@
 @include breakpoint(lg) {
 
   .latestProjectsSlide {
-  
+
     .projectDetails,
     .projectDetailsMask {
       display: flex;
@@ -45,47 +45,45 @@
       top: 0;
       width: 100%;
       z-index: 1;
-  
+
       span {
         font-size: rem(18);
         letter-spacing: rem(5);
         text-transform: uppercase;
       }
-  
+
       h2 {
         font-size: rem(58);
-        font-weight: var(--fw-bold);
         margin: rem(30) 0;
       }
-  
+
       p {
         margin: 0 auto rem(50);
-        // max-width: rem(570);
         max-width: rem(800);
       }
-  
+
     }
-  
+
     .projectDetailsMask {
-      background: var(--dark-blue);    
+      background: var(--dark-blue);
     }
 
   }
 
   :global(.hoverEnabled) :global(.slick-active) .latestProjectsSlide {
-  
+
     &:hover {
-  
+
       .projectDetails {
         opacity: 1;
       }
-  
+
       .projectDetailsMask {
         opacity: .85;
       }
-        
+
     }
-  
+
   }
 
 }

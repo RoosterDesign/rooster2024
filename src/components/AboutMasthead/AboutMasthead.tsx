@@ -18,7 +18,7 @@ export default function AboutMasthead() {
             <Container>
 
                 <div className={styles.intro}>
-                    <Heading title={`Who I am`} />
+                    <Heading title={`Who I am`} isH1 />
                     <p>{`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique arcu quis nibh rhoncus, vel faucibus lorem semper. Ut consequat mi id diam blandit, ac consequat dolor imperdiet. Suspendisse id nibh iaculis, tincidunt mauris ac, porta massa.`}</p>
                     <p>{`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique arcu quis nibh rhoncus, vel faucibus lorem semper. Ut consequat mi id diam blandit, ac consequat dolor imperdiet. Suspendisse id nibh iaculis, tincidunt mauris ac, porta massa.`}</p>
                 </div>
@@ -26,9 +26,9 @@ export default function AboutMasthead() {
                 <div className={styles.panels}>
 
                     <div className={styles.panel}>
-                        <h2 className={styles.panelTitle}>
+                        <span className={styles.panelTitle}>
                             {`My Experience`}
-                        </h2>
+                        </span>
 
                         <p className={styles.panelHighlight}>
                             {`17+ Years`}
@@ -41,9 +41,9 @@ export default function AboutMasthead() {
                     </div>
 
                     <div className={styles.panel}>
-                        <h2 className={styles.panelTitle}>
+                        <span className={styles.panelTitle}>
                             {`Brands I've worked with`}
-                        </h2>
+                        </span>
 
                         <div className={styles.clientLogos}>
                             {clientLogos.map((logo, index) => (

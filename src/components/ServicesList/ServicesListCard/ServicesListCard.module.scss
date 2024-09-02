@@ -1,0 +1,95 @@
+@import '@/app/mixins.scss';
+
+.card {
+    background: var(--light-blue);
+    border-radius: var(--border-radius);
+    // color: var(--dark-blue);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: rem(16);
+    padding: rem(30);
+    text-decoration: none;
+    transition: var(--hover-transition);
+
+    .icon {
+        height: auto;
+        margin-bottom: rem(20);
+        width: rem(40);
+    }
+
+    h2 {
+        font-size: rem(24);
+        margin-bottom: rem(15);
+    }
+
+    .fauxLink {
+        margin-top: auto;
+    }
+
+}
+
+@include breakpoint(sm) {
+
+    .card {
+        padding: rem(50) rem(40);
+    }
+
+}
+
+@include breakpoint(md) {
+
+    .card {
+        padding: rem(30);
+
+        .icon {
+            margin-bottom: rem(30);
+        }
+
+    }
+
+}
+
+@include breakpoint(lg) {
+
+    .card {
+        padding: rem(40);
+    }
+
+}
+
+
+@include breakpoint(xl) {
+
+    .card {
+        padding: rem(50);
+
+        h2 {
+            font-size: rem(32);
+            margin-bottom: rem(10);
+        }
+
+    }
+
+}
+
+@media not all and (hover: none) {
+
+    .card {
+
+        &:hover {
+            transform: scale(1.03);
+
+            :global(.textLink--faux) {
+                color: var(--white);
+            }
+
+            :global(.textLink--faux) svg path {
+                stroke: var(--white);
+            }
+
+        }
+
+    }
+
+}

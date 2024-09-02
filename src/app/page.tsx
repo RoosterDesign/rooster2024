@@ -8,14 +8,9 @@ import Testimonials from '@/components/Testimonials/Testimonials';
 import Cite from '@/components/Cite/Cite';
 import Skillset from '@/components/SkillSet/SkillSet';
 import LinkIcon from '@/components/LinkIcon/LinkIcon';
-import neilHeadshot from '../../public/neil-headshot.jpg';
+import neilHeadshot from '/public/neil-headshot.jpg';
 import IntroBlock from '@/components/IntroBlock/IntroBlock';
-import CardsList from '@/components/CardsList/CardsList';
-import Card from '@/components/Card/Card';
-
-import contracting from '../../public/icons/contracting.svg';
-import outsourcing from '../../public/icons/outsourcing.svg';
-import freelance from '../../public/icons/freelance.svg';
+import ServicesList from '@/components/ServicesList/ServicesList';
 
 export default function Home() {
 
@@ -56,11 +51,7 @@ export default function Home() {
             <p>{`With a wealth of experience in both UI/UX Design and Front End Development I offer a range of digital services, as both a full-time contractor and highly skilled freelancer. I build long-term relationships with agencies looking to outsource work to me safe in the knowledge it'll be delivered to a high standard and on time.`}</p>
           </IntroBlock>
           <AOS>
-            <CardsList>
-              <Card icon={contracting} title={`Contracting`} link={`/services`} body={`Working as a Senior Front End Developer, I have contracted at award winning design agencies and in-house at multinational companies. I integrate seamlessly with your working practices and ethos and adapt very quickly.`} />
-              <Card icon={outsourcing} title={`Outsourcing`} link={`/services`} body={`As a busy Design Agency, there is often limited resource to complete all projects on time. By outsourcing to me, you can be safe in the knowledge that the project will be delivered to your exacting standards and meeting your deadlines.`} />
-              <Card icon={freelance} title={`Freelance`} link={`/services`} body={`I work directly with a number of small to medium sized businesses in order to either help them create their first online presence, freshen up an existing website or help boost sales through integrated e-commerce solutions.`} />
-            </CardsList>
+            <ServicesList />
           </AOS>
         </Container>
 

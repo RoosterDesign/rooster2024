@@ -1,0 +1,133 @@
+@import '@/app/mixins.scss';
+
+.bulletsCallout {
+
+    > div {
+        display: grid;
+        gap: rem(40);
+    }
+
+}
+
+.bullets {
+    @include basicList;
+    display: grid;
+    gap: rem(40);
+
+    li {
+
+        svg {
+            fill: var(--accent);
+            height: rem(40);
+            margin-bottom: rem(20);
+            width: auto;
+        }
+
+    }
+
+}
+
+.bulletsCalloutImage {
+
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+}
+
+@include breakpoint(sm) {
+
+    .bullets {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@include breakpoint(md) {
+
+    .bulletsCallout {
+
+        > div {
+            justify-content: space-between;
+            grid-template-columns: 1fr rem(400);
+            gap: rem(60) rem(40);
+        }
+
+    }
+
+    .intro {
+        grid-column: 1 / 3;
+    }
+
+    .bullets {
+        grid-column: 1 / 2;
+    }
+
+    .bulletsCalloutImage {
+        grid-column: 2 / 3;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+}
+
+@include breakpoint(lg) {
+
+    .bulletsCallout {
+
+        > div {
+            grid-template-columns: 1fr rem(500);
+        }
+
+    }
+
+}
+
+@include breakpoint(xl) {
+
+    .bulletsCallout {
+
+        > div {
+            grid-template-columns: rem(650) rem(550);
+        }
+
+    }
+
+    .intro {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .bullets {
+        gap: rem(40);
+        grid-row: 2 / 3;
+    }
+
+    .bulletsCalloutImage {
+        grid-row: 1 / 3;
+    }
+
+}
+
+@include breakpoint(xxl) {
+
+    .bulletsCallout {
+
+        > div {
+            gap: rem(80);
+            grid-template-columns: rem(750) rem(600);
+        }
+
+        .bullets {
+            gap: rem(80);
+        }
+
+    }
+
+}

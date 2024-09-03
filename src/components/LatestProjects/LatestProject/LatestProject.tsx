@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Button from "@/components/Button/Button";
-import styles from './latestProject.module.scss';
+import styles from './LatestProject.module.scss';
 
 import { LatestProjectType } from './LatestProjectType';
 

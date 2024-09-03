@@ -1,7 +1,7 @@
 import Container from '@/components/Container/Container';
 import CardGrid from '@/components/CardGrid/CardGrid';
 
-import { LinkCardType } from '.@/components/LinkCard/LinkCardType';
+import { LinkCardType } from '@/components/LinkCard/LinkCardType';
 import LinkCard from '@/components/LinkCard/LinkCard';
 
 import pumpCourt from './images/5-pump-court.jpg';

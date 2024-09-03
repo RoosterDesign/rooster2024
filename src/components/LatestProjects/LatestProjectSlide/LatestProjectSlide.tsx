@@ -1,16 +1,10 @@
-import Image, { StaticImageData } from 'next/image';
-import Button from "@/components/Button/Button";
+import Image from 'next/image';
+// import Button from "@/components/Button/Button";
 import styles from './LatestProjectSlide.module.scss';
 
-interface Client {
-  type: string;
-  name: string;
-  synopsis: string;
-  link: string;
-  image: string | StaticImageData;
-}
+import { LatestProjectType } from '../LatestProjectType';
 
-export default function LatestProjectSlide( { type, name, synopsis, link, image }: Client ) {
+export default function LatestProjectSlide( { type, name, synopsis, link, image }: LatestProjectType ) {
 
   return (
     <div className={styles.latestProjectsSlide}>

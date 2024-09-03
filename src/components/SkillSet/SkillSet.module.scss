@@ -105,6 +105,11 @@
 
 @include breakpoint(md) {
 
+    .intro {
+        justify-self: flex-end;
+        max-width: 50%;
+    }
+
   .skillset {
 
     > div {

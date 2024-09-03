@@ -1,11 +1,8 @@
-'use client'
-
 import styles from './LatestProjects.module.scss';
-import "slick-carousel/slick/slick.css";
-import {useState} from 'react';
-import { StaticImageData } from 'next/image';
-import Slider from "react-slick";
+import { LatestProjectType } from './LatestProjectType';
+
 import Container from "@/components/Container/Container";
+import Carousel from '@/components/Carousel/Carousel';
 import LatestProjectSlide from './LatestProjectSlide/LatestProjectSlide';
 
 import trustFirstParts from './images/trust-first-parts.jpg';
@@ -16,19 +13,9 @@ import drSharon from './images/dr-sharon.jpg';
 import pumpCourt from './images/5-pump-court.jpg';
 import theSpa from './images/the-spa.jpg';
 
-interface Client {
-  type: string;
-  name: string;
-  synopsis: string;
-  link: string;
-  image: string | StaticImageData;
-}
-
 export default function LatestProjects() {
 
-  const [isEnabled, setIsEnabled] = useState(true);
- 
-  const clients: Client[] = [
+  const clients: LatestProjectType[] = [
     {
       type: "UI/UX Design Concept" ,
       name: "Ford TrustFirstParts",
@@ -49,7 +36,7 @@ export default function LatestProjects() {
       synopsis: "GasRegulatory asked for a set of wireframes and conceptual designs for their new gas professionals application to be put together. The designs had to take into account handling large datasets as well as being fully responsive to work on mobile devices.",
       link: "#",
       image: gasRegulatory
-    },    
+    },
     {
       type: "Design & Build" ,
       name: "Dr Sharon Facial Aesthetics",
@@ -78,43 +65,26 @@ export default function LatestProjects() {
       link: "#",
       image: theSpa
     }
-    
+
   ]
 
-  const carouselSettings = {
-    autoplay: true,
-    autoplaySpeed: 5000,
-    focusOnSelect: true,
-    arrows: false,
-    dots: true,
-    infinite: false,
-    speed: 750,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: '0',
-    beforeChange: () => setIsEnabled(false),
-    afterChange: () => setIsEnabled(true)
-  };
-
-  return (        
-    <section className={`${styles.latestProjects} ${isEnabled ? 'hoverEnabled' : ''} block`} >
-      <Container>
-        <Slider {...carouselSettings} >          
-          {clients.map((client, index) =>
-              <LatestProjectSlide
-                key={index}
-                type={client.type}
-                name={client.name}
-                synopsis={client.synopsis}
-                link={client.link}
-                image={client.image}                
-              />
-          )}
-        </Slider>
-
-        <p className={styles.notes}>{`This is a small selection of some past freelance projects I have created. Due to the sensitive nature of my contract and outsourcing work, I am unable to share projects I was involved with. Specific examples are available upon request.`}</p>
-      </Container>
-    </section>       
+  return (
+    <section className="block">
+        <Container>
+            <Carousel>
+                {clients.map((client, index) =>
+                    <LatestProjectSlide
+                        key={index}
+                        type={client.type}
+                        name={client.name}
+                        synopsis={client.synopsis}
+                        link={client.link}
+                        image={client.image}
+                    />
+                )}
+            </Carousel>
+            <p className={styles.notes}>{`This is a small selection of some past freelance projects I have created. Due to the sensitive nature of my contract and outsourcing work, I am unable to share projects I was involved with. Specific examples are available upon request.`}</p>
+        </Container>
+    </section>
   )
 }

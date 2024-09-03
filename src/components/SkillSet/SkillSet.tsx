@@ -4,7 +4,6 @@ import { useRef, useEffect, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import Container from '@/components/Container/Container';
 import styles from './SkillSet.module.scss';
-// import React from 'react';
 
 export default function Skillset({children} : { children : React.ReactNode}) {
 

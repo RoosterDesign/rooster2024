@@ -42,6 +42,7 @@
 @include breakpoint(lg) {
 
     .breadcrumbs {
+        font-size: rem(18);
         margin-bottom: rem(80);
     }
 

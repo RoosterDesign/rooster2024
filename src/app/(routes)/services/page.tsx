@@ -10,8 +10,8 @@ export default function Services() {
             <Breadcrumbs />
             <ServicesMasthead />
             <BulletsCallout />
-            <Faqs />
             <Testimonials />
+            <Faqs />
         </>
     )
 }

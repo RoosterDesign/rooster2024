@@ -7,7 +7,6 @@ import Callout from '@/components/Callout/Callout';
 import Testimonials from '@/components/Testimonials/Testimonials';
 import Cite from '@/components/Cite/Cite';
 import Skillset from '@/components/SkillSet/SkillSet';
-import LinkIcon from '@/components/LinkIcon/LinkIcon';
 import neilHeadshot from '/public/neil-headshot.jpg';
 import IntroBlock from '@/components/IntroBlock/IntroBlock';
 import ServicesList from '@/components/ServicesList/ServicesList';
@@ -17,9 +16,7 @@ export default function Home() {
   return (
     <>
       <HomeHero />
-
       <ClientLogos />
-
       <LatestProjects />
 
       <AOS>
@@ -36,20 +33,13 @@ export default function Home() {
       </AOS>
 
       <Skillset>
-        <IntroBlock title={`Skillset`} alignRight>
-          <p>I am always learning new skills and technologies through my own projects, freelancing and courses. I find this helps with settling in to new find this helps with settling in find this helps with settling in find this helps with settling incontract roles and being able to bring new development practices to the table.&nbsp;&nbsp; <LinkIcon url={`#`} label="Find out more" /></p>
-
-          {/* <p>{`I'm always learning new skills and technologies through contracting and my own projects. I find this helps with hitting the ground running with new contract roles and being able to bring new development practices to the table. Having a background in UI/UX Design also helps me stand out and offers a unique perspective as a developer.`}</p> */}
-
-        </IntroBlock>
+        <IntroBlock title={`Skillset`} intro={`I am always learning new skills and technologies through my own projects, freelancing and courses. I find this helps with settling in to new find this helps with settling in find this helps with settling in find this helps with settling incontract roles and being able to bring new development practices to the table.`} link={`/services`} alignRight />
       </Skillset>
 
 
       <section className={`block`}>
         <Container>
-          <IntroBlock title={`Services`}>
-            <p>{`With a wealth of experience in both UI/UX Design and Front End Development I offer a range of digital services, as both a full-time contractor and highly skilled freelancer. I build long-term relationships with agencies looking to outsource work to me safe in the knowledge it'll be delivered to a high standard and on time.`}</p>
-          </IntroBlock>
+          <IntroBlock title={`Services`} intro={`With a wealth of experience in both UI/UX Design and Front End Development I offer a range of digital services, as both a full-time contractor and highly skilled freelancer. I build long-term relationships with agencies looking to outsource work to me safe in the knowledge it'll be delivered to a high standard and on time.`} />
           <AOS>
             <ServicesList />
           </AOS>

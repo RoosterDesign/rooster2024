@@ -1,93 +1,15 @@
 @import '@/app/mixins.scss';
 
-.faqs {
-
-    hgroup {
-        margin-bottom: rem(40);
-        text-align: center;
-
-        .subHeading {
-            color: var(--accent);
-            display: block;
-            font-size: rem(16);
-            font-weight: var(--fw-bold);
-            margin-bottom: rem(10);
-        }
-
-        h2 {
-            font-size: rem(32);
-            line-height: rem(48);
-        }
-    }
-
-}
-
 .faqsList {
     display: grid;
     gap: rem(60);
 }
 
-@include breakpoint(sm) {
-
-    .faqs {
-
-        hgroup {
-            margin-bottom: rem(60);
-        }
-
-    }
-
-}
-
-@include breakpoint(md) {
-
-    .faqs {
-
-        hgroup {
-            margin-bottom: rem(80);
-
-            .subHeading {
-                font-size: rem(24);
-                margin-bottom: rem(20);
-            }
-
-            h2 {
-                font-size: rem(40);
-            }
-
-        }
-
-    }
-
-    .faqsList {
-        display: grid;
-        gap: rem(75);
-        grid-template-columns: 1fr 1fr;
-    }
-
-}
-
 @include breakpoint(lg) {
-
-    .faqs {
-
-        hgroup {
-            margin-bottom: rem(120);
-
-            .subHeading {
-                margin-bottom: rem(30);
-            }
-
-            h2 {
-                font-size: rem(60);
-            }
-
-        }
-
-    }
 
     .faqsList {
         gap: rem(75) rem(150);
+        grid-template-columns: 1fr 1fr;
     }
 
 }

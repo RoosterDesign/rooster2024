@@ -1,4 +1,5 @@
 import Container from '@/components/Container/Container';
+import Heading from '@/components/Heading/Heading';
 
 import { FaqType } from './FaqType';
 import Faq from './Faq/Faq';
@@ -37,10 +38,7 @@ export default function Faqs() {
         <section className={` ${styles.faqs} block`}>
             <Container>
 
-                <hgroup>
-                    <span className={styles.subHeading}>{`Don’t be afraid to ask!`}</span>
-                    <h2>Frequently Asked Question</h2>
-                </hgroup>
+                <Heading title={`Frequently Asked Questions`} subTitle={`Don’t be afraid to ask!`} />
 
                 <div className={styles.faqsList}>
                     {faqs.map((faq, i) => <Faq key={i} /> )}

@@ -1,9 +1,5 @@
 @import '@/app/mixins.scss';
 
-.latestProjects {
-  overflow-x: hidden;
-}
-
 .notes {
   font-size: rem(14);
   font-style: italic;
@@ -13,119 +9,10 @@
   text-align: center;
 }
 
-.latestProjects :global {
-
-  .slick-list {
-    margin: 0 rem(-22);
-    overflow: visible;
-  }
-  .slick-track {
-    overflow: visible;
-  }
-
-  .slick-slide {
-    padding: 0 rem(22);
-  }
-
-  .slick-dots {
-    @include basicList;
-    display: grid !important;
-    grid-auto-flow: column;
-    gap: rem(10);
-    height: rem(16);
-    margin-top: rem(30);
-
-    li {
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: rem(8);
-      overflow: hidden;
-    }
-
-    button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      display: block;
-      font-size: 0;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      transition: background-color .3s ease;
-      width: 100%;
-    }
-
-    .slick-active button {
-      background: var(--accent);
-    }
-
-  }
-
-}
-
-@include breakpoint(sm) {
-
-  .latestProjects :global {
-
-    .slick-slide {
-      opacity: .25;
-      transition: opacity .5s ease;
-
-      &:not(.slick-active) {
-        cursor: pointer;
-      }
-
-      &.slick-active {
-        opacity: 1;
-      }
-
-    }
-
-    .slick-dots {
-      height: rem(8);
-      margin-top: rem(50);
-
-      li {
-        border-radius: var(--border-radius);
-      }
-
-    }
-
-  }
-
-}
-
 @include breakpoint(md) {
 
   .notes {
     font-size: rem(16);
-  }
-
-}
-
-@media not all and (hover: none) {
-
-  .latestProjects :global {
-
-    .slick-slide {
-
-      &:not(.slick-active) {
-
-        &:hover {
-          opacity: .5;
-        }
-
-      }
-
-    }
-
-    .slick-dots {
-
-      button:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-      }
-
-    }
-
   }
 
 }

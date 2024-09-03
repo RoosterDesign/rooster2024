@@ -3,6 +3,7 @@
 .aboutMasthead {
 
     > div {
+        align-items: flex-start;
         display: grid;
         gap: rem(30);
     }
@@ -10,6 +11,7 @@
 }
 
 .panels {
+    align-items: flex-start;
     display: grid;
     gap: rem(30);
 }
@@ -144,6 +146,7 @@
     }
 
     .panels {
+        align-items: stretch;
         grid-template-columns: 1fr 1fr;
     }
 

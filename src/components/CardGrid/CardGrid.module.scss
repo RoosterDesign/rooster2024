@@ -1,0 +1,104 @@
+@import '@/app/mixins.scss';
+
+.cardGrid {
+
+    > div {
+        display: grid;
+    }
+
+}
+
+@include breakpoint(md, max) {
+
+    .cardGrid {
+
+        > div {
+            grid-auto-flow: column;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            max-width: none;
+            padding: 0 0 rem(30);
+
+            &::-webkit-scrollbar {
+                height: var(--sb-size)
+            }
+
+            &::-webkit-scrollbar-track {
+                background: var(--sb-track-color);
+                border-radius: calc(var(--sb-size) / 2);
+                margin: 0 var(--container-padding);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: var(--sb-thumb-color);
+                border-radius: calc(var(--sb-size) / 2);
+            }
+
+
+            > div,
+            > a {
+                scroll-snap-align: center;
+                flex: 0 0 auto;
+                margin-right: var(--container-padding);
+                width: 80vw;
+
+                &:first-child {
+                    margin-left: var(--container-padding);
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@include breakpoint(sm) {
+
+    .cardGrid {
+
+        > div {
+
+            > div,
+            > a {
+                width: 40vw;
+            }
+
+        }
+
+    }
+
+}
+
+@include breakpoint(md) {
+
+    .cardGrid {
+
+        > div {
+            gap: rem(24);
+            grid-template-columns: repeat(3, 1fr);
+
+            > div,
+            > a {
+                width: 100%;
+            }
+
+        }
+
+    }
+
+}
+
+@include breakpoint(lg) {
+
+    .cardGrid {
+
+        > div {
+            gap: rem(40);
+        }
+
+    }
+
+}

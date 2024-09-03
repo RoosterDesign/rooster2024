@@ -1,8 +1,8 @@
-import { CaseStudyType } from './CaseStudyType';
-
+import styles from './CaseStudies.module.scss';
+import { CaseStudyType } from './CaseStudy/CaseStudyType';
 import Container from "@/components/Container/Container";
 import Carousel from '@/components/Carousel/Carousel';
-import CaseStudySlide from './CaseStudySlide/CaseStudySlide';
+import CaseStudy from './CaseStudy/CaseStudy';
 
 import trustFirstParts from './images/trust-first-parts.jpg';
 
@@ -24,11 +24,11 @@ export default function CaseStudies() {
     ]
 
     return (
-        <section className="block">
+        <section className={styles.caseStudies}>
             <Container>
                 <Carousel>
                     {caseStudies.map((caseStudy, i) =>
-                        <CaseStudySlide
+                        <CaseStudy
                             key={i}
                             name={caseStudy.name}
                             synopsis={caseStudy.synopsis}

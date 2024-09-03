@@ -11,15 +11,15 @@ export default function Testimonials() {
 
   interface Testimonial {
     quote: string;
-    avatar?: StaticImageData;    
+    avatar?: StaticImageData;
     author: string;
     company: string;
     role: string;
   }
 
   const testimonials: Testimonial[] = [
-    {      
-      quote: "Neil worked with us for a couple of years, which passed far too quickly. He is one of a small breed of contractors that can be helicoptered into any project and he will get the job done. He's worked on many projects including technologies such as REACT, NextJs, nVelocity and obviously LESS and SASS. I wish he could have worked for us directly, then he would not have had to leave.",
+    {
+      quote: "Neil worked with us for a couple of years, which passed far too quickly. He is one of a small breed of contractors that can be helicoptered into any project and he will get the job done. He's worked on many projects including technologies such as REACT, NextJs, Velocity and obviously LESS and SASS. I wish he could have worked for us directly, then he would not have had to leave.",
       avatar: robertNash,
       author: "Robert Nash",
       role: "Managing Director",
@@ -41,13 +41,13 @@ export default function Testimonials() {
     }
   ];
 
-  return (    
+  return (
     <section className={`${styles.testimonials} block`}>
       <Container>
-        {testimonials.map((testimonial, index) => (   
-          <Testimonial key={index} quote={testimonial.quote} avatar={testimonial.avatar} author={testimonial.author} role={testimonial.role} company={testimonial.company} />          
+        {testimonials.map((testimonial, index) => (
+          <Testimonial key={index} quote={testimonial.quote} avatar={testimonial.avatar} author={testimonial.author} role={testimonial.role} company={testimonial.company} />
         ))}
       </Container>
-    </section>    
+    </section>
   )
 }

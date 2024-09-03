@@ -1,6 +1,6 @@
 @import '@/app/mixins.scss';
 
-.latestProjectsSlide {
+.latestProject {
   border-radius: var(--border-radius);
   overflow: hidden;
   position: relative;
@@ -19,7 +19,7 @@
 
 @include breakpoint(lg) {
 
-  .latestProjectsSlide {
+  .latestProject {
 
     .projectDetails,
     .projectDetailsMask {
@@ -70,7 +70,7 @@
 
   }
 
-  :global(.hoverEnabled) :global(.slick-active) .latestProjectsSlide {
+  :global(.hoverEnabled) :global(.slick-active) .latestProject {
 
     &:hover {
 

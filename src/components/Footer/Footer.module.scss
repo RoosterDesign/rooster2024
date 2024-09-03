@@ -51,6 +51,14 @@
 
 }
 
+.navLink {
+    color: var(--white);
+    font-size: rem(16);
+    opacity: .65;
+    transition: var(--hover-transition);
+    text-decoration: none;
+}
+
 
 @include breakpoint(md, max) {
 
@@ -66,7 +74,7 @@
 
         p {
 
-            span {
+            .divide {
                 display: block;
                 font-size: 0;
                 margin-bottom: rem(10);
@@ -114,7 +122,7 @@
 
     .bottomFooter {
 
-        p span {
+        p .divide {
             margin: 0 rem(10);
         }
 
@@ -147,6 +155,10 @@
             "compDetails compDetails"
     }
 
+    .mobileLink {
+        display: none;
+    }
+
     .nav {
         grid-area: nav;
     }
@@ -159,10 +171,12 @@
         grid-auto-columns: max-content;
         grid-auto-flow: column;
 
-        .active {
+        .active,
+        .active:hover {
             color: var(--white);
             cursor: default;
-            text-decoration: none;
+            font-weight: var(--fw-bold);
+            opacity: 1;
         }
 
     }
@@ -216,5 +230,9 @@
 
 @media not all and (hover: none) {
 
+    .navLink:hover {
+        color: var(--accent);
+        opacity: 1;
+    }
 
 }

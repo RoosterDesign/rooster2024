@@ -40,10 +40,11 @@ export default function Home() {
       <section className={`block`}>
         <Container>
           <IntroBlock title={`Services`} intro={`With a wealth of experience in both UI/UX Design and Front End Development I offer a range of digital services, as both a full-time contractor and highly skilled freelancer. I build long-term relationships with agencies looking to outsource work to me safe in the knowledge it'll be delivered to a high standard and on time.`} />
-          <AOS>
-            <ServicesList />
-          </AOS>
         </Container>
+
+        <AOS>
+            <ServicesList />
+        </AOS>
 
       </section>
 

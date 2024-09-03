@@ -2,11 +2,11 @@ import Container from '@/components/Container/Container';
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 import IntroBlock from '@/components/IntroBlock/IntroBlock';
 import Testimonials from '@/components/Testimonials/Testimonials';
-
 import CaseStudies from '@/components/CaseStudies/CaseStudies';
-
+import PortfolioList from '@/components/PortfolioList/PortfolioList';
 
 export default function Portfolio() {
+
     return (
         <>
             <Breadcrumbs />
@@ -16,6 +16,8 @@ export default function Portfolio() {
             </Container>
 
             <CaseStudies />
+
+            <PortfolioList />
 
             <Testimonials />
 

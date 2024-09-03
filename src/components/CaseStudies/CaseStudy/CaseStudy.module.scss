@@ -1,11 +1,10 @@
 @import '@/app/mixins.scss';
 
-.caseStudySlide {
+.caseStudy {
     background: var(--light-blue);
     border-radius: var(--border-radius);
     display: grid !important;
     gap: rem(40);
-    // padding: rem(10);
 }
 
 .caseStudyDetails {
@@ -34,7 +33,7 @@
 
 @include breakpoint(md, max) {
 
-    .caseStudySlide {
+    .caseStudy {
         grid-template-rows: auto 1fr;
     }
 
@@ -56,7 +55,7 @@
 
 @include breakpoint(md) {
 
-    .caseStudySlide {
+    .caseStudy {
         gap: rem(30);
         grid-template-columns: minmax(0, rem(700)) minmax(0, rem(700));
         justify-content: space-between;
@@ -81,6 +80,7 @@
 @include breakpoint(lg) {
 
     .caseStudyDetails {
+        min-height: rem(700);
         padding: rem(60) rem(40);
 
         h2 {

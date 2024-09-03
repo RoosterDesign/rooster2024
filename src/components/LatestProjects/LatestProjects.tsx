@@ -1,9 +1,9 @@
 import styles from './LatestProjects.module.scss';
-import { LatestProjectType } from './LatestProjectType';
+import { LatestProjectType } from './LatestProject/LatestProjectType';
 
 import Container from "@/components/Container/Container";
 import Carousel from '@/components/Carousel/Carousel';
-import LatestProjectSlide from './LatestProjectSlide/LatestProjectSlide';
+import LatestProject from './LatestProject/LatestProject';
 
 import trustFirstParts from './images/trust-first-parts.jpg';
 import applyOnceFunding from './images/apply-once-funding.jpg';
@@ -73,7 +73,7 @@ export default function LatestProjects() {
         <Container>
             <Carousel>
                 {clients.map((client, index) =>
-                    <LatestProjectSlide
+                    <LatestProject
                         key={index}
                         type={client.type}
                         name={client.name}

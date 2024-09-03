@@ -38,6 +38,10 @@ export default function Footer({ noTopFooter } : { noTopFooter?: boolean }) {
         	label: 'Get in touch',
         	url: '/contact',
         },
+        {
+        	label: 'Privacy',
+        	url: '/privacy',
+        }
     ];
 
   return (
@@ -68,7 +72,15 @@ export default function Footer({ noTopFooter } : { noTopFooter?: boolean }) {
 
         <div className={styles.bottomFooter}>
 
-          <p>&copy; {year} Rooster Design Ltd <span>|</span> <Link href={`/privacy`} title={`Privacy & Legal`} className="textLink">Privacy & Legal</Link></p>
+          <p>&copy; {year} Rooster Design Ltd
+
+            <span className={styles.mobileLink}>
+                <span className={styles.divide}>|</span> <Link href={`/privacy`} title={`Privacy & Legal`} className={styles.navLink}>Privacy & Legal</Link>
+            </span>
+
+        </p>
+
+          {/* <p>&copy; {year} Rooster Design Ltd</p> */}
 
           <nav className={styles.nav}>
             <ul className={styles.navLinks}>
@@ -76,7 +88,7 @@ export default function Footer({ noTopFooter } : { noTopFooter?: boolean }) {
                 const isActive = pathname === item.url;
                 return (
                     <li key={item.label}>
-                        <Link href={item.url} title={item.label} className={`textLink ${isActive ? styles.active : '' }`}>
+                        <Link href={item.url} title={item.label} className={`${styles.navLink} ${isActive ? styles.active : '' }`}>
                             {item.label}
                         </Link>
                     </li>
@@ -86,7 +98,7 @@ export default function Footer({ noTopFooter } : { noTopFooter?: boolean }) {
         </nav>
 
 
-          <p className={styles.small}>Rooster Design is registered in England and Wales, No: 07335844, VAT No: 996320685 <span>|</span> Registered Address: 7 Dale Close, Long Itchington, CV47 9SE</p>
+          <p className={styles.small}>Rooster Design is registered in England and Wales, No: 07335844, VAT No: 996320685 <span className={styles.divide}>|</span> Registered Address: 7 Dale Close, Long Itchington, CV47 9SE</p>
         </div>
 
 

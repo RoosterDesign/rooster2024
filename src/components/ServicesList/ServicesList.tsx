@@ -1,8 +1,8 @@
 import styles from './ServicesList.module.scss';
 
-import Image, { StaticImageData } from 'next/image';
-import ServicesListCard from './ServicesListCard/ServicesListCard';
-
+import { StaticImageData } from 'next/image';
+import LinkCard from '@/components/LinkCard/LinkCard';
+import CardGrid from '@/components/CardGrid/CardGrid';
 import contracting from '/public/icons/contracting.svg';
 import outsourcing from '/public/icons/outsourcing.svg';
 import freelance from '/public/icons/freelance.svg';
@@ -36,17 +36,20 @@ export default function ServicesList() {
             body: 'I work directly with a number of small to medium sized businesses in order to either help them create their first online presence, freshen up an existing website or help boost sales through integrated e-commerce solutions.'
         }
     ]
-  return (
-    <div className={` ${styles.servicesList}`}>
-      {services.map((service, i) =>
-            <ServicesListCard
-                key={i}
-                icon={service.icon}
-                title={service.title}
-                body={service.body}
-                link={service.link}
-            />
-        )}
-    </div>
-  )
+    return (
+        <div className={` ${styles.servicesList}`}>
+
+            <CardGrid>
+                {services.map((service, i) =>
+                    <LinkCard
+                        key={i}
+                        icon={service.icon}
+                        title={service.title}
+                        body={service.body}
+                        link={service.link}
+                    />
+                )}
+            </CardGrid>
+        </div>
+    )
 }

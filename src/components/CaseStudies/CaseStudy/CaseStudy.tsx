@@ -1,14 +1,14 @@
 import Image from 'next/image';
-import styles from './CaseStudySlide.module.scss';
+import styles from './CaseStudy.module.scss';
 
 import LinkIcon from '@/components/LinkIcon/LinkIcon';
 
-import { CaseStudyType } from '../CaseStudyType';
+import { CaseStudyType } from './CaseStudyType';
 
-export default function CaseStudySlide( { name, synopsis, link, image }: CaseStudyType ) {
+export default function CaseStudy( { name, synopsis, link, image }: CaseStudyType ) {
 
   return (
-    <div className={styles.caseStudySlide}>
+    <div className={styles.caseStudy}>
 
         <div className={styles.caseStudyDetails}>
             <h2>{name}</h2>

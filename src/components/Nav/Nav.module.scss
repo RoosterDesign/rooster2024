@@ -54,14 +54,19 @@
 
     .nav {
         background: var(--white);
+        border: rem(3) solid var(--dark-blue);
         border-radius: rem(8);
         bottom: -100vh;
-        left: var(--container-padding);
+        gap: rem(10);
+        // left: var(--container-padding);
+        max-width: rem(300);
         opacity: 0;
-        padding: rem(30) rem(40) rem(70);
+        outline: rem(4) solid rgba(255, 255, 255, 0.2);
+        padding: rem(20) rem(40) rem(50);
         position: absolute;
-        right: var(--container-padding);
+        // right: var(--container-padding);
         transition: all .5s ease;
+        width: 100%;
 
         a {
             width: 100%;
@@ -89,6 +94,7 @@
         display: flex;
         height: rem(50);
         justify-content: space-between;
+        outline: rem(4) solid rgba(255, 255, 255, 0.2);
         padding: 0 rem(22);
         position: relative;
         transition: opacity .5s ease;

@@ -2,10 +2,12 @@
 
 import styles from './ContactForm.module.scss';
 
-import { useState, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
+
+import Link from 'next/link';
 
 const schema = z.object({
     name: z.string().min(1, "Please enter your name"),
@@ -17,6 +19,7 @@ type FormFields = z.infer<typeof schema>;
 
 export default function ContactForm() {
 
+    const contactForm = useRef<HTMLDivElement | null>(null);
     const [ isFormSubmitted, setIsFormSubmitted ] = useState<boolean>();
 
     const {
@@ -36,6 +39,16 @@ export default function ContactForm() {
         // }
     //   }, [isSubmitSuccessful, reset])
 
+
+    const scrollToThanks = () => {
+        if (contactForm.current) {
+            contactForm.current.scrollIntoView({
+            behavior: "smooth", // Optional: for smooth scrolling
+            block: "start" // Scroll to the top of the target div
+          });
+        }
+      };
+
     const onSubmit: SubmitHandler<FormFields> = async (data) => {
         try {
             await fetch('/api/emails', {
@@ -50,6 +63,7 @@ export default function ContactForm() {
                     }),
                 }).then(() => {
                     setIsFormSubmitted(true);
+                    scrollToThanks();
                     reset();
                 });
 
@@ -61,7 +75,7 @@ export default function ContactForm() {
     };
 
     return (
-        <div className={styles.contactForm}>
+        <div className={styles.contactForm} ref={contactForm}>
 
             { !isFormSubmitted ?
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -99,7 +113,11 @@ export default function ContactForm() {
 
                 </form>
             :
-                <h1>Success!</h1>
+                <div className={styles.thanks}>
+                    <h2>Thank you</h2>
+                    <p>{`Thanks for reaching out, I will get back to you as soon as possible!`}</p>
+                    <p>If you haven&apos;t yet why not connect with me on my <a href="https://www.linkedin.com/in/roosterdesign" title="LinkedIn" target="_blank">LinkedIn</a> profile.</p>
+                </div>
             }
 
         </div>

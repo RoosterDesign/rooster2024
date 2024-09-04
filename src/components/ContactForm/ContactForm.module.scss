@@ -1,10 +1,11 @@
 @import '@/app/mixins.scss';
 
 .contactForm {
+    align-items: center;
     background: var(--light-blue);
     border-radius: var(--border-radius);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     margin-bottom: rem(60);
     padding: rem(40);
 
@@ -65,6 +66,16 @@
 
 }
 
+.thanks {
+    text-align: center;
+
+    h2 {
+        font-size: rem(32);
+        line-height: rem(48);
+    }
+
+}
+
 @include breakpoint(sm) {
 
     .contactForm {
@@ -78,12 +89,27 @@
 
     }
 
+    .thanks {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: rem(650);
+    }
+
 }
 
 @include breakpoint(md) {
 
     .contactForm {
         margin-bottom: rem(120);
+    }
+
+    .thanks {
+
+        h2 {
+            font-size: rem(40);
+            line-height: rem(56);
+        }
+
     }
 
 }
@@ -113,6 +139,15 @@
 
         input {
             height: rem(70);
+        }
+
+    }
+
+    .thanks {
+
+        h2 {
+            font-size: rem(60);
+            line-height: rem(80);
         }
 
     }

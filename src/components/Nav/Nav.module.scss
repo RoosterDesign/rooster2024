@@ -53,18 +53,15 @@
     }
 
     .nav {
-        background: var(--white);
-        border: rem(3) solid var(--dark-blue);
+        background: var(--light-blue);
         border-radius: rem(8);
         bottom: -100vh;
         gap: rem(10);
-        // left: var(--container-padding);
         max-width: rem(300);
         opacity: 0;
-        outline: rem(4) solid rgba(255, 255, 255, 0.2);
-        padding: rem(20) rem(40) rem(50);
+        outline: rem(5) solid rgba(255, 255, 255, 0.1);
+        padding: rem(20) rem(40) rem(60);
         position: absolute;
-        // right: var(--container-padding);
         transition: all .5s ease;
         width: 100%;
 
@@ -75,13 +72,30 @@
     }
 
     .navLinks {
+        margin-bottom: rem(10);
         width: 100%;
 
         a {
-            color: var(--dark-blue);
+            color: var(--white);
             display: flex;
             font-size: rem(20);
             padding: rem(20) 0;
+
+            opacity: .65;
+            position: relative;
+        }
+
+        .active {
+            opacity: 1;
+
+
+            &::after {
+                height: rem(20);
+                left: rem(-15);
+                top: 50%;
+                transform: translateY(-50%);
+                width: rem(3);
+            }
         }
 
     }
@@ -205,7 +219,8 @@
     }
 
     .navMask {
-        background: rgba(3, 15, 30, 0.75);
+        background: rgba(3, 15, 30, 0.8);
+        backdrop-filter: blur(rem(5));
         bottom: 0;
         display: block;
         left: 0;

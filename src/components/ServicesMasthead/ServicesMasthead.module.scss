@@ -6,11 +6,10 @@
         display: grid;
         gap: rem(16);
     }
+}
 
-    .intro {
-        margin-bottom: rem(20);
-    }
-
+.intro {
+    margin-bottom: rem(20);
 }
 
 @include breakpoint(xs) {
@@ -21,10 +20,10 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
-        .intro {
-            grid-column: 1 / 3;
-        }
+    }
 
+    .intro {
+        grid-column: 1 / 3;
     }
 
 }
@@ -38,12 +37,12 @@
             grid-template-columns: repeat(3, 1fr);
         }
 
-        .intro {
-            grid-column: 1 / 3;
-            margin-bottom: 0;
-            max-width: rem(700);
-        }
+    }
 
+    .intro {
+        grid-column: 1 / 3;
+        margin-bottom: 0;
+        max-width: rem(700);
     }
 
 }

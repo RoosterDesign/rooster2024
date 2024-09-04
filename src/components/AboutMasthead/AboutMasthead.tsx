@@ -23,7 +23,7 @@ export default function AboutMasthead() {
                     <p>{`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique arcu quis nibh rhoncus, vel faucibus lorem semper. Ut consequat mi id diam blandit, ac consequat dolor imperdiet. Suspendisse id nibh iaculis, tincidunt mauris ac, porta massa.`}</p>
                 </div>
 
-                <div className={styles.panels}>
+                {/* <div className={styles.panels}> */}
 
                     <div className={styles.panel}>
                         <span className={styles.panelTitle}>
@@ -52,7 +52,7 @@ export default function AboutMasthead() {
                         </div>
 
                     </div>
-                </div>
+                {/* </div> */}
 
             </Container>
         </section>

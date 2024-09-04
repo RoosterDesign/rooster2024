@@ -13,7 +13,7 @@ export default function LinkCard({ image, icon, title, body, link}: LinkCardType
                     <Image src={image} alt={title} placeholder="blur" quality={90} />
                 </div>
             }
-            {icon && <Image src={icon} alt={title} className={styles.icon} /> }
+            {icon && <span className={styles.icon}>{icon}</span> }
             <h3>{title}</h3>
             <p>{body}</p>
             <p className={styles.fauxLink}><LinkIcon url={``} label={`Find out more`} faux /></p>

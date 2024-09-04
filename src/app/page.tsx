@@ -33,7 +33,7 @@ export default function Home() {
       </AOS>
 
       <Skillset>
-        <IntroBlock title={`Skillset`} intro={`I am always learning new skills and technologies through my own projects, freelancing and courses. I find this helps with settling in to new find this helps with settling in find this helps with settling in find this helps with settling incontract roles and being able to bring new development practices to the table.`} link={`/services`} alignRight />
+        <IntroBlock title={`Skillset`} intro={`I am always learning new skills and technologies through my own projects, freelancing and courses. I find this helps with settling in to new find this helps with settling in find this helps with settling in find this helps with settling incontract roles and being able to bring new development practices to the table.`} link={`/services`} />
       </Skillset>
 
 

@@ -25,6 +25,12 @@
         margin-bottom: rem(10);
     }
 
+    p {
+        max-width: rem(825);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 @include breakpoint(sm) {
@@ -72,6 +78,7 @@
 
         .heading {
             font-size: rem(40);
+            line-height: rem(56);
         }
 
     }
@@ -93,10 +100,11 @@
     }
 
     .headingGroup {
-        margin-bottom: rem(120);
+        // margin-bottom: rem(120);
 
         .heading {
             font-size: rem(60);
+            line-height: rem(80);
         }
 
         .subHeading {

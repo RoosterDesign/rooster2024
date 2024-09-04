@@ -1,4 +1,4 @@
-import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
+// import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 import AboutMasthead from "@/components/AboutMasthead/AboutMasthead";
 import SkillsGraph from "@/components/SkillsGraph/SkillsGraph";
 import ImageBlock from "@/components/ImageBlock/ImageBlock";
@@ -10,7 +10,7 @@ import neilHeadshot from '/public/neil-headshot.jpg';
 export default function About() {
     return (
         <>
-            <Breadcrumbs />
+            {/* <Breadcrumbs /> */}
 
             <AboutMasthead />
 

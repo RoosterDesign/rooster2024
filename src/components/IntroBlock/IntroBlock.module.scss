@@ -1,13 +1,10 @@
 @import '@/app/mixins.scss';
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
 
   .introBlock {
-    max-width: 50%;
-  }
-  
-  .alignRight {
-    justify-self: flex-end;
+    // max-width: 50%;
+    max-width: rem(825);
   }
 
 }

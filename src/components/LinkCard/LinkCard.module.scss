@@ -25,9 +25,11 @@
 
     }
 
-    .icon {
+    .icon svg {
+        fill: var(--accent);
         height: auto;
         margin-bottom: rem(20);
+        transition: var(--hover-transition);
         width: rem(40);
     }
 
@@ -56,7 +58,7 @@
 
         }
 
-        .icon {
+        .icon svg {
             margin-bottom: rem(30);
         }
 
@@ -90,7 +92,12 @@
         .linkCard {
 
             &:hover {
+                background: var(--accent);
                 transform: scale(1.03);
+
+                .icon svg {
+                    fill: var(--white);
+                }
 
                 :global(.textLink--faux) {
                     color: var(--white);

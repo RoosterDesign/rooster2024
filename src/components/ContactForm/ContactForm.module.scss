@@ -1,0 +1,121 @@
+@import '@/app/mixins.scss';
+
+.contactForm {
+    background: var(--light-blue);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem(60);
+    padding: rem(40);
+
+    form {
+        display: grid;
+        gap: rem(40);
+        width: 100%;
+    }
+
+}
+
+.formGroup {
+
+    label {
+        display: block;
+        font-size: rem(16);
+        font-weight: var(--fw-bold);
+        margin-bottom: rem(20);
+    }
+
+    input,
+    textarea {
+        border-radius: var(--border-radius);
+        border: none;
+        color: var(--dark-blue);
+        font-size: rem(16);
+        padding: rem(20);
+        width: 100%;
+
+        &::placeholder {
+            color: var(--dark-blue);
+            opacity: .3;
+        }
+
+    }
+
+    input {
+        display: flex;
+        height: rem(60);
+    }
+
+    textarea {
+        height: rem(200);
+        resize: none
+    }
+
+}
+
+.btn {
+    @include button;
+    justify-self: center;
+
+    &:disabled,
+    &[disabled] {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+
+}
+
+@include breakpoint(sm) {
+
+    .contactForm {
+        padding-top: rem(60);
+        padding-bottom: rem(60);
+
+        form {
+            gap: rem(50);
+            max-width: rem(550);
+        }
+
+    }
+
+}
+
+@include breakpoint(md) {
+
+    .contactForm {
+        margin-bottom: rem(120);
+    }
+
+}
+
+@include breakpoint(lg) {
+
+    .contactForm {
+        padding-top: rem(100);
+        padding-bottom: rem(100);
+
+        form {
+            max-width: rem(650);
+        }
+
+    }
+
+    .formGroup {
+
+        label {
+            font-size: rem(18);
+        }
+
+        input,
+        textarea {
+            font-size: rem(18);
+        }
+
+        input {
+            height: rem(70);
+        }
+
+    }
+
+
+}

@@ -105,10 +105,36 @@
             grid-column: 5 / 7;
         }
 
+        // Biceter Village
+        &:nth-child(10) {
+            grid-column: 1 / 4;
+        }
+
+        // MINI
+        &:nth-child(11) {
+            grid-column: 4 / 7;
+        }
+
       }
 
 }
 
+
+@include breakpoint(xl, max) {
+
+    .clientLogos {
+
+        img {
+
+            &:nth-child(10),
+            &:nth-child(11) {
+                display: none;
+            }
+
+        }
+    }
+
+}
 @media (min-width: rem(992)) and (max-width: rem(1399.98)) {
 
     .clientLogos {
@@ -154,6 +180,10 @@
         height: 100%;
     }
 
+    .clientLogos {
+        gap: rem(30);
+    }
+
 }
 
 @include breakpoint(md) {
@@ -190,6 +220,7 @@
 
     .clientLogos {
         gap: rem(40) rem(30);
+        margin-top: auto;
     }
 
 }

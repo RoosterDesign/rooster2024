@@ -99,9 +99,15 @@
 
 .intro {
     align-self: center;
+    justify-self: center;
+    // max-width: rem(550);
 
-    p {
-        margin-bottom: rem(40);
+    h2 {
+        margin-bottom: rem(30);
+    }
+
+    p:last-of-type {
+        margin-bottom: rem(50);
     }
 
 }
@@ -145,8 +151,26 @@
     .skillsGraph {
 
         > div {
-            gap: rem(100);
+            gap: rem(50);
             grid-template-columns: 1fr 1fr;
+        }
+
+    }
+
+    .skillsGraphReverse {
+
+        > div {
+
+        }
+
+        .intro {
+            grid-column: 1 / 2;
+            grid-row: 1;
+        }
+
+        .skillsWrap {
+            grid-column: 2 / 3;
+            grid-row: 1;
         }
 
     }
@@ -173,6 +197,18 @@
         &:nth-child(8) {
             top: rem(-40);
             left: rem(-40);
+        }
+
+    }
+
+}
+
+@include breakpoint(lg) {
+
+    .skillsGraph {
+
+        > div {
+            gap: rem(100);
         }
 
     }

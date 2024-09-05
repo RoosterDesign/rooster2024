@@ -4,4 +4,5 @@ export interface CardType {
     body: string;
     link?: string;
     noBg?: boolean;
+    isExternal?: boolean;
 }

@@ -6,4 +6,6 @@ export interface LinkCardType {
     title: string;
     body: string;
     link: string;
+    linkLabel?: string;
+    isExternal?: boolean;
 }

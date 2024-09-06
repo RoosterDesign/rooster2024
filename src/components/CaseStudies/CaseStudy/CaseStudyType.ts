@@ -3,6 +3,6 @@ import { StaticImageData } from 'next/image';
 export interface CaseStudyType {
     name: string;
     synopsis: React.ReactNode;
-    link: string;
+    link?: string;
     image: string | StaticImageData;
   }

@@ -13,7 +13,7 @@ export default function CaseStudy( { name, synopsis, link, image }: CaseStudyTyp
         <div className={styles.caseStudyDetails}>
             <h2>{name}</h2>
             {synopsis}
-            <p className={styles.link}><LinkIcon url={link} label={`Visit website`} /></p>
+            {link && <p className={styles.link}><LinkIcon url={link} label={`Visit website`} /></p>}
         </div>
 
         <Image src={image} alt="" placeholder="blur" quality={90} className={styles.caseStudyImage} />

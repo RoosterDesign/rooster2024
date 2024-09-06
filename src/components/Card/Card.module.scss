@@ -5,7 +5,7 @@
     border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
-    padding: rem(16);
+    padding: rem(30);
 
     svg {
         align-self: flex-start;
@@ -47,23 +47,7 @@
     padding: 0;
 }
 
-@include breakpoint(md, max) {
-
-    .card {
-
-        p {
-            font-size: rem(14);
-        }
-
-    }
-
-}
-
 @include breakpoint(sm) {
-
-    .card:not(.noBg) {
-        padding: rem(30) rem(20);
-    }
 
     .card {
 
@@ -87,18 +71,18 @@
 
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
 
     .card:not(.noBg) {
-        padding:rem(30);
+        padding: rem(30);
     }
 
 }
 
-@include breakpoint(lg) {
+@include breakpoint(xxl) {
 
     .card:not(.noBg) {
-        padding: rem(40) rem(30) rem(60);
+        padding: rem(40);
     }
 
 }

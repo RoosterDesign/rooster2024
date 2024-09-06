@@ -17,10 +17,10 @@ export default function AboutMasthead() {
 
                 <div className={styles.intro}>
                     <Heading title={`Who I am`} isH1 />
-                    <p>{`Hi! I'm Neil, a UI Designer & Front End Developer based on the ourskirts of Leamington Spa in Warwickshire. With over 17 years in the industry, what began as a simple hobby has blossomed into a deep-seated passion for creating intuitive and visually compelling digital experiences.`}</p>
-                    <p>{`Whether you're seeking a contractor for your next project, a trusted partner for outsourced projects, or if you're a small business looking to build a website that not only looks great but also functions seamlessly, I'm here to help`}</p>
+                    <p>{`Hi! I'm Neil, a UI/UX Designer & front-end developer based on the ourskirts of Leamington Spa in Warwickshire. With over 17 years in the industry, what began as a simple hobby has blossomed into a deep-seated passion for creating intuitive and visually compelling digital experiences.`}</p>
+                    <p>{`Whether you're seeking a contractor for your next project, a trusted partner for outsourced projects, or if you're a small business looking to build a website that not only looks great but also functions seamlessly, I'm here to help.`}</p>
 
-                    <p>Why not check out my <Link href={'/services'}>services</Link> or <Link href={'/portfolio'}>view my latest work</Link> and when you&apos;re ready to find out more, please <Link href={'/contact'}>get in touch!</Link></p>
+                    {/* <p>Why not check out my <Link href={'/services'}>services</Link> or <Link href={'/portfolio'}>view my latest work</Link> and when you&apos;re ready to find out more, please <Link href={'/contact'}>get in touch!</Link></p> */}
 
                 </div>
 

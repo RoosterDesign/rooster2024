@@ -16,7 +16,7 @@ export default function IntroBlock({title, intro, link, alignRight}: IntroBlock)
       <p>
         {intro}
         {link && <>
-            &nbsp;&nbsp; <LinkIcon url={`#`} label="Find out more" />
+            &nbsp;&nbsp; <LinkIcon url={link} label="Find out more" />
         </>}
       </p>
     </div>

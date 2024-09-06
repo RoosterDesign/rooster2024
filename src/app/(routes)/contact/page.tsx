@@ -11,7 +11,7 @@ export default function Contact() {
 
             <Container narrow>
 
-                <Heading title={`Ready to start your new website project?`} body={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a sodales turpis, eu pharetra turpis. Quisque eget orci magna. Fusce posuere tellus ac magna iaculis mattis. Mauris tincidunt leo arcu, quis ullamcorper lacus viverra eu.`} isH1 />
+                <Heading title={`It's easy to get in touch`} body={`Whether you're looking for a contractor, someone to outsource a project to or if you're a small business looking for a website, I'd be delighted to hear from you and explore how we can work together to bring your vision to life.`} isH1 />
 
                 <ContactForm />
 

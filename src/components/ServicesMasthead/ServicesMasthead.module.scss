@@ -12,48 +12,55 @@
     margin-bottom: rem(20);
 }
 
-@include breakpoint(xs) {
-
-    .servicesMasthead {
-
-        > div {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-    }
-
-    .intro {
-        grid-column: 1 / 3;
-    }
-
-}
-
 @include breakpoint(md) {
 
     .servicesMasthead {
 
         > div {
-            gap: rem(20);
             grid-template-columns: repeat(3, 1fr);
         }
 
     }
 
     .intro {
-        grid-column: 1 / 3;
-        margin-bottom: 0;
-        max-width: rem(700);
+        grid-column: 1 / 4;
     }
 
 }
 
-@include breakpoint(lg) {
+// @include breakpoint(lg) {
+
+//     .servicesMasthead {
+
+//         > div {
+//             gap: rem(20);
+//             grid-template-columns: repeat(3, 1fr);
+//         }
+
+//     }
+
+//     .intro {
+//         grid-column: 1 / 3;
+//         margin-bottom: 0;
+//         max-width: rem(700);
+//     }
+
+// }
+
+@include breakpoint(xl) {
 
     .servicesMasthead {
 
         > div {
             gap: rem(30);
             grid-template-columns: repeat(4, 1fr);
+        }
+
+        .intro {
+            grid-column: 1 / 3;
+            margin-bottom: 0;
+            padding-right: rem(75);
+            // max-width: rem(500);
         }
 
     }

@@ -215,7 +215,8 @@
     .intro {
         grid-column: 1 / 3;
         margin-bottom: 0;
-        max-width: rem(700);
+        padding-right: rem(75);
+        // max-width: rem(700);
     }
 
     .clientLogos {

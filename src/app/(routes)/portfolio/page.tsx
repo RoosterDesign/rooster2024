@@ -12,7 +12,7 @@ export default function Portfolio() {
             {/* <Breadcrumbs /> */}
 
             <Container>
-                <IntroBlock title={`My work`} intro={`Based in Leamington Spa, Warwickshire, I offer a range of digital services, as both a full-time contractor and highly skilled freelancer. With over 12 years of experience in both UI/UX Design and Front End Development I can take projects through from initial conception, right through to development and beyond, working as either a lone-gun or as part of a team, I fit into your current working structure seamlessly.`} />
+                <IntroBlock title={`My work`} intro={`I specialise in a diverse range of work, including contracting on various projects, providing outsourced development support to agencies, and collaborating directly with end clients. My expertise in HTML, CSS, JavaScript, React, and Next.js enables me to create responsive, high-performance websites tailored to each project's unique needs. Explore my portfolio to see how I blend technical proficiency with creative problem-solving across different types of engagements.`} />
             </Container>
 
             <CaseStudies />

@@ -5,13 +5,13 @@ import Container from "@/components/Container/Container";
 import Carousel from '@/components/Carousel/Carousel';
 import LatestProject from './LatestProject/LatestProject';
 
-import trustFirstParts from './images/trust-first-parts.jpg';
-import applyOnceFunding from './images/apply-once-funding.jpg';
-import gasRegulatory from './images/gas-regulatory.jpg';
-import drSharon from './images/dr-sharon.jpg';
-// import pcAccounts from './images/pc-accounts.jpg';
-import pumpCourt from './images/5-pump-court.jpg';
-import theSpa from './images/the-spa.jpg';
+import trustFirstParts from '/public/work/trust-first-parts.jpg';
+import applyOnceFunding from '/public/work/apply-once-funding.jpg';
+import gasRegulatory from '/public/work/gas-regulatory.jpg';
+import drSharon from '/public/work/dr-sharon.jpg';
+// import pcAccounts from '/public/work/pc-accounts.jpg';
+import pumpCourt from '/public/work/5-pump-court.jpg';
+import theSpa from '/public/work/the-spa.jpg';
 
 export default function LatestProjects() {
 

@@ -1,9 +1,9 @@
 @import '@/app/mixins.scss';
 
 .siteHeader {
-    border-top: .5rem solid var(--accent);
+    // border-top: .5rem solid var(--accent);
     // height: rem(110);
-    margin-bottom: rem(20);
+    margin-bottom: rem(30);
     padding: rem(20) 0 0;
 
     > div {
@@ -11,7 +11,7 @@
         height: 100%;
         justify-content: space-between;
     }
-    
+
 }
 
 .logo {
@@ -33,11 +33,11 @@
     }
 
     .logo {
-    
+
         // > img {
             width: rem(80);
         // }
-    
+
     }
 
 }

@@ -1,0 +1,176 @@
+@import '@/app/mixins.scss';
+
+.contactMethods {
+    display: grid;
+    gap: rem(16);
+
+    a {
+        background: var(--light-blue);
+        border-radius: var(--border-radius);
+        color: var(--white);
+        display: grid;
+        gap: rem(20);
+        grid-template-columns: rem(50) 1fr;
+        grid-template-rows: rem(50);
+        padding: rem(16);
+        text-decoration: none;
+        transition: var(--hover-transition);
+
+        .icon {
+            background: var(--accent);
+            border-radius: var(--border-radius);
+            display: flex;
+            justify-content: center;
+            transition: var(--hover-transition);
+
+            svg {
+                height: auto;
+                fill: var(--white);
+                transition: var(--hover-transition);
+                width: rem(30);
+            }
+
+        }
+
+        .label {
+            align-self: center;
+
+            strong {
+                display: block;
+                font-size: rem(16);
+                margin-bottom: rem(10);
+            }
+
+        }
+
+    }
+
+}
+
+@include breakpoint(xs) {
+
+    .contactMethods {
+
+        a {
+            grid-template-columns: rem(60) 1fr;
+            grid-template-rows: rem(60);
+            padding: rem(20);
+
+            .icon {
+
+                svg {
+                    width: rem(35);
+                }
+
+            }
+
+            .label {
+
+                strong {
+                    font-size: rem(20);
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@include breakpoint(sm) {
+
+    .contactMethods {
+        grid-template-columns: repeat(2, 1fr);
+
+        a {
+            gap: rem(16);
+            grid-template-columns: rem(50) 1fr;
+            grid-template-rows: rem(50);
+            padding: rem(16);
+
+            .icon {
+
+                svg {
+                    width: rem(30);
+                }
+
+            }
+
+            .label {
+                font-size: rem(14);
+
+                strong {
+                    font-size: rem(16);
+                    margin-bottom: rem(8);
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@include breakpoint(md) {
+
+    .contactMethods {
+        gap: rem(30);
+
+        a {
+            gap: rem(30);
+            grid-template-columns: rem(80) 1fr;
+            grid-template-rows: rem(80);
+            padding: rem(20);
+
+            .icon {
+
+                svg {
+                    width: rem(40);
+                }
+
+            }
+
+            .label {
+                font-size: rem(16);
+
+                strong {
+                    font-size: rem(20);
+                    margin-bottom: rem(10);
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media not all and (hover: none) {
+
+    .contactMethods {
+
+        a {
+
+            &:hover {
+                background: var(--accent);
+                transform: scale(1.03);
+
+                .icon {
+                    background: var(--white);
+
+                    svg {
+                        fill: var(--accent);
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

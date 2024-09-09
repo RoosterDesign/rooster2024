@@ -8,20 +8,20 @@ interface Callout {
 }
 
 export default function Callout({ children, image }: Callout) {
-  return (  
+  return (
     <section className={`${styles.callout} block`}>
       <Container>
 
-        
+
         <div className={`imgDotGrid`}>
-          <Image src={image} alt="Neil Dewing - Front End Developer" width={875} height={875} className={` ${styles.calloutImage}`} placeholder="blur" quality={100}  />
+          <Image src={image} alt="Neil Dewing - Front-end developer" width={875} height={875} className={` ${styles.calloutImage}`} placeholder="blur" quality={90}  />
         </div>
 
         <div className={styles.calloutContent}>
           {children}
-        </div>    
+        </div>
 
-      </Container>  
-    </section>    
+      </Container>
+    </section>
   )
 }

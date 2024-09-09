@@ -7,10 +7,10 @@ import { usePathname } from 'next/navigation';
 import Button from '@/components/Button/Button';
 
 export default function Nav() {
-	const pathname = usePathname();
+    const pathname = usePathname();
 	const [navVisible, setNavVisible] = useState(false);
-  const [isScrolling, setIsScrolling] = useState(false);
-  let timeoutId: NodeJS.Timeout;
+    const [isScrolling, setIsScrolling] = useState(false);
+    let timeoutId: NodeJS.Timeout;
 
   useEffect(() => {
     setNavVisible(false);
@@ -31,28 +31,28 @@ export default function Nav() {
     };
   }, []);
 
-	const navItems = [
-		{
-			label: 'Home',
-			url: '/',
-		},
-		{
-			label: 'About',
-			url: 'about',
-		},
-		{
-			label: 'Services',
-			url: 'services',
-		},
-		{
-			label: 'Portfolio',
-			url: 'portfolio',
-		},
-		// {
-		// 	label: 'Download my CV',
-		// 	url: '/cv',
-		// },
-	];
+    const navItems = [
+        {
+            label: 'Home',
+            url: '/',
+        },
+        {
+            label: 'About',
+            url: '/about',
+        },
+        {
+            label: 'Services',
+            url: '/services',
+        },
+        {
+            label: 'Portfolio',
+            url: '/portfolio',
+        },
+        // {
+        // 	label: 'Download my CV',
+        // 	url: '/cv',
+        // },
+    ];
 
 	const navVisibleClass = navVisible ? styles.navVisible : '';
 
@@ -66,11 +66,11 @@ export default function Nav() {
 
 	return (
     <>
-      {/* <div className={`${styles.navWrap} ${navVisibleClass} ${scrollingClass}`}> */}
-      <div className={styles.navWrap}>
+      <div className={`${styles.navWrap} ${navVisibleClass} ${scrollingClass}`}>
+      {/* <div className={styles.navWrap}> */}
 
         <nav className={styles.nav}>
-          {/* <ul className={styles.navLinks}>
+          <ul className={styles.navLinks}>
             {navItems.map(item => {
               const isActive = pathname === item.url;
               return (
@@ -83,13 +83,12 @@ export default function Nav() {
             })}
           </ul>
           <Button url="/contact" label={`Get in touch`} />
-           */}
 
-          <Button url={`mailto:neil@roosterdesign.co.uk`} label={`Get in touch`} external />
+          {/* <Button url={`mailto:neil@roosterdesign.co.uk`} label={`Get in touch`} external /> */}
 
         </nav>
 
-        {/* <div className={styles.navBar}>
+        <div className={styles.navBar}>
           <Link href='/' title='Homepage'>
             <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
               <path d='M21 13v10h-6v-6h-6v6h-6v-10h-3l12-12 12 12h-3zm-1-5.907v-5.093h-3v2.093l3 3z' />
@@ -109,7 +108,7 @@ export default function Nav() {
             </svg>
           </Link>
 
-        </div> */}
+        </div>
 
       </div>
 

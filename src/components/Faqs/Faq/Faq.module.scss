@@ -1,0 +1,39 @@
+@import '@/app/mixins.scss';
+
+.faq {
+    margin: 0;
+
+    dt {
+        font-size: rem(16);
+        font-weight: var(--fw-bold);
+        margin-bottom: rem(20);
+    }
+
+    dd {
+        font-size: rem(16);
+        line-height: 1.75;
+        margin: 0;
+    }
+
+}
+
+@include breakpoint(md) {
+
+    .faq {
+        margin: 0;
+
+        dt {
+            font-size: rem(24);
+            font-weight: var(--fw-bold);
+            margin-bottom: rem(20);
+        }
+
+        dd {
+            font-size: rem(18);
+            line-height: rem(32);
+            margin: 0;
+        }
+
+    }
+
+}

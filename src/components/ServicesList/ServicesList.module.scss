@@ -1,0 +1,40 @@
+@import '@/app/mixins.scss';
+
+.servicesList {
+  margin-top: rem(40);
+
+//   > div {
+//     display: grid;
+//     gap: rem(30);
+//   }
+
+}
+
+@include breakpoint(md) {
+
+  .servicesList {
+    margin-top: rem(60);
+  }
+
+}
+
+@include breakpoint(lg) {
+
+  .servicesList {
+    margin-top: rem(80);
+
+    // > div {
+    //     grid-template-columns: repeat(3, 1fr);
+    // }
+
+  }
+
+}
+
+@include breakpoint(xxl) {
+
+  .servicesList {
+    margin-top: rem(100);
+  }
+
+}

@@ -1,0 +1,22 @@
+@import '@/app/mixins.scss';
+
+.caseStudies {
+    margin-top: rem(50);
+}
+
+
+@include breakpoint(sm) {
+
+    .caseStudies {
+      margin-top: rem(80);
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    .caseStudies {
+      margin-top: rem(125);
+    }
+
+  }

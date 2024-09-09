@@ -14,7 +14,7 @@ export default function HomeHero() {
     <section className={styles.homeHero}>
       <Container>
 
-        <h1>Hi! I&apos;m Neil, a <span>UI Designer</span> & <span>Front End Developer</span> based in Warwickshire with <span>over {yearsExperience} years</span> of industry experience.</h1>
+        <h1>Hi! I&apos;m Neil, a <span>UI Designer</span> & <span>Front-End Developer</span> based in Warwickshire with <span>over {yearsExperience} years</span> of industry experience.</h1>
 
         <div className={styles.downloadCv}>
           <p>{`I'm open to contracting, freelance and outsourcing opportunities. You can download my CV below.`}</p>

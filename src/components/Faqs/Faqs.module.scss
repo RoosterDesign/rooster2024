@@ -1,0 +1,17 @@
+@import '@/app/mixins.scss';
+
+.faqsList {
+    display: grid;
+    gap: rem(60);
+    margin-top: rem(60);
+}
+
+@include breakpoint(lg) {
+
+    .faqsList {
+        gap: rem(75) rem(150);
+        grid-template-columns: 1fr 1fr;
+        margin-top: rem(120);
+    }
+
+}

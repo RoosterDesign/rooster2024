@@ -1,49 +1,53 @@
 @import '@/app/mixins.scss';
 
 .container {
-  margin: 0 auto;
-  // padding: 0 rem(16);
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
-  width: 100%;
+    margin: 0 auto;
+    // padding: 0 rem(16);
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    width: 100%;
 }
 
 @include breakpoint(sm) {
 
-  .container {
-    max-width: rem(680);
-  }
+    .container {
+        max-width: rem(680);
+    }
 
 }
 
 @include breakpoint(md) {
 
-  .container {
-    max-width: rem(980);
-  }
+    .container {
+        max-width: rem(980);
+    }
+
+    .containerNarrow {
+        max-width: rem(950);
+    }
 
 }
 
 @include breakpoint(lg) {
 
-  .container {
-    max-width: rem(1180);
-  }
+    .container:not(.containerNarrow) {
+        max-width: rem(1180);
+    }
 
 }
 
 @include breakpoint(xl) {
 
-  .container {
-    max-width: rem(1380);
-  }
+    .container:not(.containerNarrow) {
+        max-width: rem(1380);
+    }
 
 }
 
 @include breakpoint(xxl) {
 
-  .container {
-    max-width: rem(1580);
-  }
+    .container:not(.containerNarrow) {
+        max-width: rem(1580);
+    }
 
 }

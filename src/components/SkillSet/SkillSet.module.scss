@@ -24,11 +24,10 @@
 }
 
 .logoGrid {
-  display: grid;  
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding-top: 15%;
 }
-
 
 .skillLogo {
   color: var(--darker-blue);
@@ -56,7 +55,7 @@
     padding-top: 86.6%;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     z-index: -1;
-  } 
+  }
 
   svg {
     visibility: hidden;
@@ -73,20 +72,19 @@
 
   .skillLogo {
     @include animate-nth-child(20, 0.1s, 0.1s);
-  
+
     img {
       animation: 0.5s popIn forwards;
     }
-    
+
   }
 
 }
 
-
 @include breakpoint(sm) {
 
   .logoGrid {
-    grid-template-columns: repeat(4, 1fr);    
+    grid-template-columns: repeat(4, 1fr);
     padding-top: 11%;
   }
 
@@ -106,6 +104,11 @@
 
 @include breakpoint(md) {
 
+    .intro {
+        justify-self: flex-end;
+        max-width: 50%;
+    }
+
   .skillset {
 
     > div {
@@ -117,11 +120,13 @@
 
   .skillset > div > div:first-child {
     grid-column: 2;
-    grid-row: 1;    
-    margin-bottom: 34%;
+    grid-row: 1;
+    justify-self: flex-end;
+    margin-bottom: rem(360);
+    max-width: rem(560);
     z-index: 1;
   }
-  
+
   .logoGrid {
     grid-column: 1 / 3;
     grid-row: 1;
@@ -152,16 +157,34 @@
     &:nth-child(6) {
       grid-column: 2;
     }
-    
+
   }
 
 }
 
+@include breakpoint(lg) {
+
+    .skillset > div > div:first-child {
+        max-width: rem(720);
+        margin-bottom: rem(440);
+    }
+
+}
 
 @include breakpoint(xl) {
 
   .skillset > div > div:first-child {
-    margin-bottom: 38%;
+    max-width: rem(850);
+    margin-bottom: rem(520);
   }
 
 }
+
+@include breakpoint(xxl) {
+
+    .skillset > div > div:first-child {
+      max-width: 52%;
+      margin-bottom: rem(560);
+    }
+
+  }

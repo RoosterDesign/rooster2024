@@ -1,17 +1,24 @@
 import styles from './IntroBlock.module.scss';
 import Heading from '@/components/Heading/Heading';
+import LinkIcon from '@/components/LinkIcon/LinkIcon';
 
 interface IntroBlock {
   title: string;
-  children?: React.ReactNode;
+  intro: string;
+  link?: string;
   alignRight?: boolean;
 }
 
-export default function IntroBlock({title, children, alignRight}: IntroBlock) {
+export default function IntroBlock({title, intro, link, alignRight}: IntroBlock) {
   return (
     <div className={`${styles.introBlock} ${alignRight ? styles.alignRight: ''}`}>
       <Heading title={title} />
-      {children}
+      <p>
+        {intro}
+        {link && <>
+            &nbsp;&nbsp; <LinkIcon url={link} label="Find out more" />
+        </>}
+      </p>
     </div>
   )
 }

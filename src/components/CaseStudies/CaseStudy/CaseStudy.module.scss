@@ -1,0 +1,102 @@
+@import '@/app/mixins.scss';
+
+.caseStudy {
+    background: var(--light-blue);
+    border-radius: var(--border-radius);
+    display: grid !important;
+    gap: rem(40);
+}
+
+.caseStudyDetails {
+    display: flex;
+    flex-direction: column;
+    padding: 0 rem(30) rem(40);
+
+    h2 {
+        font-size: rem(24);
+        margin-bottom: rem(15);
+    }
+
+    .link {
+        margin-top: auto;
+        padding-top: rem(20);
+    }
+
+}
+
+.caseStudyImage {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+@include breakpoint(md, max) {
+
+    .caseStudy {
+        grid-template-rows: auto 1fr;
+    }
+
+    .caseStudyImage {
+        aspect-ratio: 16 / 9;
+        grid-row: 1;
+        height: auto;
+    }
+
+}
+
+@include breakpoint(sm) {
+
+    .caseStudyDetails {
+        padding: 0 rem(40) rem(50);
+    }
+
+}
+
+@include breakpoint(md) {
+
+    .caseStudy {
+        gap: rem(30);
+        grid-template-columns: minmax(0, rem(700)) minmax(0, rem(700));
+        justify-content: space-between;
+        padding: rem(20);
+    }
+
+    .caseStudyDetails {
+        padding: rem(30);
+
+        .link {
+            padding-top: rem(40);
+        }
+
+    }
+
+    .caseStudyImage {
+        border-radius: var(--border-radius);
+    }
+
+}
+
+@include breakpoint(lg) {
+
+    .caseStudyDetails {
+        min-height: rem(600);
+        padding: rem(60) rem(40);
+
+        h2 {
+            font-size: rem(32);
+            margin-bottom: rem(30);
+        }
+
+    }
+
+}
+
+
+@include breakpoint(xl) {
+
+    .caseStudyDetails {
+        padding: rem(60) rem(80);
+    }
+
+}

@@ -1,89 +1,107 @@
 @import '@/app/mixins.scss';
 
 .card {
-  background: var(--white);
-  border-radius: var(--border-radius);
-  color: var(--dark-blue);
-  padding: rem(30);
-  text-decoration: none;
-  transition: transform .3s ease;
+    background: var(--light-blue);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    padding: rem(30);
 
-  .icon {
-    height: auto;
-    margin-bottom: rem(20);
-    width: rem(40);
-  }
+    svg {
+        align-self: flex-start;
+        fill: var(--accent);
+        height: rem(30);
+        margin-bottom: rem(20);
+        width: auto;
+    }
 
-  h3 {
-    font-size: rem(24);
-    font-weight: var(--fw-bold);
-    margin-bottom: rem(15);
-  }
+    :global(.tailwind) {
+        height: rem(25);
+    }
+
+    :global(.cms) {
+        height: rem(40);
+    }
+
+    :global(.wcag) {
+        height: rem(40);
+    }
 
 }
 
-@media not all and (hover: none) {
+.cardLink {
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--hover-transition);
 
-  .cardLink {
-
-    &:hover {
-      transform: scale(1.03);
-  
-      :global(.textLink--faux) {
-        color: var(--dark-blue);
-      }
-  
-      :global(.textLink--faux) svg path {
-        stroke: var(--dark-blue);
-      }
-  
+    svg {
+        fill: var(--white);
+        transition: var(--hover-transition);
     }
 
-  }
+}
 
+.noBg {
+    background: none;
+    padding: 0;
 }
 
 @include breakpoint(sm) {
 
-  .card {
-    padding: rem(50) rem(40);
-  }
+    .card {
 
-}
+        svg {
+            height: rem(40);
+        }
 
-@include breakpoint(md) {
+        :global(.tailwind) {
+            height: rem(30);
+        }
 
-  .card {
-    padding: rem(30);
+        :global(.cms) {
+            height: rem(50);
+        }
 
-    .icon {
-      margin-bottom: rem(30);
+        :global(.wcag) {
+            height: rem(50);
+        }
+
     }
-
-  }
 
 }
 
 @include breakpoint(lg) {
 
-  .card {
-    padding: rem(40);
-    
-  }
+    .card:not(.noBg) {
+        padding: rem(30);
+    }
 
 }
 
+@include breakpoint(xxl) {
 
-@include breakpoint(xl) {
-
-  .card {
-    padding: rem(50);
-
-    h3 {
-      font-size: rem(32);
-      margin-bottom: rem(20);
+    .card:not(.noBg) {
+        padding: rem(40);
     }
 
-  }
+}
+
+@media not all and (hover: none) {
+
+    .cardLink {
+
+        &:hover {
+            background: var(--white);
+            color: var(--accent);
+            transform: scale(1.03);
+
+            svg {
+                fill: var(--accent);
+            }
+
+        }
+
+    }
 
 }

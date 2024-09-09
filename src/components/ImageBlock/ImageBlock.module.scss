@@ -1,0 +1,43 @@
+@import '@/app/mixins.scss';
+
+.imageBlock,
+.imageBlockFull {
+
+    img {
+        aspect-ratio: 16 / 9;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+}
+
+.imageBlock {
+
+    img {
+        border-radius: var(--border-radius);
+    }
+
+}
+
+.imageBlockFull {
+    max-width: rem(2560);
+    margin: 0 auto;
+
+    img {
+        max-height: rem(750);
+    }
+
+}
+
+@include breakpoint(xxl) {
+
+    .imageBlockFull {
+
+        img {
+            border-radius: var(--border-radius);
+        }
+
+    }
+
+}

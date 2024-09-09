@@ -1,0 +1,117 @@
+@import '@/app/mixins.scss';
+
+.linkCard {
+    background: var(--light-blue);
+    border-radius: var(--border-radius);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: rem(30);
+    text-decoration: none;
+    transition: var(--hover-transition);
+
+    .image {
+        overflow: hidden;
+        margin: rem(-30) rem(-30) rem(30);
+
+        img {
+            aspect-ratio: 16 / 9;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            display: block;
+            height: auto;
+            object-fit: cover;
+            width: 100%;
+        }
+
+    }
+
+    .icon svg {
+        fill: var(--accent);
+        height: auto;
+        margin-bottom: rem(20);
+        transition: var(--hover-transition);
+        width: rem(40);
+    }
+
+    h2 {
+        font-size: rem(24);
+        margin-bottom: rem(15);
+    }
+
+    .fauxLink {
+        margin-top: auto;
+    }
+
+}
+
+@include breakpoint(md) {
+
+    .linkCard {
+
+        .image {
+            margin: rem(-15) rem(-15) rem(30);
+
+            img {
+                border-radius: var(--border-radius);
+            }
+
+        }
+
+        .icon svg {
+            margin-bottom: rem(30);
+        }
+
+    }
+
+}
+
+
+@include breakpoint(xl) {
+
+    .linkCard {
+        padding: rem(40);
+
+        .image {
+            margin: rem(-20) rem(-20) rem(40);
+        }
+
+        h2 {
+            font-size: rem(32);
+            margin-bottom: rem(10);
+        }
+
+    }
+
+}
+
+@media not all and (hover: none) {
+
+    @include breakpoint(md) {
+
+        .linkCard {
+
+            &:hover {
+                background: var(--accent);
+                transform: scale(1.03);
+
+                .icon svg {
+                    fill: var(--white);
+                }
+
+                :global(.textLink--faux) {
+                    color: var(--white);
+                    text-decoration: underline;
+                    text-underline-offset: rem(8);
+                }
+
+                :global(.textLink--faux) svg path {
+                    stroke: var(--white);
+                }
+
+            }
+
+        }
+
+    }
+
+}

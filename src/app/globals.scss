@@ -5,6 +5,7 @@
     //= Colours
 
     --white: #fff;
+    --light-blue: #132842;
     --dark-blue: #030F1E;
     --darker-blue: #01060D;
     --pink: #F21483;
@@ -16,7 +17,7 @@
 
     //= Typography
 
-    --primary-font: var(--font-poppins);
+    --primary-font: var(--font-poppins, 'Arial');
     --secondary-font: var(--font-permanent-marker);
     --fw-regular: 400;
     --fw-bold: 700;
@@ -34,10 +35,12 @@
     --button-hover-bg: var(--white);
     --button-hover-colour: var(--accent);
 
-    --button-alt-bg: var(--white);
-    --button-alt-colour: var(--accent);
-    --button-alt-hover-bg: var(--accent);
-    --button-alt-hover-colour: var(--white);
+
+    //= Custom Scrollbar
+
+    --sb-thumb-color: var(--accent);
+    --sb-track-color: rgba(255, 255, 255, 0.05);
+    --sb-size: 8px;
 
 
     //= General
@@ -57,7 +60,11 @@
 
 html,
 body {
-  // overflow-x: hidden;
+  overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -66,15 +73,49 @@ body {
   font-family: var(--primary-font);
   // max-width: 100vw;
 
+  &::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: calc(var(--sb-size) / 2);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: calc(var(--sb-size) / 2);
+  }
+
 }
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+
 
 h1, h2, h3, h4, h5, h6, p {
   font-weight: var(--fw-regular);
   margin: 0;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-weight: var(--fw-bold);
+}
+
+h2, .h2 {
+    font-size: rem(20);
+    line-height: rem(32);
+    margin-bottom: rem(20);
+}
+
+h3, .h3 {
+    font-size: rem(18);
+    line-height: rem(32);
+    margin-bottom: rem(10);
 }
 
 p {
@@ -86,6 +127,14 @@ p {
     margin-bottom: 0;
   }
 
+  a {
+    @extend .textLink;
+  }
+
+}
+
+p + h2 {
+    margin-top: rem(60);
 }
 
 strong {
@@ -100,39 +149,42 @@ strong {
 .textLink {
   color: var(--accent);
   font-weight: var(--fw-bold);
-  text-decoration: underline;
-  text-underline-offset: rem(8);
+  text-decoration: none;
   transition: color .2s ease;
 
   svg path {
     transition: stroke .2s ease;
   }
 
-}
-
-.textContent {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: rem(800);
-
-  h2 {
-    margin-top: rem(60);
-    margin-bottom: rem(20);
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: rem(8);
   }
 
-  p {
+  &:hover:not(.textLink--faux) {
+    color: var(--white);
+  }
 
-    a {
-      @extend .textLink;
-      word-wrap:break-word;
-    }
+  &:hover:not(.textLink--faux) svg path {
+    stroke: var(--white);
+  }
 
+  &--alt:hover {
+    color: var(--dark-blue);
+  }
+
+  &--alt:hover svg path {
+    stroke: var(--dark-blue);
   }
 
 }
 
 .imgDotGrid {
   position: relative;
+
+  img {
+    border-radius: var(--border-radius);
+  }
 
   &::after {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 325 286'%3E%3Ccircle cx='6.5' cy='6.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='45.5' cy='6.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='84.5' cy='6.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='123.5' cy='6.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='162.5' cy='6.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='201.5' cy='6.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='240.5' cy='6.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='279.5' cy='6.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='318.5' cy='6.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='6.5' cy='45.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='45.5' cy='45.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='84.5' cy='45.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='123.5' cy='45.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='162.5' cy='45.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='201.5' cy='45.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='240.5' cy='45.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='279.5' cy='45.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='318.5' cy='45.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='6.5' cy='84.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='45.5' cy='84.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='84.5' cy='84.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='123.5' cy='84.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='162.5' cy='84.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='201.5' cy='84.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='240.5' cy='84.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='279.5' cy='84.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='318.5' cy='84.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='6.5' cy='123.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='45.5' cy='123.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='6.5' cy='162.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='45.5' cy='162.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='6.5' cy='201.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='45.5' cy='201.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='6.5' cy='240.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='45.5' cy='240.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='6.5' cy='279.5' r='6.5' fill='%23132842'/%3E%3Ccircle cx='45.5' cy='279.5' r='6.5' fill='%23132842'/%3E%3C/svg%3E");
@@ -159,13 +211,18 @@ strong {
     margin-bottom: rem(150);
   }
 
+  h3, .h3 {
+    font-size: rem(24);
+    line-height: rem(40);
+  }
+
 }
 
 @include breakpoint(md) {
 
-  .block {
-    margin-top: rem(150);
-    margin-bottom: rem(150);
+  h2 {
+    font-size: rem(26);
+    line-height: rem(40);
   }
 
 }
@@ -191,6 +248,12 @@ strong {
     display: block;
   }
 
+  h2 {
+    font-size: rem(32);
+    line-height: rem(48);
+    margin-bottom: rem(30);
+  }
+
 }
 
 @include breakpoint(xxl) {
@@ -200,34 +263,12 @@ strong {
     margin-bottom: rem(300);
   }
 
-}
-
-
-@media not all and (hover: none) {
-
-  .textLink {
-
-    &:hover:not(.textLink--faux) {
-      color: var(--white);
-    }
-
-    &:hover:not(.textLink--faux) svg path {
-      stroke: var(--white);
-    }
-
-    &--alt:hover {
-      color: var(--dark-blue);
-    }
-
-    &--alt:hover svg path {
-      stroke: var(--dark-blue);
-    }
-
+  h2 {
+    font-size: rem(40);
+    line-height: rem(54);
   }
 
 }
-
-
 
 // @include breakpoint(xxxl) {
 
@@ -236,8 +277,6 @@ strong {
 //   }
 
 // }
-
-
 
 
 // HIDE

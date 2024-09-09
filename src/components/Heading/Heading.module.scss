@@ -1,49 +1,116 @@
 @import '@/app/mixins.scss';
 
 .heading {
-  display: flex;
-  font-size: rem(40);
-  line-height: 1.25;
-  margin-bottom: rem(16);
+    display: flex;
+    font-size: rem(40);
+    line-height: 1.25;
+    margin-bottom: rem(16);
+}
+
+.headingGroup {
+    margin-bottom: rem(40);
+    text-align: center;
+
+    .heading {
+        display: block;
+        font-size: rem(32);
+        line-height: rem(48);
+    }
+
+    .subHeading {
+        color: var(--accent);
+        display: block;
+        font-size: rem(16);
+        font-weight: var(--fw-bold);
+        margin-bottom: rem(10);
+    }
+
+    p {
+        max-width: rem(825);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 @include breakpoint(sm) {
 
-  .heading {
-    font-size: rem(48);
-    margin-bottom: rem(24);
+    .heading {
+        font-size: rem(48);
+        margin-bottom: rem(24);
 
-    &::before {
-      align-self: flex-end;
-      background-color: var(--accent);
-      border-radius: rem(2);
-      content: '';
-      display: block;
-      flex-shrink: 0;
-      height: rem(4);
-      margin-right: rem(10);
-      transform: translateY(rem(-13));
-      position: relative;
-      width: rem(30);
+        &::before {
+            align-self: flex-end;
+            background-color: var(--accent);
+            border-radius: rem(2);
+            content: '';
+            display: block;
+            flex-shrink: 0;
+            height: rem(4);
+            margin-right: rem(10);
+            transform: translateY(rem(-13));
+            position: relative;
+            width: rem(30);
+        }
+
     }
 
-  }
+    .headingGroup {
+        margin-bottom: rem(60);
+
+        .heading::before {
+            display: none;
+        }
+
+    }
+
+}
+
+@include breakpoint(md) {
+
+    .headingGroup {
+        margin-bottom: rem(80);
+
+        .subHeading {
+            font-size: rem(24);
+            margin-bottom: rem(20);
+        }
+
+        .heading {
+            font-size: rem(40);
+            line-height: rem(56);
+        }
+
+    }
 
 }
 
 @include breakpoint(lg) {
 
-  .heading {
-    font-size: rem(64);
-    margin-bottom: rem(32);
+    .heading {
+        font-size: rem(64);
+        margin-bottom: rem(32);
 
-    &::before {
-      border-radius: rem(3);
-      height: rem(6);
-      width: rem(40);
+        &::before {
+            border-radius: rem(3);
+            height: rem(6);
+            width: rem(40);
+        }
+
     }
 
-  }
+    .headingGroup {
+        // margin-bottom: rem(120);
+
+        .heading {
+            font-size: rem(60);
+            line-height: rem(80);
+        }
+
+        .subHeading {
+            margin-bottom: rem(30);
+        }
+
+    }
 
 }
-

@@ -12,7 +12,7 @@ export default function LatestProject( { type, name, synopsis, link, image }: La
         <span>{type}</span>
         <h2>{name}</h2>
         <p>{synopsis}</p>
-        <Button url={link} label={`Visit Website`} />
+        {link && <Button url={link} label={`Visit Website`} external />}
       </div>
         <div className={styles.projectDetailsMask}></div>
         <Image src={image} alt="" placeholder="blur" quality={90} />

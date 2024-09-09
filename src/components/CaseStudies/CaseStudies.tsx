@@ -41,7 +41,7 @@ export default function CaseStudies() {
         },
         {
             name: "Ford TrustFirstParts",
-            synopsis: (<><p>Whilst contracting as a UI designer, I worked on a project for a potential client seeking a web-based application to manage various aspects of their car parts stocking system.</p><p>The goal was to design an intuitive, user-friendly interface that would allow users to efficiently handle inventory, track stock levels, and manage orders.</p><p>I focused on creating a clean, organized layout that streamlined complex processes and provided clear navigation, ensuring ease of use for both experienced and novice users. These designs laid the groundwork for a functional, scalable web application that could support the client&apos;s business operations.</p></>),
+            synopsis: (<><p>During another contract, I worked on a project for a potential client seeking a web-based application to manage various aspects of their car parts stocking system.</p><p>The goal was to design an intuitive, user-friendly interface that would allow users to efficiently handle inventory, track stock levels, and manage orders.</p><p>I focused on creating a clean, organized layout that streamlined complex processes and provided clear navigation, ensuring ease of use for both experienced and novice users. These designs laid the groundwork for a functional, scalable web application that could support the client&apos;s business operations.</p></>),
             link: "",
             image: trustFirstParts
         },
@@ -53,7 +53,7 @@ export default function CaseStudies() {
         },
         {
             name: "GasRegulatory App",
-            synopsis: <><p>I was tasked with creating a design concept for a web application tailored towards professionals in the gas trade.</p><p>The goal of the application was to help users track their certifications, manage renewal deadlines, and stay updated on any further training requirements. The design needed to provide a seamless experience for users to ensure they remained compliant with industry standards.</p><p>I focused on simplicity and clarity, offering features like a personalized dashboard for tracking certification statuses, automated renewal reminders, and easy access to training resources.</p></>,
+            synopsis: <><p>I was tasked with creating a design concept for a web application tailored towards professionals in the gas trade.</p><p>The goal of the application was to help users track their certifications, manage renewal deadlines, and stay updated on any further training requirements. The design needed to provide a seamless experience for users to ensure they remained compliant with industry standards.</p><p>I focused on simplicity and clarity, offering features like a personalised dashboard for tracking certification statuses, automated renewal reminders, and easy access to training resources.</p></>,
             link: "",
             image: gasRegulatory
         },

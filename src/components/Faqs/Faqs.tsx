@@ -19,7 +19,7 @@ export default function Faqs() {
         },
         {
             question: `What types of projects do you typically work on?`,
-            answer: `I work on a variety of projects, including website redesigns, new website builds, UI/UX enhancements, and custom front end development for applications. My focus is on creating responsive, user-friendly interfaces that meet the specific needs of each client.'`
+            answer: `I work on a variety of projects, including website redesigns, new website builds, UI/UX enhancements, and custom front end development for applications. My focus is on creating responsive, user-friendly interfaces that meet the specific needs of each client.`
         },
         {
             question: `How do you approach project deadlines and communication?`,
@@ -27,7 +27,7 @@ export default function Faqs() {
         },
         {
             question: 'What is your experience with agency collaborations?',
-            answer: 'I have extensive experience working with agencies, integrating seamlessly into teams to support various front-end development needs. I understand the dynamics of agency workflows and am adept at following guidelines, meeting deadlines, and contributing effectively to projects.'
+            answer: 'I have extensive experience working with agencies, integrating seamlessly into teams to support various front end development needs. I understand the dynamics of agency workflows and am adept at following guidelines, meeting deadlines, and contributing effectively to projects.'
         },
         {
             question: `How do you ensure your work aligns with the agency's standards and client expectations when outsourcing?`,

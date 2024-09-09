@@ -33,7 +33,7 @@ export default function AboutMasthead() {
                         {`17+ Years`}
                     </p>
 
-                    <p>{`With over 17 years of experience, I've created engaging digital experiences for a wide range of clients, from well-known brands to small businesses.`}</p>
+                    <p>{`With over 17 years of experience, I've created engaging digital experiences for a wide range of clients, from small businesses to well-known brands.`}</p>
 
                     <p><LinkIcon url={`/neil-dewing-cv.pdf`} label={`Download my CV`} external /></p>
 

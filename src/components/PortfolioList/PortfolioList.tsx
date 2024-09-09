@@ -35,19 +35,19 @@ export default function PortfolioList() {
         {
             image: harringtons,
             title: 'Harringtons on the Hill',
-            body: 'Local beauty spa, The Spa Leamington, is a long running client of mine who I have worked with for a number of years. I recently redesigned their existing website as well as creating an e-commerce shop for their beauty products using Shopify.',
+            body: 'As an outsource project for a local agency, I was asked to design and build a website for a local restaurant. This was built on a Wordpress CMS, allowing the client to maintaining the website themselves.',
             link: 'https://harringtonsonthehill.com/'
         },
         {
             image: muk,
             title: 'Muk',
-            body: 'Local beauty spa, The Spa Leamington, is a long running client of mine who I have worked with for a number of years. I recently redesigned their existing website as well as creating an e-commerce shop for their beauty products using Shopify.',
+            body: 'I have worked closely with Muk for a number of years. I moved them on to the e-commerce platform Shopify. With it came a new design to modernise the site and improve on its accessibility and responsiveness.',
             link: 'https://www.mukme.com/'
         },
         {
             image: abbeyFields,
             title: 'Friends of Abbey Fields',
-            body: 'Local beauty spa, The Spa Leamington, is a long running client of mine who I have worked with for a number of years. I recently redesigned their existing website as well as creating an e-commerce shop for their beauty products using Shopify. Website still under development.',
+            body: 'Another outsource project led me to design and build a website for a local environmental committee. This was built on Wordpress allowing the client to update the website with the latest news and regular activities they organise.',
             link: 'https://www.friendsofabbeyfields.org.uk/'
         }
     ]

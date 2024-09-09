@@ -41,7 +41,7 @@ export default function Home() {
 
       <section className={`block`}>
         <Container>
-          <IntroBlock title={`Services`} intro={`As a front-end developer, I offer a range of services tailored to different needs. I work as a contractor on short- and long-term projects, provide outsourced support to local agencies, and take on individual projects for small to medium-sized businesses. My goal is to deliver high-quality, scalable solutions, whether collaborating with larger teams or working directly with clients on their specific requirements.`} />
+          <IntroBlock title={`Services`} intro={`As a front-end developer, I offer a range of services tailored to different needs. I work as a contractor on short and long-term projects, provide outsourced support to local agencies, and take on individual projects for small to medium-sized businesses. My goal is to deliver high-quality, scalable solutions, whether collaborating with larger teams or working directly with clients on their specific requirements.`} />
         </Container>
 
         <AOS>

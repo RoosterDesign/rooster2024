@@ -35,7 +35,7 @@ export default function Testimonials() {
     {
       quote: "Neil delivered an impeccable service. His commitment and support throughout our relationship has been second to none. Our site has been continually updated to meet our customer demands and to ensure we deliver the ultimate spa experience, which in return has allowed us to gain further business through our site.",
       avatar: theSpa,
-      author: "Mark Philpott",
+      author: "Marc Philpott",
       role: "Director",
       company: "The Spa Leamington"
     }

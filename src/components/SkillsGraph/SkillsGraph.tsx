@@ -1,38 +1,50 @@
+import { storyblokEditable } from "@storyblok/react/rsc";
+import { SkillsGraphStoryblok, ButtonStoryblok } from '../../../component-types-sb';
+import { render } from 'storyblok-rich-text-react-renderer-ts';
 import Image from 'next/image';
 import Container from '@/components/Container/Container';
 import Button from '@/components/Button/Button';
-
 import styles from './SkillsGraph.module.scss';
 
-import neilHeadshotSm from '/public/neil-headshot-sm.jpg';
+interface Props {
+    blok: SkillsGraphStoryblok
+}
 
-export default function SkillsGraph({ reverse } : { reverse?: boolean }) {
-
-    const skillLogos: string[] = ['html5', 'css3', 'javascript', 'react', 'nextjs', 'tailwind', 'wordpress', 'figma'];
-
+const SkillsGraph: React.FC<Props> = ({ blok }) => {
+    const { title, content, image, logos, buttons } = blok;
     return (
-        <section className={`${styles.skillsGraph} ${reverse ? styles.skillsGraphReverse : ''} block`}>
+        <section className={`${styles.skillsGraph} block`} {...storyblokEditable(blok)}>
             <Container>
 
                 <div className={styles.skillsWrap}>
-                    {skillLogos.map((logo, index) => (
-                        <div className={styles.skill} key={index}>
-                            <Image src={`/skill-logos/${logo}.svg`} alt="" height={0} width={0} />
+                    {logos.map((logo) => (
+                        <div className={styles.skill} key={logo.id}>
+                            <Image src={logo.filename} alt="" height={0} width={0} />
                         </div>
                     ))}
                     <div className={styles.skillPhoto}>
-                        <Image src={neilHeadshotSm} alt="" height={300} width={300} placeholder="blur" quality={90} />
+                        <Image src={image.filename} alt="" height={300} width={300} quality={90} />
                     </div>
                 </div>
 
                 <div className={styles.intro}>
-                    <h2 className="h3">{`As a UI/UX Designer and front-end developer, I blend design and code to craft engaging websites, web applications, and software solutions that deliver a seamless and captivating user experience.`}</h2>
-                    <p>{`I create pixel-perfect, accessible websites and applications that look great and function smoothly across a range of devices. I use React for dynamic interfaces and my go-to framework for most projects is Next.js. I'm also well-versed in content management systems like WordPress and Umbraco, ensuring clients can easily manage their content.`}</p>
-                    <p>{`On the design side, I use Figma to create intuitive, user-friendly interfaces that perfectly align with a client's brand and vision, ensuring the design not only looks great but also reflects the essence of their business.`}</p>
-                    <Button url={`/services`}  label={`My services`} />
+                    <h2 className="h3">{title}</h2>
+                    {render(content)}
+                    {buttons?.map((button: ButtonStoryblok) => {
+                        return (
+                            <Button
+                                url={button.link.url}
+                                label={button.label}
+                                external={button.link.target === '_blank'}
+                                key={button._uid}
+                            />
+                        )
+                    })}
                 </div>
 
             </Container>
         </section>
     )
 }
+
+export default SkillsGraph;

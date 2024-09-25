@@ -2,7 +2,7 @@
 
 .skillsGraph {
 
-    > div {
+    >div {
         display: grid;
         gap: rem(60);
     }
@@ -150,27 +150,22 @@
 
     .skillsGraph {
 
-        > div {
+        >div {
             gap: rem(50);
             grid-template-columns: 1fr 1fr;
         }
 
-    }
-
-    .skillsGraphReverse {
-
-        > div {
-
+        .intro,
+        .skillsWrap {
+            grid-row: 1;
         }
 
         .intro {
             grid-column: 1 / 2;
-            grid-row: 1;
         }
 
         .skillsWrap {
             grid-column: 2 / 3;
-            grid-row: 1;
         }
 
     }
@@ -207,7 +202,7 @@
 
     .skillsGraph {
 
-        > div {
+        >div {
             gap: rem(100);
         }
 
@@ -219,7 +214,7 @@
 
     .skillsGraph {
 
-        > div {
+        >div {
             gap: rem(150);
         }
 

@@ -4,7 +4,7 @@ import styles from './Header.module.scss';
 import Container from '@/components/Container/Container';
 import Nav from '@/components/Nav/Nav';
 
-export default function Header() {
+const Header: React.FC = () => {
     return (
         <header className={styles.siteHeader}>
             <Container>
@@ -15,4 +15,6 @@ export default function Header() {
             </Container>
         </header>
     );
-  }
+}
+
+export default Header;

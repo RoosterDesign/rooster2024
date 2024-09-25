@@ -1,7 +1,13 @@
-import { FaqType } from './FaqType';
+import { FaqStoryblok } from '../../../../component-types-sb';
+
 import styles from './Faq.module.scss';
 
-export default function Faq({ question, answer }: FaqType) {
+interface Props {
+    faq: FaqStoryblok
+}
+
+const Faq: React.FC<Props> = ({ faq }) => {
+    const { question, answer } = faq;
     return (
         <dl className={styles.faq}>
             <dt className="h3">{question}</dt>
@@ -9,3 +15,5 @@ export default function Faq({ question, answer }: FaqType) {
         </dl>
     )
 }
+
+export default Faq;

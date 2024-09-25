@@ -2,10 +2,14 @@
 
 import styles from './Carousel.module.scss';
 import "slick-carousel/slick/slick.css";
-import {useState} from 'react';
+import { useState } from 'react';
 import Slider from "react-slick";
 
-export default function Carousel({children} : {children: React.ReactNode }) {
+interface Props {
+    children: React.ReactNode
+}
+
+const Carousel: React.FC<Props> = ({ children }) => {
 
     const [isEnabled, setIsEnabled] = useState(true);
 
@@ -23,7 +27,7 @@ export default function Carousel({children} : {children: React.ReactNode }) {
         centerPadding: '0',
         beforeChange: () => setIsEnabled(false),
         afterChange: () => setIsEnabled(true)
-      };
+    };
 
     return (
         <div className={`${styles.carousel} ${isEnabled ? 'hoverEnabled' : ''}`}>
@@ -33,3 +37,5 @@ export default function Carousel({children} : {children: React.ReactNode }) {
         </div>
     )
 }
+
+export default Carousel;

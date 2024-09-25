@@ -1,0 +1,1094 @@
+{
+  "components": [
+    {
+      "name": "about_masthead",
+      "display_name": null,
+      "created_at": "2024-09-24T11:07:03.254Z",
+      "updated_at": "2024-09-25T10:46:03.709Z",
+      "id": 6330247,
+      "schema": {
+        "experience_subtitle": {
+          "type": "text",
+          "pos": 3,
+          "required": true
+        },
+        "tab-078a5210-ad90-4c2b-bb25-0c62cc401857": {
+          "display_name": "Experience Card",
+          "keys": [
+            "experience_subtitle",
+            "experience_highlight",
+            "experience_content",
+            "experience_link"
+          ],
+          "pos": 4,
+          "type": "tab"
+        },
+        "tab-0b79883d-a635-4540-8087-2529b5f571bd": {
+          "display_name": "Clients Card",
+          "keys": [
+            "clients_subtitle",
+            "clients_logos"
+          ],
+          "pos": 5,
+          "type": "tab"
+        },
+        "clients_subtitle": {
+          "type": "text",
+          "pos": 6,
+          "required": true
+        },
+        "experience_highlight": {
+          "type": "text",
+          "pos": 7,
+          "required": true
+        },
+        "experience_content": {
+          "type": "textarea",
+          "pos": 8,
+          "required": true
+        },
+        "experience_link": {
+          "type": "multilink",
+          "pos": 9,
+          "asset_link_type": false,
+          "show_anchor": false,
+          "allow_target_blank": true,
+          "allow_custom_attributes": false,
+          "required": true
+        },
+        "clients_logos": {
+          "type": "multiasset",
+          "pos": 10,
+          "filetypes": [
+            "images"
+          ],
+          "asset_folder_id": 640337,
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "about_masthead",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "aos",
+      "display_name": "Animate on Scroll",
+      "created_at": "2024-09-17T10:06:39.650Z",
+      "updated_at": "2024-09-17T10:07:27.498Z",
+      "id": 6303225,
+      "schema": {
+        "items": {
+          "type": "bloks",
+          "pos": 0,
+          "maximum": 1,
+          "minimum": 1,
+          "restrict_type": "",
+          "restrict_components": false
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Animate on Scroll",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "bullet_callout",
+      "display_name": null,
+      "created_at": "2024-09-24T14:46:09.137Z",
+      "updated_at": "2024-09-25T08:33:57.183Z",
+      "id": 6331883,
+      "schema": {
+        "bullets": {
+          "type": "bloks",
+          "pos": 0,
+          "restrict_type": "",
+          "restrict_components": true,
+          "required": true,
+          "component_whitelist": [
+            "card"
+          ],
+          "maximum": 4,
+          "minimum": 1
+        },
+        "image": {
+          "type": "asset",
+          "pos": 1,
+          "required": true,
+          "filetypes": [
+            "images"
+          ]
+        },
+        "title": {
+          "type": "text",
+          "pos": 2,
+          "required": true
+        },
+        "content": {
+          "type": "richtext",
+          "pos": 3,
+          "required": true
+        },
+        "reversed": {
+          "type": "boolean",
+          "pos": 4
+        },
+        "tab-2c42c5e7-2d83-4828-b658-90b621f3b524": {
+          "display_name": "Bullets",
+          "keys": [
+            "bullets"
+          ],
+          "pos": 5,
+          "type": "tab"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "bullet_callout",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "button",
+      "display_name": null,
+      "created_at": "2024-09-17T11:11:37.737Z",
+      "updated_at": "2024-09-24T11:13:17.730Z",
+      "id": 6303708,
+      "schema": {
+        "label": {
+          "type": "text",
+          "pos": 0,
+          "required": true
+        },
+        "link": {
+          "type": "multilink",
+          "pos": 1,
+          "required": true,
+          "asset_link_type": false,
+          "allow_target_blank": true,
+          "allow_custom_attributes": false
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "button",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "callout",
+      "display_name": null,
+      "created_at": "2024-09-17T09:59:42.461Z",
+      "updated_at": "2024-09-24T15:16:10.677Z",
+      "id": 6303189,
+      "schema": {
+        "image": {
+          "type": "asset",
+          "pos": 0,
+          "required": true
+        },
+        "title": {
+          "type": "textarea",
+          "pos": 1,
+          "required": true
+        },
+        "content": {
+          "type": "richtext",
+          "pos": 2,
+          "required": true,
+          "customize_toolbar": true,
+          "toolbar": [
+            "link",
+            "paragraph"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "callout",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "card",
+      "display_name": null,
+      "created_at": "2024-09-23T11:40:14.584Z",
+      "updated_at": "2024-09-25T08:34:59.209Z",
+      "id": 6325196,
+      "schema": {
+        "link_label": {
+          "type": "text",
+          "pos": 0
+        },
+        "icon": {
+          "type": "textarea",
+          "pos": 1,
+          "required": false,
+          "key": "Icon"
+        },
+        "title": {
+          "type": "text",
+          "pos": 2,
+          "required": true,
+          "key": "title"
+        },
+        "body": {
+          "type": "textarea",
+          "pos": 3,
+          "required": true,
+          "key": "body"
+        },
+        "no_bg": {
+          "type": "boolean",
+          "pos": 4
+        },
+        "link": {
+          "type": "multilink",
+          "pos": 5,
+          "key": "link"
+        },
+        "isExternal": {
+          "type": "boolean",
+          "pos": 6
+        },
+        "tab-a7eec5e3-280c-47f1-8b8f-1fbddd87a4b0": {
+          "display_name": "Link",
+          "keys": [
+            "isExternal",
+            "link",
+            "link_label"
+          ],
+          "pos": 7,
+          "type": "tab"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "card",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "Case Study",
+      "display_name": null,
+      "created_at": "2024-09-24T08:24:17.519Z",
+      "updated_at": "2024-09-24T14:04:42.162Z",
+      "id": 6329473,
+      "schema": {
+        "show_on_homepage": {
+          "type": "boolean",
+          "pos": 0
+        },
+        "thumbnail": {
+          "type": "asset",
+          "pos": 1,
+          "filetypes": [
+            "images"
+          ]
+        },
+        "show_as_casestudy": {
+          "type": "boolean",
+          "pos": 2
+        },
+        "casestudy_image": {
+          "type": "asset",
+          "pos": 3,
+          "filetypes": [
+            "images"
+          ]
+        },
+        "home_image": {
+          "type": "asset",
+          "pos": 4,
+          "filetypes": [
+            "images"
+          ]
+        },
+        "tab-dc16003b-3a6e-4232-b341-6cf2be2bd9e4": {
+          "display_name": "Images",
+          "keys": [
+            "home_image",
+            "casestudy_image",
+            "thumbnail"
+          ],
+          "pos": 5,
+          "type": "tab"
+        },
+        "tab-01466566-718b-4cf1-9a73-b7c371b8326c": {
+          "display_name": "Visibility",
+          "keys": [
+            "show_on_homepage",
+            "show_as_casestudy"
+          ],
+          "pos": 6,
+          "type": "tab"
+        },
+        "project_type": {
+          "type": "text",
+          "pos": 7
+        },
+        "client_name": {
+          "type": "text",
+          "pos": 8,
+          "required": true
+        },
+        "synopsis": {
+          "type": "textarea",
+          "pos": 9
+        },
+        "description": {
+          "type": "richtext",
+          "pos": 10,
+          "customize_toolbar": true,
+          "toolbar": [
+            "paragraph"
+          ]
+        },
+        "link": {
+          "type": "multilink",
+          "pos": 11,
+          "allow_custom_attributes": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Case Study",
+      "component_group_uuid": null,
+      "color": "#395ece",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null
+    },
+    {
+      "name": "client_logos",
+      "display_name": "",
+      "created_at": "2024-09-17T09:39:57.516Z",
+      "updated_at": "2024-09-18T08:13:55.341Z",
+      "id": 6303136,
+      "schema": {
+        "images": {
+          "type": "multiasset",
+          "pos": 0,
+          "filetypes": [
+            "images"
+          ],
+          "required": true,
+          "key": "Images",
+          "asset_folder_id": 640337
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "client_logos",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "faq",
+      "display_name": null,
+      "created_at": "2024-09-25T09:13:01.308Z",
+      "updated_at": "2024-09-25T09:13:32.789Z",
+      "id": 6335001,
+      "schema": {
+        "question": {
+          "type": "text",
+          "pos": 0,
+          "required": true
+        },
+        "answer": {
+          "type": "textarea",
+          "pos": 1,
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "faq",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "frequently_asked_questions",
+      "display_name": null,
+      "created_at": "2024-09-25T09:12:08.593Z",
+      "updated_at": "2024-09-25T09:26:46.453Z",
+      "id": 6334998,
+      "schema": {
+        "faqs": {
+          "type": "bloks",
+          "pos": 0,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "faq"
+          ],
+          "minimum": 1,
+          "required": true
+        },
+        "subtitle": {
+          "type": "text",
+          "pos": 1,
+          "required": true
+        },
+        "title": {
+          "type": "text",
+          "pos": 2,
+          "required": true
+        },
+        "tab-6da7789c-ad11-4df5-8603-cd56b536b801": {
+          "display_name": "Questions",
+          "keys": [
+            "items",
+            "faqs"
+          ],
+          "pos": 3,
+          "type": "tab"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "frequently_asked_questions",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "grid",
+      "display_name": null,
+      "created_at": "2024-09-16T13:15:07.358Z",
+      "updated_at": "2024-09-23T11:43:03.703Z",
+      "id": 6299176,
+      "schema": {
+        "blocks": {
+          "type": "bloks"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "grid",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "home_hero",
+      "display_name": null,
+      "created_at": "2024-09-16T15:57:45.090Z",
+      "updated_at": "2024-09-24T13:06:41.877Z",
+      "id": 6300720,
+      "schema": {
+        "heading": {
+          "type": "richtext",
+          "pos": 0,
+          "required": true,
+          "customize_toolbar": true,
+          "toolbar": [
+            "bold",
+            "h1"
+          ]
+        },
+        "cv_synopsis": {
+          "type": "text",
+          "pos": 1
+        },
+        "buttons": {
+          "type": "bloks",
+          "pos": 2,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "button"
+          ],
+          "display_name": "Buttons"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "home_hero",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "intro_text",
+      "display_name": null,
+      "created_at": "2024-09-18T08:08:28.315Z",
+      "updated_at": "2024-09-23T11:13:00.116Z",
+      "id": 6307904,
+      "schema": {
+        "title": {
+          "type": "text",
+          "pos": 0,
+          "required": true
+        },
+        "body": {
+          "type": "richtext",
+          "pos": 1,
+          "customize_toolbar": true,
+          "toolbar": [
+            "bold",
+            "link"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "intro_text",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "masthead",
+      "display_name": null,
+      "created_at": "2024-09-25T10:11:26.606Z",
+      "updated_at": "2024-09-25T10:40:34.916Z",
+      "id": 6335875,
+      "schema": {
+        "title": {
+          "type": "text",
+          "pos": 0,
+          "required": true
+        },
+        "intro": {
+          "type": "richtext",
+          "pos": 1,
+          "required": true
+        },
+        "has_container": {
+          "type": "boolean",
+          "pos": 2,
+          "default_value": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "masthead",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "page",
+      "display_name": null,
+      "created_at": "2024-09-16T13:15:07.325Z",
+      "updated_at": "2024-09-24T09:06:04.436Z",
+      "id": 6299174,
+      "schema": {
+        "body": {
+          "type": "bloks"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "page",
+      "component_group_uuid": null,
+      "color": "#395ece",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null
+    },
+    {
+      "name": "portfolio",
+      "display_name": null,
+      "created_at": "2024-09-25T13:06:46.140Z",
+      "updated_at": "2024-09-25T13:31:15.469Z",
+      "id": 6337036,
+      "schema": {
+        "items": {
+          "type": "options",
+          "pos": 0,
+          "required": true,
+          "source": "internal_stories",
+          "filter_content_type": [
+            "Case Study"
+          ]
+        },
+        "layout": {
+          "type": "option",
+          "pos": 1,
+          "use_uuid": true,
+          "required": true,
+          "options": [
+            {
+              "_uid": "bb21bf57-b28f-4feb-8996-db04bd6e64b4",
+              "name": "Home Carousel",
+              "value": "home-carousel"
+            },
+            {
+              "_uid": "7b50ad3b-7aeb-4f4c-9923-3b7b4f1c6b02",
+              "value": "portfolio-carousel",
+              "name": "Portfolio Carousel"
+            },
+            {
+              "_uid": "9c097e99-44bd-4044-9721-f0879a9a4466",
+              "value": "portfolio-list",
+              "name": "Portfolio List"
+            }
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "portfolio",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "services",
+      "display_name": null,
+      "created_at": "2024-09-23T12:51:54.572Z",
+      "updated_at": "2024-09-24T13:54:02.529Z",
+      "id": 6325572,
+      "schema": {
+        "tab-b98a3dd4-d87b-4c71-83fc-8ca32e93b79b": {
+          "display_name": "Cards",
+          "keys": [
+            "blocks"
+          ],
+          "pos": 0,
+          "type": "tab"
+        },
+        "title": {
+          "type": "text",
+          "pos": 1,
+          "required": true
+        },
+        "intro": {
+          "type": "richtext",
+          "pos": 2,
+          "required": true
+        },
+        "blocks": {
+          "type": "bloks",
+          "pos": 3,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "card"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "services",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "services_masthead",
+      "display_name": null,
+      "created_at": "2024-09-25T08:49:56.704Z",
+      "updated_at": "2024-09-25T10:46:38.285Z",
+      "id": 6334841,
+      "schema": {
+        "cards": {
+          "type": "bloks",
+          "pos": 0,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "card"
+          ],
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "services_masthead",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "skillset",
+      "display_name": null,
+      "created_at": "2024-09-18T08:09:43.618Z",
+      "updated_at": "2024-09-23T13:31:47.855Z",
+      "id": 6307905,
+      "schema": {
+        "tab-d807e726-e871-435d-a164-f761a6f56238": {
+          "display_name": "Logos",
+          "keys": [
+            "logos"
+          ],
+          "pos": 0,
+          "type": "tab",
+          "key": "tab-d807e726-e871-435d-a164-f761a6f56238"
+        },
+        "logos": {
+          "type": "multiasset",
+          "pos": 1,
+          "filetypes": [
+            "images"
+          ],
+          "key": "logos"
+        },
+        "title": {
+          "type": "text",
+          "pos": 2,
+          "key": "title"
+        },
+        "intro": {
+          "type": "richtext",
+          "pos": 3,
+          "key": "Intro"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "skillset",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "skills_graph",
+      "display_name": null,
+      "created_at": "2024-09-24T12:49:22.365Z",
+      "updated_at": "2024-09-24T12:57:25.230Z",
+      "id": 6331030,
+      "schema": {
+        "title": {
+          "type": "textarea",
+          "pos": 0,
+          "required": true
+        },
+        "tab-960b082f-2a56-45ce-9a50-d2fc9fc207fb": {
+          "display_name": "Logos",
+          "keys": [
+            "logos"
+          ],
+          "pos": 0,
+          "type": "tab"
+        },
+        "content": {
+          "type": "richtext",
+          "pos": 1,
+          "required": true
+        },
+        "buttons": {
+          "type": "bloks",
+          "pos": 2,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "button"
+          ]
+        },
+        "image": {
+          "type": "asset",
+          "pos": 4,
+          "filetypes": [
+            "images"
+          ],
+          "required": true
+        },
+        "logos": {
+          "type": "multiasset",
+          "pos": 5,
+          "filetypes": [
+            "images"
+          ],
+          "asset_folder_id": 640577,
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "skills_graph",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "Testimonial",
+      "display_name": "Testimonial",
+      "created_at": "2024-09-16T13:56:31.368Z",
+      "updated_at": "2024-09-24T09:07:11.988Z",
+      "id": 6299489,
+      "schema": {
+        "avatar": {
+          "type": "asset",
+          "pos": 0,
+          "filetypes": [
+            "images"
+          ],
+          "key": "avatar"
+        },
+        "author": {
+          "type": "text",
+          "pos": 1,
+          "required": true,
+          "key": "author"
+        },
+        "jobRole": {
+          "type": "text",
+          "pos": 2,
+          "key": "job_role"
+        },
+        "company": {
+          "type": "text",
+          "pos": 3,
+          "key": "company"
+        },
+        "quote": {
+          "type": "textarea",
+          "pos": 4,
+          "required": true,
+          "key": "quote"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Testimonial",
+      "component_group_uuid": null,
+      "color": "#395ece",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null
+    },
+    {
+      "name": "testimonials_list",
+      "display_name": "Testimonials List",
+      "created_at": "2024-09-16T14:59:47.048Z",
+      "updated_at": "2024-09-24T09:20:44.706Z",
+      "id": 6300498,
+      "schema": {
+        "items": {
+          "type": "options",
+          "pos": 0,
+          "source": "internal_stories",
+          "entry_appearance": "link",
+          "allow_advanced_search": true,
+          "required": true,
+          "filter_content_type": [
+            "testimonial",
+            "Testimonial"
+          ],
+          "max_options": "3",
+          "min_options": "1",
+          "folder_slug": "testimonials/",
+          "display_name": "Items",
+          "key": "testimonials"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Testimonials List",
+      "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "color": "#2db47d",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Nestable Blocks"
+    }
+  ],
+  "component_groups": [
+    {
+      "name": "Nestable Blocks",
+      "id": 402696,
+      "uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
+      "parent_id": null,
+      "parent_uuid": null
+    }
+  ]
+}

@@ -1,33 +1,53 @@
-import Link from 'next/link';
+import { CardStoryblok } from '../../../component-types-sb';
 
-import { CardType } from './CardType';
+import Link from 'next/link';
+import Image from 'next/image';
+import LinkIcon from '@/components/LinkIcon/LinkIcon';
+
 import styles from './Card.module.scss';
 
-export default function Card({ icon, title, body, link, noBg, isExternal}: CardType) {
-    return (
-        <>
-        {link ?
+interface Props {
+    cardContent: CardStoryblok
+}
 
-            isExternal ?
-                <a href={link} title={title} className={`${styles.card} ${styles.cardLink}`} target="_blank">
-                    {icon}
-                    <h3>{title}</h3>
-                    <p>{body}</p>
-                </a>
-            :
-                <Link href={link} title={title} className={`${styles.card} ${styles.cardLink}`}>
-                    {icon}
-                    <h3>{title}</h3>
-                    <p>{body}</p>
-                </Link>
+const Card: React.FC<Props> = ({ cardContent }) => {
+    const { image, icon, title, body, link_label, link, no_bg, isExternal } = cardContent;
 
-        :
-            <div className={` ${styles.card} ${noBg ? styles.noBg : ''}`}>
-                {icon}
-                <h3>{title}</h3>
-                <p>{body}</p>
+    const cardHtml = <>
+        {image &&
+            <div className={styles.image}>
+                <Image src={image} alt={title} width={445} height={250} quality={90} />
             </div>
         }
-        </>
+        {icon && <span className={styles.icon} dangerouslySetInnerHTML={{ __html: icon }} />}
+        <h3>{title}</h3>
+        <p>{body}</p>
+    </>
+
+    const linkCardHtml = <>
+        {cardHtml}
+        <p className={styles.fauxLink}>
+            <LinkIcon url={``} label={`${link_label ? link_label : 'Find out more'}`} faux />
+        </p>
+    </>
+
+    return (
+        link?.url ? (
+            isExternal ? (
+                <a href={link.url} title={title} className={`${styles.card} ${styles.cardLink}`} target="_blank">
+                    {linkCardHtml}
+                </a>
+            ) : (
+                <Link href={link.url} title={title} className={`${styles.card} ${styles.cardLink}`}>
+                    {linkCardHtml}
+                </Link>
+            )
+        ) : (
+            <div className={` ${styles.card} ${no_bg ? styles.noBg : ''}`}>
+                {cardHtml}
+            </div>
+        )
     )
 }
+
+export default Card;

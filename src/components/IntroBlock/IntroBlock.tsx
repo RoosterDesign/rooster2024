@@ -1,24 +1,23 @@
-import styles from './IntroBlock.module.scss';
+import { RichtextStoryblok } from '../../../component-types-sb';
 import Heading from '@/components/Heading/Heading';
-import LinkIcon from '@/components/LinkIcon/LinkIcon';
+import { render } from 'storyblok-rich-text-react-renderer-ts';
+import styles from './IntroBlock.module.scss';
 
-interface IntroBlock {
-  title: string;
-  intro: string;
-  link?: string;
-  alignRight?: boolean;
+interface Props {
+    title: string;
+    intro: RichtextStoryblok;
+    // link?: string;
+    // alignRight?: boolean;
 }
 
-export default function IntroBlock({title, intro, link, alignRight}: IntroBlock) {
-  return (
-    <div className={`${styles.introBlock} ${alignRight ? styles.alignRight: ''}`}>
-      <Heading title={title} />
-      <p>
-        {intro}
-        {link && <>
-            &nbsp;&nbsp; <LinkIcon url={link} label="Find out more" />
-        </>}
-      </p>
-    </div>
-  )
+const IntroBlock: React.FC<Props> = ({ title, intro }) => {
+    return (
+        // <div className={`${styles.introBlock} ${alignRight ? styles.alignRight : ''}`}>
+        <div className={styles.introBlock}>
+            <Heading title={title} />
+            {render(intro)}
+        </div>
+    )
 }
+
+export default IntroBlock;

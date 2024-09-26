@@ -1,11 +1,11 @@
-import { CaseStudyStoryblok } from '../../../component-types-sb';
+import { PortfolioListStoryblok } from '../../../component-types-sb';
 
 import Container from '@/components/Container/Container';
 import CardGrid from '@/components/CardGrid/CardGrid';
 import Card from '@/components/Card/Card';
 
 interface Props {
-    items: CaseStudyStoryblok[]
+    items: PortfolioListStoryblok[]
 }
 
 const PortfolioList: React.FC<Props> = ({ items }) => {
@@ -13,7 +13,7 @@ const PortfolioList: React.FC<Props> = ({ items }) => {
         <section className="block">
             <Container>
                 <CardGrid>
-                    {items.map((item: CaseStudyStoryblok) => {
+                    {items.map((item: PortfolioListStoryblok) => {
 
                         const formattedCardContent = {
                             image: item.content.thumbnail.filename,
@@ -21,6 +21,7 @@ const PortfolioList: React.FC<Props> = ({ items }) => {
                             body: item.content.synopsis,
                             link: item.content.link.url,
                             isExternal: item.content.link.target === '_blank',
+                            link_label: `Visit website`,
                             ...item.content
                         }
 

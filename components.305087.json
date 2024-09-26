@@ -265,7 +265,7 @@
       "name": "card",
       "display_name": null,
       "created_at": "2024-09-23T11:40:14.584Z",
-      "updated_at": "2024-09-25T08:34:59.209Z",
+      "updated_at": "2024-09-26T13:33:42.526Z",
       "id": 6325196,
       "schema": {
         "link_label": {
@@ -297,16 +297,12 @@
         "link": {
           "type": "multilink",
           "pos": 5,
-          "key": "link"
-        },
-        "isExternal": {
-          "type": "boolean",
-          "pos": 6
+          "key": "link",
+          "allow_target_blank": true
         },
         "tab-a7eec5e3-280c-47f1-8b8f-1fbddd87a4b0": {
           "display_name": "Link",
           "keys": [
-            "isExternal",
             "link",
             "link_label"
           ],
@@ -329,103 +325,6 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "component_group_name": "Nestable Blocks"
-    },
-    {
-      "name": "Case Study",
-      "display_name": null,
-      "created_at": "2024-09-24T08:24:17.519Z",
-      "updated_at": "2024-09-24T14:04:42.162Z",
-      "id": 6329473,
-      "schema": {
-        "show_on_homepage": {
-          "type": "boolean",
-          "pos": 0
-        },
-        "thumbnail": {
-          "type": "asset",
-          "pos": 1,
-          "filetypes": [
-            "images"
-          ]
-        },
-        "show_as_casestudy": {
-          "type": "boolean",
-          "pos": 2
-        },
-        "casestudy_image": {
-          "type": "asset",
-          "pos": 3,
-          "filetypes": [
-            "images"
-          ]
-        },
-        "home_image": {
-          "type": "asset",
-          "pos": 4,
-          "filetypes": [
-            "images"
-          ]
-        },
-        "tab-dc16003b-3a6e-4232-b341-6cf2be2bd9e4": {
-          "display_name": "Images",
-          "keys": [
-            "home_image",
-            "casestudy_image",
-            "thumbnail"
-          ],
-          "pos": 5,
-          "type": "tab"
-        },
-        "tab-01466566-718b-4cf1-9a73-b7c371b8326c": {
-          "display_name": "Visibility",
-          "keys": [
-            "show_on_homepage",
-            "show_as_casestudy"
-          ],
-          "pos": 6,
-          "type": "tab"
-        },
-        "project_type": {
-          "type": "text",
-          "pos": 7
-        },
-        "client_name": {
-          "type": "text",
-          "pos": 8,
-          "required": true
-        },
-        "synopsis": {
-          "type": "textarea",
-          "pos": 9
-        },
-        "description": {
-          "type": "richtext",
-          "pos": 10,
-          "customize_toolbar": true,
-          "toolbar": [
-            "paragraph"
-          ]
-        },
-        "link": {
-          "type": "multilink",
-          "pos": 11,
-          "allow_custom_attributes": true
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": true,
-      "preview_tmpl": null,
-      "is_nestable": false,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "Case Study",
-      "component_group_uuid": null,
-      "color": "#395ece",
-      "icon": null,
-      "internal_tags_list": [],
-      "internal_tag_ids": [],
-      "content_type_asset_preview": null
     },
     {
       "name": "client_logos",
@@ -728,10 +627,95 @@
       "content_type_asset_preview": null
     },
     {
-      "name": "portfolio",
+      "name": "portfolio_item",
+      "display_name": "Portfolio Item",
+      "created_at": "2024-09-24T08:24:17.519Z",
+      "updated_at": "2024-09-25T16:29:49.625Z",
+      "id": 6329473,
+      "schema": {
+        "thumbnail": {
+          "type": "asset",
+          "pos": 1,
+          "filetypes": [
+            "images"
+          ]
+        },
+        "casestudy_image": {
+          "type": "asset",
+          "pos": 3,
+          "filetypes": [
+            "images"
+          ]
+        },
+        "home_image": {
+          "type": "asset",
+          "pos": 4,
+          "filetypes": [
+            "images"
+          ]
+        },
+        "tab-dc16003b-3a6e-4232-b341-6cf2be2bd9e4": {
+          "display_name": "Images",
+          "keys": [
+            "home_image",
+            "casestudy_image",
+            "thumbnail"
+          ],
+          "pos": 5,
+          "type": "tab"
+        },
+        "project_type": {
+          "type": "text",
+          "pos": 7
+        },
+        "client_name": {
+          "type": "text",
+          "pos": 8,
+          "required": true
+        },
+        "synopsis": {
+          "type": "textarea",
+          "pos": 9
+        },
+        "description": {
+          "type": "richtext",
+          "pos": 10,
+          "customize_toolbar": false,
+          "toolbar": [
+            "paragraph"
+          ],
+          "style_options": []
+        },
+        "link": {
+          "type": "multilink",
+          "pos": 11,
+          "allow_custom_attributes": false,
+          "allow_target_blank": true,
+          "restrict_content_types": false,
+          "component_whitelist": [],
+          "force_link_scope": false
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Portfolio Item",
+      "component_group_uuid": null,
+      "color": "#395ece",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null
+    },
+    {
+      "name": "portfolio_list",
       "display_name": null,
       "created_at": "2024-09-25T13:06:46.140Z",
-      "updated_at": "2024-09-25T13:31:15.469Z",
+      "updated_at": "2024-09-25T14:57:34.128Z",
       "id": 6337036,
       "schema": {
         "items": {
@@ -740,8 +724,11 @@
           "required": true,
           "source": "internal_stories",
           "filter_content_type": [
-            "Case Study"
-          ]
+            "Case Study",
+            "portfolio_item"
+          ],
+          "folder_slug": "portfolio-items/",
+          "entry_appearance": "link"
         },
         "layout": {
           "type": "option",
@@ -774,7 +761,7 @@
       "is_nestable": true,
       "all_presets": [],
       "preset_id": null,
-      "real_name": "portfolio",
+      "real_name": "portfolio_list",
       "component_group_uuid": "599e4b67-49b0-49e0-a43e-5a44dec58abf",
       "color": "#2db47d",
       "icon": null,
@@ -988,10 +975,41 @@
       "component_group_name": "Nestable Blocks"
     },
     {
-      "name": "Testimonial",
+      "name": "test",
+      "display_name": null,
+      "created_at": "2024-09-25T16:02:20.645Z",
+      "updated_at": "2024-09-25T16:02:34.081Z",
+      "id": 6337887,
+      "schema": {
+        "items": {
+          "type": "options",
+          "pos": 0,
+          "source": "internal_stories",
+          "filter_content_type": [
+            "testimonial"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "test",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null
+    },
+    {
+      "name": "testimonial",
       "display_name": "Testimonial",
       "created_at": "2024-09-16T13:56:31.368Z",
-      "updated_at": "2024-09-24T09:07:11.988Z",
+      "updated_at": "2024-09-25T14:40:01.304Z",
       "id": 6299489,
       "schema": {
         "avatar": {
@@ -1044,7 +1062,7 @@
       "name": "testimonials_list",
       "display_name": "Testimonials List",
       "created_at": "2024-09-16T14:59:47.048Z",
-      "updated_at": "2024-09-24T09:20:44.706Z",
+      "updated_at": "2024-09-25T16:24:18.670Z",
       "id": 6300498,
       "schema": {
         "items": {
@@ -1052,7 +1070,7 @@
           "pos": 0,
           "source": "internal_stories",
           "entry_appearance": "link",
-          "allow_advanced_search": true,
+          "allow_advanced_search": false,
           "required": true,
           "filter_content_type": [
             "testimonial",

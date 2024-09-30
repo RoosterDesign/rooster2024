@@ -1,17 +1,16 @@
-// import { StoryblokStory } from "@storyblok/react/rsc";
-// import { fetchData } from '@/lib/storyblok';
+import { StoryblokStory } from "@storyblok/react/rsc";
+import { fetchData } from '@/lib/storyblok';
 
 const About: React.FC = async () => {
-    // const sbOptions = {
-    //     slug: "about",
-    //     resolve_relations: ["testimonials_list.items"]
-    // }
-    // const { data } = await fetchData(sbOptions);
-    // const bridgeOptions = { resolveRelations: ["testimonials_list.items"] };
+    const sbOptions = {
+        slug: "about",
+        resolve_relations: ["testimonials_list.items"]
+    }
+    const { data } = await fetchData(sbOptions);
+    const bridgeOptions = { resolveRelations: ["testimonials_list.items"] };
 
     return (
-        <h1>About</h1>
-        // <StoryblokStory story={data.story} bridgeOptions={bridgeOptions} />
+        <StoryblokStory story={data.story} bridgeOptions={bridgeOptions} />
     )
 }
 

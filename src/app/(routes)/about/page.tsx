@@ -1,7 +1,7 @@
 import { StoryblokStory } from "@storyblok/react/rsc";
 import { fetchData } from '@/lib/storyblok';
 
-const About: React.FC = async () => {
+export default async function About() {
     const sbOptions = {
         slug: "about",
         resolve_relations: ["testimonials_list.items"]
@@ -13,5 +13,3 @@ const About: React.FC = async () => {
         <StoryblokStory story={data.story} bridgeOptions={bridgeOptions} />
     )
 }
-
-export default About;

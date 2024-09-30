@@ -1,9 +1,7 @@
 import { StoryblokStory } from "@storyblok/react/rsc";
 import { fetchData } from '@/lib/storyblok';
 
-
 const Portfolio: React.FC = async () => {
-
     const sbOptions = {
         slug: "portfolio",
         resolve_relations: ["testimonials_list.items", "portfolio_list.items"]

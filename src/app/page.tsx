@@ -1,5 +1,6 @@
-import { StoryblokStory } from "@storyblok/react/rsc";
+import { StoryblokStory, } from '@storyblok/react/rsc';
 import { fetchData } from '@/lib/storyblok';
+
 export default async function Home() {
     const sbOptions = {
         slug: "homepage",

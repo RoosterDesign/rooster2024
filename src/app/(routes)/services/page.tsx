@@ -2,7 +2,6 @@ import { StoryblokStory } from "@storyblok/react/rsc";
 import { fetchData } from '@/lib/storyblok';
 
 const Services: React.FC = async () => {
-
     const sbOptions = {
         slug: "services",
         resolve_relations: ["testimonials_list.items"]

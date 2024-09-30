@@ -5,7 +5,6 @@ import type { Metadata } from "next";
 
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import StoryblokProvider from "@/components/StoryblokProvider";
-// import StoryblokProvider from '@/app/StoryblokProvider';
 
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
@@ -21,7 +20,6 @@ const cachedFetch = (input: any, init?: any): Promise<Response> => {
         cache: "no-store",
     })
 }
-
 storyblokInit({
     accessToken: process.env.NEXT_PUBLIC_STORYBLOK_API_TOKEN,
     use: [apiPlugin],
@@ -39,15 +37,6 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
                     <Header />
                     {children}
                     <Footer />
-
-                    {/* <div className="bp-helper bp-helper--base">BASE</div>
-            <div className="bp-helper bp-helper--sm">SM</div>
-            <div className="bp-helper bp-helper--md">MD</div>
-            <div className="bp-helper bp-helper--lg">LG</div>
-            <div className="bp-helper bp-helper--xl">XL</div>
-            <div className="bp-helper bp-helper--xxl">XXL</div>
-            <div className="bp-helper bp-helper--xxxl">XXXL</div> */}
-
                 </body>
             </html>
         </StoryblokProvider>

@@ -1,10 +1,10 @@
-import { CaseStudyStoryblok } from '../../../component-types-sb';
+import { PortfolioItemStoryblok } from '../../../component-types-sb';
 import Container from "@/components/Container/Container";
 import Carousel from '@/components/Carousel/Carousel';
 import HomeWorkCarouselItem from './HomeWorkCarouselItem/HomeWorkCarouselItem';
 
 interface Props {
-    items: CaseStudyStoryblok[]
+    items: PortfolioItemStoryblok[]
 }
 
 const HomeWorkCarousel: React.FC<Props> = ({ items }) => {
@@ -12,7 +12,7 @@ const HomeWorkCarousel: React.FC<Props> = ({ items }) => {
         <section className="block">
             <Container>
                 <Carousel>
-                    {items.map((item: CaseStudyStoryblok) => {
+                    {items.map((item: PortfolioItemStoryblok) => {
                         return (
                             <HomeWorkCarouselItem
                                 key={item.uuid}

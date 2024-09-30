@@ -20,7 +20,7 @@ const Card: React.FC<Props> = ({ cardContent }) => {
             </div>
         }
         {icon && <span className={styles.icon} dangerouslySetInnerHTML={{ __html: icon }} />}
-        <h3>{title}</h3>
+        <p className={styles.title}>{title}</p>
         <p>{body}</p>
     </>
 

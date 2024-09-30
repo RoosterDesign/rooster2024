@@ -30,6 +30,13 @@
         width: auto;
     }
 
+    .title {
+        font-size: rem(18);
+        font-weight: var(--fw-bold);
+        line-height: rem(32);
+        margin-bottom: rem(10);
+    }
+
     // h3 {
     //     font-size: rem(24);
     //     margin-bottom: rem(15);
@@ -67,6 +74,11 @@
 @include breakpoint(sm) {
 
     .card {
+
+        .title {
+            font-size: rem(24);
+            line-height: rem(40);
+        }
 
         //         .icon svg {
         //     height: rem(40);

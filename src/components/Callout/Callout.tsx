@@ -1,27 +1,29 @@
-import Image, {StaticImageData}from 'next/image';
+import { storyblokEditable } from "@storyblok/react/rsc";
+import { render } from 'storyblok-rich-text-react-renderer-ts';
+import { CalloutStoryblok } from '../../../component-types-sb';
+import Image from 'next/image';
 import Container from '@/components/Container/Container';
 import styles from './Callout.module.scss';
 
-interface Callout {
-  children: React.ReactNode;
-  image: StaticImageData;
+interface Props {
+    blok: CalloutStoryblok
 }
 
-export default function Callout({ children, image }: Callout) {
-  return (
-    <section className={`${styles.callout} block`}>
-      <Container>
-
-
-        <div className={`imgDotGrid`}>
-          <Image src={image} alt="Neil Dewing - Front-end developer" width={875} height={875} className={` ${styles.calloutImage}`} placeholder="blur" quality={90}  />
-        </div>
-
-        <div className={styles.calloutContent}>
-          {children}
-        </div>
-
-      </Container>
-    </section>
-  )
+const Callout: React.FC<Props> = ({ blok }) => {
+    const { image, title, content } = blok;
+    return (
+        <section className={`${styles.callout} block`} {...storyblokEditable(blok)}>
+            <Container>
+                <div className={`imgDotGrid`}>
+                    <Image src={image.filename} alt="Neil Dewing - Front-end developer" width={875} height={875} className={` ${styles.calloutImage}`} quality={90} />
+                </div>
+                <div className={styles.calloutContent}>
+                    <h2>{title}</h2>
+                    {render(content)}
+                </div>
+            </Container>
+        </section>
+    )
 }
+
+export default Callout;

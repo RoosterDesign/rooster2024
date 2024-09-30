@@ -7,8 +7,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 
-import Link from 'next/link';
-
 const schema = z.object({
     name: z.string().min(1, "Please enter your name"),
     email: z.string().email(),
@@ -17,10 +15,10 @@ const schema = z.object({
 
 type FormFields = z.infer<typeof schema>;
 
-export default function ContactForm() {
+const ContactForm: React.FC = () => {
 
     const contactForm = useRef<HTMLDivElement | null>(null);
-    const [ isFormSubmitted, setIsFormSubmitted ] = useState<boolean>();
+    const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>();
 
     const {
         register,
@@ -28,26 +26,26 @@ export default function ContactForm() {
         setError,
         reset,
         formState: { errors, isSubmitting, isSubmitSuccessful, isDirty, isValid },
-      } = useForm<FormFields>({
+    } = useForm<FormFields>({
         resolver: zodResolver(schema),
-      });
+    });
 
     //   useEffect(() => {
-        // if(isSubmitSuccessful) {
-            // setIsFormSubmitted(true);
-            // reset();
-        // }
+    // if(isSubmitSuccessful) {
+    // setIsFormSubmitted(true);
+    // reset();
+    // }
     //   }, [isSubmitSuccessful, reset])
 
 
     const scrollToThanks = () => {
         if (contactForm.current) {
             contactForm.current.scrollIntoView({
-            behavior: "smooth", // Optional: for smooth scrolling
-            block: "start" // Scroll to the top of the target div
-          });
+                behavior: "smooth", // Optional: for smooth scrolling
+                block: "start" // Scroll to the top of the target div
+            });
         }
-      };
+    };
 
     const onSubmit: SubmitHandler<FormFields> = async (data) => {
         try {
@@ -55,17 +53,17 @@ export default function ContactForm() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    },
+                },
                 body: JSON.stringify({
                     name: data.name,
                     email: data.email,
                     message: data.message,
-                    }),
-                }).then(() => {
-                    setIsFormSubmitted(true);
-                    scrollToThanks();
-                    reset();
-                });
+                }),
+            }).then(() => {
+                setIsFormSubmitted(true);
+                scrollToThanks();
+                reset();
+            });
 
         } catch (error) {
             setError("root", {
@@ -77,7 +75,7 @@ export default function ContactForm() {
     return (
         <div className={styles.contactForm} ref={contactForm}>
 
-            { !isFormSubmitted ?
+            {!isFormSubmitted ?
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <div className={styles.formGroup}>
@@ -112,7 +110,7 @@ export default function ContactForm() {
                     {errors.root && <div>{errors.root.message}</div>}
 
                 </form>
-            :
+                :
                 <div className={styles.thanks}>
                     <h2>Thank you</h2>
                     <p>{`Thanks for reaching out, I will get back to you as soon as possible!`}</p>
@@ -123,3 +121,5 @@ export default function ContactForm() {
         </div>
     )
 }
+
+export default ContactForm;

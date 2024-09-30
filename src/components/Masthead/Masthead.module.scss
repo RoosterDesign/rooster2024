@@ -1,0 +1,9 @@
+@import '@/app/mixins.scss';
+
+@include breakpoint(lg) {
+
+    .masthead {
+        max-width: rem(825);
+    }
+
+}

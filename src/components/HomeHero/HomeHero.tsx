@@ -1,27 +1,36 @@
+import { storyblokEditable } from "@storyblok/react/rsc";
+import { render } from 'storyblok-rich-text-react-renderer-ts';
+import { HomeHeroStoryblok, ButtonStoryblok } from '../../../component-types-sb';
 import styles from './HomeHero.module.scss';
 import Container from '@/components/Container/Container';
 import Button from '@/components/Button/Button';
 
-export default function HomeHero() {
-
-  const startDate = new Date('2007-03-01').valueOf();
-  const today = new Date().valueOf();
-  const differenceInTime = today - startDate;
-  const differenceInYears = differenceInTime / (1000 * 60 * 60 * 24 * 365.25);
-  const yearsExperience = Math.floor(differenceInYears);
-
-  return (
-    <section className={styles.homeHero}>
-      <Container>
-
-        <h1>Hi! I&apos;m Neil, a <span>UI Designer</span> & <span>Front-End Developer</span> based in Warwickshire with <span>over {yearsExperience} years</span> of industry experience.</h1>
-
-        <div className={styles.downloadCv}>
-          <p>{`I'm open to contracting, freelance and outsourcing opportunities. You can download my CV below.`}</p>
-          <Button url={`/neil-dewing-cv.pdf`} label={`Download CV`} external />
-        </div>
-
-      </Container>
-    </section>
-  )
+interface Props {
+    blok: HomeHeroStoryblok
 }
+
+const HomeHero: React.FC<Props> = ({ blok }) => {
+    const { heading, cv_synopsis, buttons } = blok;
+    return (
+        <section className={styles.homeHero} {...storyblokEditable(blok)}>
+            <Container>
+                {render(heading)}
+                <div className={styles.downloadCv}>
+                    <p>{cv_synopsis}</p>
+                    {buttons?.map((button: ButtonStoryblok) => {
+                        return (
+                            <Button
+                                url={button.link.url}
+                                label={button.label}
+                                external={button.link.target === '_blank'}
+                                key={button._uid}
+                            />
+                        )
+                    })}
+                </div>
+            </Container>
+        </section>
+    )
+}
+
+export default HomeHero;

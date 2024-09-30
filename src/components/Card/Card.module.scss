@@ -7,12 +7,36 @@
     flex-direction: column;
     padding: rem(30);
 
-    svg {
-        align-self: flex-start;
+    .image {
+        overflow: hidden;
+        margin: rem(-30) rem(-30) rem(30);
+
+        img {
+            aspect-ratio: 16 / 9;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            display: block;
+            height: auto;
+            object-fit: cover;
+            width: 100%;
+        }
+
+    }
+
+    .icon svg {
         fill: var(--accent);
-        height: rem(30);
+        height: rem(40);
         margin-bottom: rem(20);
+        transition: var(--hover-transition);
         width: auto;
+    }
+
+    // h3 {
+    //     font-size: rem(24);
+    //     margin-bottom: rem(15);
+    // }
+
+    .fauxLink {
+        margin-top: auto;
     }
 
     :global(.tailwind) {
@@ -30,16 +54,9 @@
 }
 
 .cardLink {
-    background: var(--accent);
     color: var(--white);
     text-decoration: none;
     transition: var(--hover-transition);
-
-    svg {
-        fill: var(--white);
-        transition: var(--hover-transition);
-    }
-
 }
 
 .noBg {
@@ -51,9 +68,9 @@
 
     .card {
 
-        svg {
-            height: rem(40);
-        }
+        //         .icon svg {
+        //     height: rem(40);
+        // }
 
         :global(.tailwind) {
             height: rem(30);
@@ -71,33 +88,85 @@
 
 }
 
-@include breakpoint(lg) {
+@include breakpoint(md) {
 
-    .card:not(.noBg) {
-        padding: rem(30);
+    .card {
+
+        .image {
+            margin: rem(-15) rem(-15) rem(30);
+
+            img {
+                border-radius: var(--border-radius);
+            }
+
+        }
+
     }
 
 }
 
-@include breakpoint(xxl) {
+
+// @include breakpoint(lg) {
+
+//     .card:not(.noBg) {
+//         padding: rem(30);
+//     }
+
+// }
+
+@include breakpoint(xl) {
 
     .card:not(.noBg) {
         padding: rem(40);
     }
 
+    .card {
+
+        .image {
+            margin: rem(-20) rem(-20) rem(40);
+        }
+
+        .icon svg {
+            margin-bottom: rem(30);
+        }
+
+        // h3 {
+        //     font-size: rem(32);
+        //     margin-bottom: rem(10);
+        // }
+
+    }
+
 }
+
+// @include breakpoint(xxl) {
+
+//     .card:not(.noBg) {
+//         padding: rem(40);
+//     }
+
+// }
 
 @media not all and (hover: none) {
 
     .cardLink {
 
         &:hover {
-            background: var(--white);
-            color: var(--accent);
+            background: var(--accent);
             transform: scale(1.03);
 
-            svg {
-                fill: var(--accent);
+            .icon svg {
+                fill: var(--white);
+            }
+
+            :global(.textLink--faux) {
+                color: var(--white);
+                text-decoration: underline;
+                text-underline-offset: rem(8);
+            }
+
+            :global(.textLink--faux) svg path {
+                stroke: var(--white);
             }
 
         }

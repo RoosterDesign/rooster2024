@@ -1,13 +1,15 @@
 import styles from './CardGrid.module.scss';
 
-import Container from '@/components/Container/Container';
+interface Props {
+    children: React.ReactNode
+}
 
-export default function CardGrid({children}: {children: React.ReactNode}) {
+const CardGrid: React.FC<Props> = ({ children }) => {
     return (
         <div className={styles.cardGrid}>
-            <Container>
-                {children}
-            </Container>
+            {children}
         </div>
     )
 }
+
+export default CardGrid;

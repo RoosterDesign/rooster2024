@@ -1,15 +1,18 @@
 import React from 'react';
 import styles from './Container.module.scss';
 
-interface Container {
-  children: React.ReactNode;
-  narrow?: boolean;
+interface Props {
+    children: React.ReactNode;
+    narrow?: boolean;
 }
 
-export default function Container({ children, narrow }: Container ) {
-  return (
-    <div className={` ${styles.container} ${narrow ? styles.containerNarrow : ''}`}>
-      {children}
-    </div>
-  )
+const Container: React.FC<Props> = ({ children, narrow }) => {
+
+    return (
+        <div className={` ${styles.container} ${narrow ? styles.containerNarrow : ''}`}>
+            {children}
+        </div>
+    )
 }
+
+export default Container;

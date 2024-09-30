@@ -1,51 +1,45 @@
-import Image, {StaticImageData}from 'next/image';
+import { storyblokEditable } from "@storyblok/react/rsc";
+import { render } from 'storyblok-rich-text-react-renderer-ts';
+import Image, { StaticImageData } from 'next/image';
+import { BulletCalloutStoryblok } from '../../../component-types-sb';
 import Container from '@/components/Container/Container';
 import Heading from '@/components/Heading/Heading';
-
-import { CardType } from '@/components/Card/CardType';
 import Card from '@/components/Card/Card';
-
 import styles from './BulletsCallout.module.scss';
 
-interface BulletsCallout {
-    title: string;
-    image: StaticImageData;
-    body: string;
-    bullets: CardType[];
-    reverse?: boolean
+interface Props {
+    blok: BulletCalloutStoryblok;
 }
 
-export default function BulletsCallout({title, image, body, bullets, reverse} : BulletsCallout) {
+const BulletsCallout: React.FC<Props> = ({ blok }) => {
+    const { title, image, content, bullets, reversed } = blok;
 
     return (
-        <section className={` ${styles.bulletsCallout} ${reverse ? styles.bulletsCalloutReverse : ''} block`}>
+        <section className={` ${styles.bulletsCallout} ${reversed ? styles.bulletsCalloutReverse : ''} block`} {...storyblokEditable(blok)}>
             <Container>
 
                 <div className={styles.intro}>
                     <Heading title={title} />
-                    <p>{body}</p>
+                    {render(content)}
                 </div>
 
                 <ol className={styles.bullets}>
-                    {bullets.map((bullet, i) =>
-                        (
-                            <li key={i}>
-                                <Card
-                                    icon={bullet.icon}
-                                    title={bullet.title}
-                                    body={bullet.body}
-                                    noBg
-                                />
-                            </li>
-                        )
+                    {bullets.map((bullet) =>
+                    (
+                        <li key={bullet._uid}>
+                            <Card cardContent={bullet} />
+                        </li>
+                    )
                     )}
                 </ol>
 
                 <div className={` ${styles.bulletsCalloutImage} imgDotGrid`}>
-                    <Image src={image} alt={``} width={610} height={875} placeholder="blur" quality={90} />
+                    <Image src={image.filename} alt={``} width={610} height={875} quality={90} />
                 </div>
 
             </Container>
         </section>
     )
 }
+
+export default BulletsCallout;

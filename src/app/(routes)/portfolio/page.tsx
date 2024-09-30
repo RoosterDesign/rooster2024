@@ -1,26 +1,19 @@
-import Container from '@/components/Container/Container';
-// import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
-import IntroBlock from '@/components/IntroBlock/IntroBlock';
-import Testimonials from '@/components/Testimonials/Testimonials';
-import CaseStudies from '@/components/CaseStudies/CaseStudies';
-import PortfolioList from '@/components/PortfolioList/PortfolioList';
+import { StoryblokStory } from "@storyblok/react/rsc";
+import { fetchData } from '@/lib/storyblok';
 
-export default function Portfolio() {
+
+const Portfolio: React.FC = async () => {
+
+    const sbOptions = {
+        slug: "portfolio",
+        resolve_relations: ["testimonials_list.items", "portfolio_list.items"]
+    }
+    const { data } = await fetchData(sbOptions);
+    const bridgeOptions = { resolveRelations: ["testimonials_list.items", "portfolio_list.items"] };
 
     return (
-        <>
-            {/* <Breadcrumbs /> */}
-
-            <Container>
-                <IntroBlock title={`My work`} intro={`I specialise in a diverse range of work, including contracting on various projects, providing outsourced development support to agencies, and collaborating directly with end clients. My expertise in HTML, CSS, JavaScript, React, and Next.js enables me to create responsive, high-performance websites tailored to each project's unique needs. Explore my portfolio to see how I blend technical proficiency with creative problem-solving across different types of engagements.`} />
-            </Container>
-
-            <CaseStudies />
-
-            <PortfolioList />
-
-            <Testimonials />
-
-        </>
+        <StoryblokStory story={data.story} bridgeOptions={bridgeOptions} />
     )
 }
+
+export default Portfolio;

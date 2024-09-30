@@ -280,14 +280,15 @@ export interface PageStoryblok {
 }
 
 export interface PortfolioItemStoryblok {
-  thumbnail?: AssetStoryblok;
-  casestudy_image?: AssetStoryblok;
-  home_image?: AssetStoryblok;
+  link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   project_type?: string;
   client_name: string;
   synopsis?: string;
   description?: RichtextStoryblok;
-  link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
+  link_label?: string;
+  thumbnail?: AssetStoryblok;
+  casestudy_image?: AssetStoryblok;
+  home_image?: AssetStoryblok;
   component: "portfolio_item";
   _uid: string;
   [k: string]: any;

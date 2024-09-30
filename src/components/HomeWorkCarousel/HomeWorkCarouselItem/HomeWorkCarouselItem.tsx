@@ -1,4 +1,4 @@
-import { CaseStudyStoryblok } from '../../../../component-types-sb';
+import { PortfolioItemStoryblok } from '../../../../component-types-sb';
 
 import Image from 'next/image';
 import Button from "@/components/Button/Button";
@@ -6,7 +6,7 @@ import Button from "@/components/Button/Button";
 import styles from './HomeWorkCarouselItem.module.scss';
 
 interface Props {
-    client: CaseStudyStoryblok
+    client: PortfolioItemStoryblok
 }
 
 const HomeWorkCarouselItem: React.FC<Props> = ({ client }) => {
@@ -15,13 +15,8 @@ const HomeWorkCarouselItem: React.FC<Props> = ({ client }) => {
         project_type,
         client_name,
         synopsis,
-        description,
         link,
-        casestudy_image,
-        home_image,
-        thumbnail,
-        show_on_homepage,
-        show_as_casestudy } = client;
+        home_image } = client;
 
     return (
         <div className={styles.latestProject}>

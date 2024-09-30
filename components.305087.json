@@ -630,26 +630,70 @@
       "name": "portfolio_item",
       "display_name": "Portfolio Item",
       "created_at": "2024-09-24T08:24:17.519Z",
-      "updated_at": "2024-09-25T16:29:49.625Z",
+      "updated_at": "2024-09-26T13:47:21.622Z",
       "id": 6329473,
       "schema": {
+        "link": {
+          "type": "multilink",
+          "pos": 0,
+          "allow_custom_attributes": false,
+          "allow_target_blank": true,
+          "restrict_content_types": false,
+          "component_whitelist": [],
+          "force_link_scope": false
+        },
+        "project_type": {
+          "type": "text",
+          "pos": 1
+        },
+        "client_name": {
+          "type": "text",
+          "pos": 2,
+          "required": true
+        },
+        "synopsis": {
+          "type": "textarea",
+          "pos": 3
+        },
+        "description": {
+          "type": "richtext",
+          "pos": 4,
+          "customize_toolbar": false,
+          "toolbar": [
+            "paragraph"
+          ],
+          "style_options": []
+        },
+        "link_label": {
+          "type": "text",
+          "pos": 5
+        },
+        "tab-6e24fb22-b7ae-41dd-ad90-ba61753c96cf": {
+          "display_name": "Link",
+          "keys": [
+            "link_label",
+            "link"
+          ],
+          "pos": 6,
+          "type": "tab"
+        },
         "thumbnail": {
           "type": "asset",
-          "pos": 1,
+          "pos": 7,
           "filetypes": [
             "images"
           ]
         },
         "casestudy_image": {
           "type": "asset",
-          "pos": 3,
+          "pos": 8,
           "filetypes": [
             "images"
           ]
         },
         "home_image": {
           "type": "asset",
-          "pos": 4,
+          "pos": 9,
           "filetypes": [
             "images"
           ]
@@ -661,39 +705,8 @@
             "casestudy_image",
             "thumbnail"
           ],
-          "pos": 5,
-          "type": "tab"
-        },
-        "project_type": {
-          "type": "text",
-          "pos": 7
-        },
-        "client_name": {
-          "type": "text",
-          "pos": 8,
-          "required": true
-        },
-        "synopsis": {
-          "type": "textarea",
-          "pos": 9
-        },
-        "description": {
-          "type": "richtext",
           "pos": 10,
-          "customize_toolbar": false,
-          "toolbar": [
-            "paragraph"
-          ],
-          "style_options": []
-        },
-        "link": {
-          "type": "multilink",
-          "pos": 11,
-          "allow_custom_attributes": false,
-          "allow_target_blank": true,
-          "restrict_content_types": false,
-          "component_whitelist": [],
-          "force_link_scope": false
+          "type": "tab"
         }
       },
       "image": null,

@@ -1,12 +1,12 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
-import { PortfolioStoryblok } from '../../../component-types-sb';
+import { PortfolioListStoryblok } from '../../../component-types-sb';
 
 import HomeWorkCarousel from '@/components/HomeWorkCarousel/HomeWorkCarousel';
 import PortfolioCarousel from '@/components/PortfolioCarousel/PortfolioCarousel';
 import PortfolioList from '@/components/PortfolioList/PortfolioList';
 
 interface Props {
-    blok: PortfolioStoryblok
+    blok: PortfolioListStoryblok
 }
 
 const Portfolio: React.FC<Props> = ({ blok }) => {
